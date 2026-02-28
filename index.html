@@ -5,74 +5,92 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>World Happenings</title>
   <style>
-    @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Source+Serif+4:wght@400;600&family=Inter:wght@400;500&display=swap');
-    :root{--bg:#f5f1e8;--surface:#fff;--border:#d4c9b0;--ink:#1a1008;--muted:#6b5e4a;--accent:#b5181a;--accent2:#1a4480;--tag-bg:#f0e8d8;}
+    @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Source+Serif+4:ital,wght@0,400;0,600;1,400&family=Inter:wght@400;500&display=swap');
     *{box-sizing:border-box;margin:0;padding:0;}
-    body{background:var(--bg);color:var(--ink);font-family:'Source Serif 4',Georgia,serif;padding-bottom:80px;}
-    header{background:var(--ink);color:#fff;padding:0;}
-    .masthead{text-align:center;padding:24px 40px 20px;border-bottom:3px double #555;}
-    .masthead-top{display:flex;justify-content:space-between;align-items:center;margin-bottom:16px;font-size:11px;letter-spacing:0.1em;text-transform:uppercase;color:#aaa;font-family:'Inter',sans-serif;}
-    .masthead h1{font-family:'Playfair Display',serif;font-size:clamp(36px,6vw,72px);font-weight:900;letter-spacing:-0.02em;line-height:1;}
-    .masthead-sub{margin-top:12px;font-size:12px;letter-spacing:0.15em;text-transform:uppercase;color:#aaa;font-family:'Inter',sans-serif;}
-    .edition-bar{background:var(--accent);text-align:center;padding:6px;font-family:'Inter',sans-serif;font-size:11px;letter-spacing:0.15em;text-transform:uppercase;color:#fff;}
-    .container{max-width:1200px;margin:0 auto;padding:40px 40px 0;}
-    .section-label{font-family:'Playfair Display',serif;font-size:13px;text-transform:uppercase;letter-spacing:0.2em;color:var(--accent);margin-bottom:16px;padding-bottom:8px;border-bottom:2px solid var(--accent);display:flex;justify-content:space-between;align-items:center;}
-    .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(340px,1fr));gap:1px;background:var(--border);margin-bottom:48px;}
-    .card{background:var(--surface);padding:24px;display:flex;flex-direction:column;gap:10px;text-decoration:none;color:inherit;transition:background 0.15s;}
-    .card:hover{background:var(--tag-bg);}
-    .card-region{font-family:'Inter',sans-serif;font-size:10px;text-transform:uppercase;letter-spacing:0.15em;color:var(--accent2);font-weight:500;}
-    .card h3{font-family:'Playfair Display',serif;font-size:18px;font-weight:700;line-height:1.3;}
-    .card p{font-size:14px;line-height:1.7;color:var(--muted);}
-    .card-source{font-family:'Inter',sans-serif;font-size:11px;color:#aaa;margin-top:auto;padding-top:8px;border-top:1px solid var(--border);}
-    footer{text-align:center;margin-top:60px;font-family:'Inter',sans-serif;font-size:11px;color:var(--muted);border-top:2px solid var(--ink);padding-top:16px;}
-    .masthead h1{font-size:36px;}}
-  
-    @media(max-width:768px){
-      .masthead{padding:16px;}
-      .masthead-top{flex-direction:column;gap:4px;text-align:center;}
-      .masthead h1{font-size:36px;}
-      .container{padding-left:16px;padding-right:16px;}
-      .grid{grid-template-columns:1fr;}
-      .card h3{font-size:16px;}
-      .card p{font-size:13px;}
-    }
-  
-    .section-block{margin-bottom:48px;}
-    .section-label{font-size:13px;letter-spacing:0.15em;padding:12px 16px;margin-bottom:0;background:var(--ink);color:#fff;border:none;display:flex;justify-content:space-between;}
-    .section-label span{color:#aaa;font-size:11px;}
-    .grid{border:2px solid var(--ink);border-top:none;}
-    .card{border:none;border-bottom:1px solid var(--border);border-right:1px solid var(--border);}
-    .card:last-child{border-bottom:none;}
-    .section-block:nth-child(even) .section-label{background:var(--accent);}
-    .section-block:nth-child(3n) .section-label{background:var(--accent2);}
+    body{background:#f0ebe0;color:#1a1008;font-family:'Source Serif 4',Georgia,serif;padding-bottom:80px;}
 
+    header{background:#1a1008;color:#fff;padding:24px 40px 20px;text-align:center;}
+    .masthead-meta{font-family:'Inter',sans-serif;font-size:10px;letter-spacing:0.2em;text-transform:uppercase;color:#888;margin-bottom:12px;display:flex;justify-content:space-between;}
+    h1{font-family:'Playfair Display',serif;font-size:clamp(36px,6vw,72px);font-weight:900;letter-spacing:-0.02em;}
+    .tagline{font-family:'Inter',sans-serif;font-size:11px;letter-spacing:0.25em;text-transform:uppercase;color:#888;margin-top:10px;}
+
+    /* EACH REGION = DISTINCT PAPER SECTION */
+    .zone{padding:40px;}
+    .zone-americas{background:#fff8f0;border-top:4px solid #b5181a;}
+    .zone-europe{background:#f0f4ff;border-top:4px solid #1a4480;}
+    .zone-asia{background:#f0fff4;border-top:4px solid #166534;}
+    .zone-mideast{background:#fffbf0;border-top:4px solid #92400e;}
+    .zone-economy{background:#fafafa;border-top:4px solid #374151;}
+    .zone-science{background:#f0f9ff;border-top:4px solid #0369a1;}
+
+    .zone-header{display:flex;align-items:baseline;gap:16px;margin-bottom:24px;padding-bottom:10px;border-bottom:2px solid;}
+    .zone-americas .zone-header{border-color:#b5181a;}
+    .zone-europe .zone-header{border-color:#1a4480;}
+    .zone-asia .zone-header{border-color:#166534;}
+    .zone-mideast .zone-header{border-color:#92400e;}
+    .zone-economy .zone-header{border-color:#374151;}
+    .zone-science .zone-header{border-color:#0369a1;}
+
+    .zone-name{font-family:'Playfair Display',serif;font-size:22px;font-weight:700;}
+    .zone-americas .zone-name{color:#b5181a;}
+    .zone-europe .zone-name{color:#1a4480;}
+    .zone-asia .zone-name{color:#166534;}
+    .zone-mideast .zone-name{color:#92400e;}
+    .zone-economy .zone-name{color:#374151;}
+    .zone-science .zone-name{color:#0369a1;}
+    .zone-rule{flex:1;height:1px;background:currentColor;opacity:0.2;}
+
+    .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:20px;}
+    .card{padding:20px;text-decoration:none;color:inherit;display:block;border:1px solid rgba(0,0,0,0.08);transition:box-shadow 0.15s;}
+    .card:hover{box-shadow:0 4px 16px rgba(0,0,0,0.12);}
+    .zone-americas .card{background:#fff;}
+    .zone-europe .card{background:#f7f9ff;}
+    .zone-asia .card{background:#f7fff9;}
+    .zone-mideast .card{background:#fffdf7;}
+    .zone-economy .card{background:#fff;}
+    .zone-science .card{background:#f7fcff;}
+
+    .card h3{font-family:'Playfair Display',serif;font-size:17px;font-weight:700;line-height:1.35;margin-bottom:10px;}
+    .card p{font-size:13px;line-height:1.75;color:#4a3f30;}
+    .card-foot{margin-top:12px;padding-top:10px;border-top:1px solid rgba(0,0,0,0.08);font-family:'Inter',sans-serif;font-size:11px;color:#888;display:flex;justify-content:space-between;}
+
+    footer{text-align:center;padding:24px 40px;font-family:'Inter',sans-serif;font-size:11px;color:#888;border-top:3px double #1a1008;background:#1a1008;color:#555;}
+    @media(max-width:768px){header,.zone{padding:16px;}.masthead-meta{flex-direction:column;gap:4px;text-align:center;}.grid{grid-template-columns:1fr;}}
   </style>
 </head>
 <body>
   <header>
-    <div class="masthead">
-      <div class="masthead-top">
-        <span id="datestr">Today</span>
-        <span>Wally World Desk</span>
-        <span>Daily Edition</span>
-      </div>
-      <h1>World Happenings</h1>
-      <div class="masthead-sub">Global News &amp; Current Events</div>
-    </div>
-    <div class="edition-bar">First report coming soon</div>
+    <div class="masthead-meta"><span id="d">Today</span><span>World Desk — Wally</span><span>Daily Edition</span></div>
+    <h1>World Happenings</h1>
+    <div class="tagline">Global News &amp; Current Events</div>
   </header>
-  <div class="container">
-    <div class="section-label">Initializing <span>●</span></div>
-    <div class="grid">
-      <div class="card">
-        <div class="card-region">Status</div>
-        <h3>First report generating...</h3>
-        <p>Wally is compiling today's world news. Check back shortly.</p>
-        <div class="card-source">wally-hq</div>
-      </div>
-    </div>
+
+  <div class="zone zone-americas">
+    <div class="zone-header"><div class="zone-name">Americas</div><div class="zone-rule"></div></div>
+    <div class="grid"><div class="card"><h3>First report generating...</h3><p>Wally is compiling today's world news. Check back shortly.</p><div class="card-foot"><span>wally-hq</span><span>—</span></div></div></div>
   </div>
+  <div class="zone zone-europe">
+    <div class="zone-header"><div class="zone-name">Europe</div><div class="zone-rule"></div></div>
+    <div class="grid"></div>
+  </div>
+  <div class="zone zone-asia">
+    <div class="zone-header"><div class="zone-name">Asia &amp; Pacific</div><div class="zone-rule"></div></div>
+    <div class="grid"></div>
+  </div>
+  <div class="zone zone-mideast">
+    <div class="zone-header"><div class="zone-name">Middle East &amp; Africa</div><div class="zone-rule"></div></div>
+    <div class="grid"></div>
+  </div>
+  <div class="zone zone-economy">
+    <div class="zone-header"><div class="zone-name">Economy</div><div class="zone-rule"></div></div>
+    <div class="grid"></div>
+  </div>
+  <div class="zone zone-science">
+    <div class="zone-header"><div class="zone-name">Science &amp; Tech</div><div class="zone-rule"></div></div>
+    <div class="grid"></div>
+  </div>
+
   <footer>World Happenings &nbsp;·&nbsp; Powered by Wally &nbsp;·&nbsp; Refreshed daily</footer>
-  <script>document.getElementById('datestr').textContent=new Date().toLocaleDateString('en-US',{weekday:'long',year:'numeric',month:'long',day:'numeric'});</script>
+  <script>document.getElementById('d').textContent=new Date().toLocaleDateString('en-US',{weekday:'long',year:'numeric',month:'long',day:'numeric'});</script>
 </body>
 </html>
