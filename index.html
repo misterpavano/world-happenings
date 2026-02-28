@@ -4,99 +4,200 @@
   <meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>World Happenings</title>
   <style>
-    @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Source+Serif+4:ital,wght@0,400;0,600;1,400&family=Inter:wght@400;500&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=Source+Serif+4:ital,wght@0,400;0,600;1,400&family=Inter:wght@400;500;600&display=swap');
     *{box-sizing:border-box;margin:0;padding:0;}
     body{background:#f0ebe0;color:#1a1008;font-family:'Source Serif 4',Georgia,serif;padding-bottom:80px;}
     header{background:#1a1008;color:#fff;padding:24px 40px 20px;text-align:center;}
     .masthead-meta{font-family:'Inter',sans-serif;font-size:10px;letter-spacing:0.2em;text-transform:uppercase;color:#888;margin-bottom:12px;display:flex;justify-content:space-between;}
     h1{font-family:'Playfair Display',serif;font-size:clamp(36px,6vw,72px);font-weight:900;letter-spacing:-0.02em;}
     .tagline{font-family:'Inter',sans-serif;font-size:11px;letter-spacing:0.25em;text-transform:uppercase;color:#888;margin-top:10px;}
+    .breaking{background:#b5181a;color:#fff;text-align:center;padding:9px;font-family:'Inter',sans-serif;font-size:11px;font-weight:600;letter-spacing:0.15em;text-transform:uppercase;}
+    .lead-story{background:#1a1008;color:#f0ebe0;padding:56px 40px;}
+    .lead-inner{max-width:800px;margin:0 auto;}
+    .lead-label{font-family:'Inter',sans-serif;font-size:10px;font-weight:600;letter-spacing:0.3em;text-transform:uppercase;color:#b5181a;margin-bottom:16px;}
+    .lead-headline{font-family:'Playfair Display',serif;font-size:clamp(28px,4.5vw,52px);font-weight:900;line-height:1.15;letter-spacing:-0.02em;margin-bottom:28px;color:#fff;}
+    .lead-kicker{font-family:'Inter',sans-serif;font-size:10px;font-weight:600;letter-spacing:0.2em;text-transform:uppercase;color:#888;margin-bottom:6px;}
+    .lead-body{font-size:16px;line-height:1.85;color:#c8bfaf;margin-bottom:20px;}
+    .lead-body+.lead-kicker{margin-top:12px;}
+    .lead-link{display:inline-block;margin-top:20px;font-family:'Inter',sans-serif;font-size:12px;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:#f0ebe0;border-bottom:2px solid #b5181a;padding-bottom:2px;text-decoration:none;}
+    .lead-link:hover{color:#b5181a;}
+    .news5{background:#e8e0d0;border-top:3px solid #1a1008;border-bottom:3px solid #1a1008;padding:28px 40px;}
+    .news5-label{font-family:'Inter',sans-serif;font-size:10px;font-weight:600;letter-spacing:0.3em;text-transform:uppercase;color:#888;margin-bottom:16px;}
+    .news5-list{display:flex;flex-wrap:wrap;gap:14px 32px;list-style:none;padding:0;}
+    .news5-list li{font-family:'Source Serif 4',serif;font-size:14px;line-height:1.6;color:#1a1008;flex:1 1 280px;}
     .zone{padding:40px;}
     .zone-mideast{background:#fffbf0;border-top:4px solid #92400e;}
     .zone-americas{background:#fff8f0;border-top:4px solid #b5181a;}
     .zone-europe{background:#f0f4ff;border-top:4px solid #1a4480;}
     .zone-economy{background:#fafafa;border-top:4px solid #374151;}
     .zone-header{display:flex;align-items:baseline;gap:16px;margin-bottom:24px;padding-bottom:10px;border-bottom:2px solid;}
-    .zone-mideast .zone-header{border-color:#92400e;} .zone-americas .zone-header{border-color:#b5181a;} .zone-europe .zone-header{border-color:#1a4480;} .zone-economy .zone-header{border-color:#374151;}
+    .zone-mideast .zone-header{border-color:#92400e;}.zone-americas .zone-header{border-color:#b5181a;}.zone-europe .zone-header{border-color:#1a4480;}.zone-economy .zone-header{border-color:#374151;}
     .zone-name{font-family:'Playfair Display',serif;font-size:22px;font-weight:700;}
-    .zone-mideast .zone-name{color:#92400e;} .zone-americas .zone-name{color:#b5181a;} .zone-europe .zone-name{color:#1a4480;} .zone-economy .zone-name{color:#374151;}
+    .zone-mideast .zone-name{color:#92400e;}.zone-americas .zone-name{color:#b5181a;}.zone-europe .zone-name{color:#1a4480;}.zone-economy .zone-name{color:#374151;}
     .zone-rule{flex:1;height:1px;background:currentColor;opacity:0.2;}
     .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:20px;}
     .card{padding:20px;text-decoration:none;color:inherit;display:block;border:1px solid rgba(0,0,0,0.08);transition:box-shadow 0.15s;}
     .card:hover{box-shadow:0 4px 16px rgba(0,0,0,0.12);}
-    .zone-mideast .card{background:#fffdf7;} .zone-americas .card{background:#fff;} .zone-europe .card{background:#f7f9ff;} .zone-economy .card{background:#fff;}
+    .zone-mideast .card{background:#fffdf7;}.zone-americas .card{background:#fff;}.zone-europe .card{background:#f7f9ff;}.zone-economy .card{background:#fff;}
     .card-region{font-family:'Inter',sans-serif;font-size:10px;text-transform:uppercase;letter-spacing:0.15em;font-weight:500;margin-bottom:8px;}
-    .zone-mideast .card-region{color:#92400e;} .zone-americas .card-region{color:#b5181a;} .zone-europe .card-region{color:#1a4480;} .zone-economy .card-region{color:#374151;}
+    .zone-mideast .card-region{color:#92400e;}.zone-americas .card-region{color:#b5181a;}.zone-europe .card-region{color:#1a4480;}.zone-economy .card-region{color:#374151;}
     .card h3{font-family:'Playfair Display',serif;font-size:17px;font-weight:700;line-height:1.35;margin-bottom:10px;}
     .card p{font-size:13px;line-height:1.75;color:#4a3f30;}
     .card-foot{margin-top:12px;padding-top:10px;border-top:1px solid rgba(0,0,0,0.08);font-family:'Inter',sans-serif;font-size:11px;color:#888;display:flex;justify-content:space-between;}
-    .breaking{background:#b5181a;color:#fff;text-align:center;padding:8px;font-family:'Inter',sans-serif;font-size:11px;font-weight:600;letter-spacing:0.15em;text-transform:uppercase;}
-    footer{text-align:center;padding:24px 40px;font-family:'Inter',sans-serif;font-size:11px;color:#555;border-top:3px double #1a1008;background:#1a1008;color:#888;}
-    @media(max-width:768px){header,.zone{padding:16px;}.masthead-meta{flex-direction:column;gap:4px;text-align:center;}.grid{grid-template-columns:1fr;}}
+    .card.lead-card{grid-column:1/-1;display:grid;grid-template-columns:1fr auto;gap:0;border-width:2px;}
+    .lead-card-body{padding:0;}
+    .lead-card .what-it-means{margin-top:12px;padding:10px 14px;border-left:3px solid;font-size:12.5px;line-height:1.7;font-style:italic;color:#4a3f30;background:rgba(0,0,0,0.03);}
+    .zone-mideast .lead-card{border-color:#92400e;}.zone-mideast .lead-card .what-it-means{border-color:#92400e;}
+    .zone-americas .lead-card{border-color:#b5181a;}.zone-americas .lead-card .what-it-means{border-color:#b5181a;}
+    .zone-europe .lead-card{border-color:#1a4480;}.zone-europe .lead-card .what-it-means{border-color:#1a4480;}
+    .zone-economy .lead-card{border-color:#374151;}.zone-economy .lead-card .what-it-means{border-color:#374151;}
+    .card.lead-card h3{font-size:20px;}
+    .lead-card-badge{writing-mode:vertical-rl;text-orientation:mixed;font-family:'Inter',sans-serif;font-size:9px;font-weight:600;letter-spacing:0.25em;text-transform:uppercase;padding:16px 10px;display:flex;align-items:center;color:#fff;min-width:32px;}
+    .zone-mideast .lead-card-badge{background:#92400e;}.zone-americas .lead-card-badge{background:#b5181a;}.zone-europe .lead-card-badge{background:#1a4480;}.zone-economy .lead-card-badge{background:#374151;}
+    .finally{background:#f5f0e6;border-top:4px solid #92400e;padding:48px 40px;}
+    .finally-inner{max-width:720px;margin:0 auto;}
+    .finally-label{font-family:'Inter',sans-serif;font-size:10px;font-weight:600;letter-spacing:0.3em;text-transform:uppercase;color:#92400e;margin-bottom:12px;}
+    .finally-headline{font-family:'Playfair Display',serif;font-size:clamp(22px,3.5vw,34px);font-weight:700;font-style:italic;line-height:1.25;margin-bottom:20px;color:#1a1008;}
+    .finally-kicker{font-family:'Inter',sans-serif;font-size:10px;font-weight:600;letter-spacing:0.2em;text-transform:uppercase;color:#92400e;margin-bottom:6px;}
+    .finally-body{font-size:15px;line-height:1.85;color:#3a2f20;margin-bottom:16px;}
+    footer{text-align:center;padding:24px 40px;font-family:'Inter',sans-serif;font-size:11px;border-top:3px double #1a1008;background:#1a1008;color:#888;}
+    @media(max-width:768px){
+      header,.zone,.lead-story,.news5,.finally{padding:20px 16px;}
+      .masthead-meta{flex-direction:column;gap:4px;text-align:center;}
+      .grid{grid-template-columns:1fr;}
+      .card.lead-card{grid-template-columns:1fr;display:block;}
+      .lead-card-badge{writing-mode:horizontal-tb;padding:6px 12px;min-width:unset;}
+      .news5-list li{flex:1 1 100%;}
+    }
   </style>
 </head>
 <body>
+
   <header>
-    <div class="masthead-meta"><span>Saturday, February 28, 2026</span><span>World Desk — Wally</span><span>Daily Edition</span></div>
+    <div class="masthead-meta">
+      <span>Saturday, February 28, 2026</span>
+      <span>World Desk — Wally</span>
+      <span>Daily Edition</span>
+    </div>
     <h1>World Happenings</h1>
     <div class="tagline">Global News &amp; Current Events</div>
   </header>
-  <div class="breaking">⚡ Breaking — US &amp; Israel Launch Major Strikes on Iran</div>
 
-  <div class="zone zone-mideast">
+  <div class="breaking">&#9889; Breaking &#8212; US &amp; Israel Launch Coordinated Strikes on Iran &nbsp;&#183;&nbsp; Region-Wide Retaliation Underway</div>
+
+  <section class="lead-story">
+    <div class="lead-inner">
+      <div class="lead-label">The Big Story</div>
+      <h2 class="lead-headline">Operation Epic Fury &#8212; US &amp; Israel Strike Iran</h2>
+      <div class="lead-kicker">What&#8217;s going on:</div>
+      <p class="lead-body">Early Saturday, the US and Israel launched coordinated strikes on Iran targeting nuclear sites, missile installations, and locations near Ayatollah Khamenei&#8217;s compound. Trump announced the operation in an 8-minute Truth Social video. Iran retaliated fast &#8212; 200+ missiles fired at Israel, plus strikes on US bases in Bahrain, Kuwait, and Qatar. At least 201 people have been killed, 700+ injured. Airlines canceled flights across the region. Dubai told residents to stay indoors.</p>
+      <div class="lead-kicker">The takeaway:</div>
+      <p class="lead-body">This is the conflict that&#8217;s been simmering for decades finally boiling over. Trump explicitly said he didn&#8217;t want regime change &#8212; and yet here we are, mid-negotiations with Tehran. Oil spiked, markets braced, and the wider region is watching. This is a before-and-after moment regardless of what comes next.</p>
+      <a class="lead-link" href="https://apnews.com/article/iran-us-us-israel-trump-979a41042f073f8f4004e34e67b470f5" target="_blank">Read more &#8594;</a>
+    </div>
+  </section>
+
+  <section class="news5">
+    <div class="news5-label">News in 5</div>
+    <ul class="news5-list">
+      <li>&#127963; Iran&#8217;s foreign minister confirmed Khamenei and President Pezeshkian are alive &#8212; but neither has been seen publicly since before the strikes.</li>
+      <li>&#127979; More than 80 people were killed at a girls&#8217; school in southern Iran hit during the strikes, per local Iranian officials.</li>
+      <li>&#128165; Shrapnel from an Iranian missile strike on the UAE capital killed one person &#8212; conflict spillover hitting neutral ground.</li>
+      <li>&#128379; Democrats are eyeing a &#8220;blue wave&#8221; in November&#8217;s midterms, hoping to capture the House while the Senate remains a tough climb.</li>
+      <li>&#9992; Canada&#8217;s new PM Mark Carney visited India to rebuild economic ties &#8212; part of a broader push to reduce US economic dependence.</li>
+    </ul>
+  </section>
+
+  <section class="zone zone-mideast">
     <div class="zone-header"><div class="zone-name">Middle East</div><div class="zone-rule"></div></div>
     <div class="grid">
-      <a class="card" href="https://apnews.com/article/iran-us-explosion-tehran-c2f11247d8a66e36929266f2c557a54c" target="_blank">
-        <div class="card-region">🔴 Breaking</div>
-        <h3>US and Israel Launch Major Attack on Iran</h3>
-        <p>The US and Israel launched coordinated strikes on Iran. President Trump urged the Iranian public to "seize control of your destiny" and rise against the Islamic leadership. 201 reported killed, 747 injured.</p>
-        <div class="card-foot"><span>AP News</span><span>Feb 28, 2026</span></div>
+      <a class="card lead-card" href="https://www.bbc.com/news/live/cn5ge95q6y7t" target="_blank">
+        <div class="lead-card-body">
+          <div class="card-region">&#128308; Breaking</div>
+          <h3>Iran Retaliates &#8212; Strikes Hit Dubai, Doha, Kuwait &amp; Bahrain</h3>
+          <p>Iran launched retaliatory attacks across the region, hitting US allies. Explosions in Dubai, Doha, Bahrain, and Kuwait City. The UAE government urged citizens and residents to remain indoors.</p>
+          <div class="what-it-means"><strong>What it means:</strong> Iran is signaling it won&#8217;t absorb strikes passively &#8212; every US ally in the Gulf is now in range. The retaliation reshapes the calculus for every government that hosts American forces.</div>
+          <div class="card-foot"><span>BBC News</span><span>Feb 28, 2026</span></div>
+        </div>
+        <div class="lead-card-badge">Lead</div>
       </a>
-      <a class="card" href="https://www.bbc.com/news/live/cn5ge95q6y7t" target="_blank">
-        <div class="card-region">🔴 Breaking</div>
-        <h3>Iran Retaliates — Strikes Hit Dubai, Doha, Kuwait &amp; Bahrain</h3>
-        <p>Iran launched retaliatory attacks across the Middle East hitting US allies. Explosions reported in Dubai, Doha, Bahrain, and Kuwait. UAE urges citizens to remain indoors.</p>
-        <div class="card-foot"><span>BBC News</span><span>Feb 28, 2026</span></div>
-      </a>
-      <a class="card" href="https://www.msn.com/en-in/news/world/dubai-news-live-updates-uae-urges-citizens-to-remain-indoors" target="_blank">
+      <a class="card" href="https://www.yahoo.com/news/articles/airlines-suspend-middle-east-flights-100035838.html" target="_blank">
         <div class="card-region">Middle East</div>
-        <h3>UAE Issues Stay-Indoors Alert, Burj Khalifa Lights Remain On</h3>
-        <p>UAE government sent emergency SMS alerts urging citizens and residents to remain indoors. India's foreign minister expressed deep concern and contacted UAE counterpart.</p>
-        <div class="card-foot"><span>MSN/ANI</span><span>Feb 28, 2026</span></div>
+        <h3>Airlines Cancel Flights Across the Middle East</h3>
+        <p>Carriers suspended routes including to Dubai, the world&#8217;s busiest international hub. Thousands of passengers stranded as airspace closures spread.</p>
+        <div class="card-foot"><span>Yahoo News</span><span>Feb 28, 2026</span></div>
+      </a>
+      <a class="card" href="https://www.americamagazine.org/news/2026/02/28/sorrow-shock-for-catholics-in-middle-east-as-us-and-israel-strike-iran-amid-negotiations/" target="_blank">
+        <div class="card-region">Middle East</div>
+        <h3>Sorrow and Shock &#8212; Catholics in the Middle East React</h3>
+        <p>Religious leaders across the region issued statements urging prayer and peace as strikes unfolded on a Saturday morning. Local communities gathered amid uncertainty.</p>
+        <div class="card-foot"><span>America Magazine</span><span>Feb 28, 2026</span></div>
       </a>
     </div>
-  </div>
+  </section>
 
-  <div class="zone zone-americas">
+  <section class="zone zone-americas">
     <div class="zone-header"><div class="zone-name">Americas</div><div class="zone-rule"></div></div>
     <div class="grid">
-      <a class="card" href="https://www.usatoday.com/story/news/world/2026/02/28/why-us-israel-attack-iran/88898362007/" target="_blank">
+      <a class="card lead-card" href="https://www.wsj.com/us-news/more-americans-are-leaving-the-us-than-moving-here" target="_blank">
+        <div class="lead-card-body">
+          <div class="card-region">Americas</div>
+          <h3>The Donald Dash: More Americans Are Leaving Than Arriving</h3>
+          <p>For the first time since the Great Depression, more people left the US than moved in. Around 150,000 departed in 2025 alone. Ireland, Portugal, Albania, and Mexico are top destinations for the newly mobile.</p>
+          <div class="what-it-means"><strong>What it means:</strong> This isn&#8217;t just political &#8212; it&#8217;s a math problem. Housing, healthcare, student loans. Remote work made it possible. The political climate made it appealing. When people who can leave start doing so, that&#8217;s a signal worth watching.</div>
+          <div class="card-foot"><span>Wall Street Journal</span><span>Feb 28, 2026</span></div>
+        </div>
+        <div class="lead-card-badge">Lead</div>
+      </a>
+      <a class="card" href="https://www.cnn.com/2026/02/28/politics/regime-change-iran-trump" target="_blank">
         <div class="card-region">Analysis</div>
-        <h3>Why Did the US Attack Iran? What We Know</h3>
-        <p>Trump administration cited Iran's nuclear program acceleration and a direct threat to allied nations as justification. Joint strikes were weeks in planning. Congress was briefed hours before action.</p>
-        <div class="card-foot"><span>USA Today</span><span>Feb 28, 2026</span></div>
+        <h3>Trump Launches Regime-Change Effort He Pledged to Avoid</h3>
+        <p>CNN analysis on the contradiction at the heart of Trump&#8217;s Iran policy &#8212; he&#8217;s always positioned himself against regime change, and yet the strikes tell a different story.</p>
+        <div class="card-foot"><span>CNN</span><span>Feb 28, 2026</span></div>
+      </a>
+      <a class="card" href="https://www.theguardian.com/us-news/2026/feb/28/midterms-democrats-house-senate" target="_blank">
+        <div class="card-region">Politics</div>
+        <h3>Midterm Blue Wave? Democrats Eye House Takeover</h3>
+        <p>Democrats are optimistic about flipping the House in November but face an uphill Senate battle. Trump plans to campaign as if he&#8217;s personally on the ballot.</p>
+        <div class="card-foot"><span>The Guardian</span><span>Feb 28, 2026</span></div>
       </a>
     </div>
-  </div>
+  </section>
 
-  <div class="zone zone-economy">
+  <section class="zone zone-economy">
     <div class="zone-header"><div class="zone-name">Economy</div><div class="zone-rule"></div></div>
     <div class="grid">
-      <div class="card">
-        <div class="card-region">Markets</div>
-        <h3>Dow, S&amp;P 500, Nasdaq Fall to End February</h3>
-        <p>All three major indices fell to close out the month as AI spending concerns and geopolitical escalation rattled markets. Worst February performance for the S&P since 2020.</p>
-        <div class="card-foot"><span>Yahoo Finance</span><span>Feb 27, 2026</span></div>
-      </div>
+      <a class="card lead-card" href="https://invezz.com/news/2026/02/28/us-israel-strikes-on-iran-send-oil-prices-higher-markets-into-risk-mode/" target="_blank">
+        <div class="lead-card-body">
+          <div class="card-region">Markets</div>
+          <h3>Oil Spikes, Markets Brace as Iran Conflict Erupts</h3>
+          <p>US-Israel strikes on Iran sent oil prices sharply higher and pushed markets into risk-off mode. February ends as the worst month for the S&amp;P 500 since 2020.</p>
+          <div class="what-it-means"><strong>What it means:</strong> Energy markets are pricing in a prolonged conflict. Every week of sustained fighting in the Gulf adds pressure to supply chains, inflation, and Fed calculations. The timing &#8212; mid-rate-cycle &#8212; makes it especially complicated.</div>
+          <div class="card-foot"><span>Invezz</span><span>Feb 28, 2026</span></div>
+        </div>
+        <div class="lead-card-badge">Lead</div>
+      </a>
       <div class="card">
         <div class="card-region">Labor</div>
-        <h3>Block Cuts 50% of Workforce, Blames AI</h3>
-        <p>Payments firm Block fired nearly half its employees citing AI automation efficiency. Stock jumped $6B. Critics say AI is being used as convenient cover for long-overdue restructuring.</p>
-        <div class="card-foot"><span>Reuters</span><span>Feb 27, 2026</span></div>
+        <h3>Block Cuts 50% of Workforce, Cites AI</h3>
+        <p>Payments firm Block fired nearly half its staff citing automation efficiencies. Stock jumped $6B on the news. Critics say AI is being used as cover for long-overdue restructuring.</p>
+        <div class="card-foot"><span>Multiple sources</span><span>Feb 28, 2026</span></div>
       </div>
     </div>
-  </div>
+  </section>
 
-  <footer>World Happenings &nbsp;·&nbsp; Powered by Wally &nbsp;·&nbsp; Refreshed Saturday, February 28, 2026</footer>
+  <section class="finally">
+    <div class="finally-inner">
+      <div class="finally-label">And Finally&#8230;</div>
+      <h2 class="finally-headline">Punch the Monkey Is Doing His Best, and So Are We</h2>
+      <div class="finally-kicker">What&#8217;s going on:</div>
+      <p class="finally-body">A 7-month-old macaque named Punch at a Tokyo-area zoo was rejected by his mother, iced out by the other monkeys, and left clinging to a giant IKEA stuffed orangutan &#8212; the DJUNGELSKOG, for those keeping track. The internet adopted him instantly. He joined Harambe, Moo Deng, and others in the long lineage of collective emotional support animals the internet rallies behind in dark times.</p>
+      <div class="finally-kicker">The takeaway:</div>
+      <p class="finally-body">Even in a chaotic news week, people will stop for a small creature holding on tight. The other monkeys are reportedly starting to warm up to Punch. The internet is rooting for it harder than most geopolitical outcomes this week. Sometimes that&#8217;s enough.</p>
+    </div>
+  </section>
+
+  <footer>World Happenings &nbsp;&#183;&nbsp; Powered by Wally &nbsp;&#183;&nbsp; Refreshed Saturday, February 28, 2026</footer>
+
 </body>
 </html>
