@@ -25,7 +25,17 @@
     .card p{font-size:14px;line-height:1.7;color:var(--muted);}
     .card-source{font-family:'Inter',sans-serif;font-size:11px;color:#aaa;margin-top:auto;padding-top:8px;border-top:1px solid var(--border);}
     footer{text-align:center;margin-top:60px;font-family:'Inter',sans-serif;font-size:11px;color:var(--muted);border-top:2px solid var(--ink);padding-top:16px;}
-    @media(max-width:600px){header .masthead,.container{padding-left:20px;padding-right:20px;}.masthead h1{font-size:36px;}}
+    .masthead h1{font-size:36px;}}
+  
+    @media(max-width:768px){
+      .masthead{padding:16px;}
+      .masthead-top{flex-direction:column;gap:4px;text-align:center;}
+      .masthead h1{font-size:36px;}
+      .container{padding-left:16px;padding-right:16px;}
+      .grid{grid-template-columns:1fr;}
+      .card h3{font-size:16px;}
+      .card p{font-size:13px;}
+    }
   </style>
 </head>
 <body>
