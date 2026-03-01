@@ -29,18 +29,40 @@
     .zone-mideast{background:#fffbf0;border-top:4px solid #92400e;}
     .zone-americas{background:#fff8f0;border-top:4px solid #b5181a;}
     .zone-europe{background:#f0f4ff;border-top:4px solid #1a4480;}
+    .zone-asia{background:#f0fff4;border-top:4px solid #166534;}
     .zone-economy{background:#fafafa;border-top:4px solid #374151;}
+    .zone-science{background:#fdf4ff;border-top:4px solid #6b21a8;}
     .zone-header{display:flex;align-items:baseline;gap:16px;margin-bottom:24px;padding-bottom:10px;border-bottom:2px solid;}
-    .zone-mideast .zone-header{border-color:#92400e;}.zone-americas .zone-header{border-color:#b5181a;}.zone-europe .zone-header{border-color:#1a4480;}.zone-economy .zone-header{border-color:#374151;}
+    .zone-mideast .zone-header{border-color:#92400e;}
+    .zone-americas .zone-header{border-color:#b5181a;}
+    .zone-europe .zone-header{border-color:#1a4480;}
+    .zone-asia .zone-header{border-color:#166534;}
+    .zone-economy .zone-header{border-color:#374151;}
+    .zone-science .zone-header{border-color:#6b21a8;}
     .zone-name{font-family:'Playfair Display',serif;font-size:22px;font-weight:700;}
-    .zone-mideast .zone-name{color:#92400e;}.zone-americas .zone-name{color:#b5181a;}.zone-europe .zone-name{color:#1a4480;}.zone-economy .zone-name{color:#374151;}
+    .zone-mideast .zone-name{color:#92400e;}
+    .zone-americas .zone-name{color:#b5181a;}
+    .zone-europe .zone-name{color:#1a4480;}
+    .zone-asia .zone-name{color:#166534;}
+    .zone-economy .zone-name{color:#374151;}
+    .zone-science .zone-name{color:#6b21a8;}
     .zone-rule{flex:1;height:1px;background:currentColor;opacity:0.2;}
     .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:20px;}
     .card{padding:20px;text-decoration:none;color:inherit;display:block;border:1px solid rgba(0,0,0,0.08);transition:box-shadow 0.15s;}
     .card:hover{box-shadow:0 4px 16px rgba(0,0,0,0.12);}
-    .zone-mideast .card{background:#fffdf7;}.zone-americas .card{background:#fff;}.zone-europe .card{background:#f7f9ff;}.zone-economy .card{background:#fff;}
+    .zone-mideast .card{background:#fffdf7;}
+    .zone-americas .card{background:#fff;}
+    .zone-europe .card{background:#f7f9ff;}
+    .zone-asia .card{background:#f0fdf4;}
+    .zone-economy .card{background:#fff;}
+    .zone-science .card{background:#fdf4ff;}
     .card-region{font-family:'Inter',sans-serif;font-size:10px;text-transform:uppercase;letter-spacing:0.15em;font-weight:500;margin-bottom:8px;}
-    .zone-mideast .card-region{color:#92400e;}.zone-americas .card-region{color:#b5181a;}.zone-europe .card-region{color:#1a4480;}.zone-economy .card-region{color:#374151;}
+    .zone-mideast .card-region{color:#92400e;}
+    .zone-americas .card-region{color:#b5181a;}
+    .zone-europe .card-region{color:#1a4480;}
+    .zone-asia .card-region{color:#166534;}
+    .zone-economy .card-region{color:#374151;}
+    .zone-science .card-region{color:#6b21a8;}
     .card h3{font-family:'Playfair Display',serif;font-size:17px;font-weight:700;line-height:1.35;margin-bottom:10px;}
     .card p{font-size:13px;line-height:1.75;color:#4a3f30;}
     .card-foot{margin-top:12px;padding-top:10px;border-top:1px solid rgba(0,0,0,0.08);font-family:'Inter',sans-serif;font-size:11px;color:#888;display:flex;justify-content:space-between;}
@@ -50,10 +72,17 @@
     .zone-mideast .lead-card{border-color:#92400e;}.zone-mideast .lead-card .what-it-means{border-color:#92400e;}
     .zone-americas .lead-card{border-color:#b5181a;}.zone-americas .lead-card .what-it-means{border-color:#b5181a;}
     .zone-europe .lead-card{border-color:#1a4480;}.zone-europe .lead-card .what-it-means{border-color:#1a4480;}
+    .zone-asia .lead-card{border-color:#166534;}.zone-asia .lead-card .what-it-means{border-color:#166534;}
     .zone-economy .lead-card{border-color:#374151;}.zone-economy .lead-card .what-it-means{border-color:#374151;}
+    .zone-science .lead-card{border-color:#6b21a8;}.zone-science .lead-card .what-it-means{border-color:#6b21a8;}
     .card.lead-card h3{font-size:20px;}
     .lead-card-badge{writing-mode:vertical-rl;text-orientation:mixed;font-family:'Inter',sans-serif;font-size:9px;font-weight:600;letter-spacing:0.25em;text-transform:uppercase;padding:16px 10px;display:flex;align-items:center;color:#fff;min-width:32px;}
-    .zone-mideast .lead-card-badge{background:#92400e;}.zone-americas .lead-card-badge{background:#b5181a;}.zone-europe .lead-card-badge{background:#1a4480;}.zone-economy .lead-card-badge{background:#374151;}
+    .zone-mideast .lead-card-badge{background:#92400e;}
+    .zone-americas .lead-card-badge{background:#b5181a;}
+    .zone-europe .lead-card-badge{background:#1a4480;}
+    .zone-asia .lead-card-badge{background:#166534;}
+    .zone-economy .lead-card-badge{background:#374151;}
+    .zone-science .lead-card-badge{background:#6b21a8;}
     .finally{background:#f5f0e6;border-top:4px solid #92400e;padding:48px 40px;}
     .finally-inner{max-width:720px;margin:0 auto;}
     .finally-label{font-family:'Inter',sans-serif;font-size:10px;font-weight:600;letter-spacing:0.3em;text-transform:uppercase;color:#92400e;margin-bottom:12px;}
@@ -83,121 +112,242 @@
     <div class="tagline">Global News &amp; Current Events</div>
   </header>
 
-  <div class="breaking">&#9889; Breaking &#8212; US &amp; Israel Launch Coordinated Strikes on Iran &nbsp;&#183;&nbsp; Region-Wide Retaliation Underway</div>
+  <div class="breaking">&#9889; Breaking — Khamenei Killed in US-Israel Strike &nbsp;&#183;&nbsp; Iran Retaliates Across Gulf &nbsp;&#183;&nbsp; Pakistan-Afghanistan War Escalates</div>
 
   <section class="lead-story">
     <div class="lead-inner">
       <div class="lead-label">The Big Story</div>
-      <h2 class="lead-headline">Operation Epic Fury &#8212; US &amp; Israel Strike Iran</h2>
-      <div class="lead-kicker">What&#8217;s going on:</div>
-      <p class="lead-body">Early Saturday, the US and Israel launched coordinated strikes on Iran targeting nuclear sites, missile installations, and locations near Ayatollah Khamenei&#8217;s compound. Trump announced the operation in an 8-minute Truth Social video. Iran retaliated fast &#8212; 200+ missiles fired at Israel, plus strikes on US bases in Bahrain, Kuwait, and Qatar. At least 201 people have been killed, 700+ injured. Airlines canceled flights across the region. Dubai told residents to stay indoors.</p>
+      <h2 class="lead-headline">Khamenei Is Dead — US &amp; Israel Enter Day 2 of Iran Strikes</h2>
+      <div class="lead-kicker">What happened:</div>
+      <p class="lead-body">Iran's Supreme Leader Ayatollah Ali Khamenei, 86, was killed Saturday in a joint US-Israeli strike on his compound in Tehran — confirmed by Al Jazeera, Reuters, and CNBC. His daughter, son-in-law, and grandson were also killed. Iran has begun a 40-day mourning period and appointed Alireza Arafi as interim Supreme Leader. The strikes, now in their second day, have targeted nuclear sites, missile installations, and military infrastructure. Iran retaliated with a barrage of ballistic missiles at Israel and US bases across the Gulf.</p>
       <div class="lead-kicker">The takeaway:</div>
-      <p class="lead-body">This is the conflict that&#8217;s been simmering for decades finally boiling over. Trump explicitly said he didn&#8217;t want regime change &#8212; and yet here we are, mid-negotiations with Tehran. Oil spiked, markets braced, and the wider region is watching. This is a before-and-after moment regardless of what comes next.</p>
-      <a class="lead-link" href="https://apnews.com/article/iran-us-us-israel-trump-979a41042f073f8f4004e34e67b470f5" target="_blank">Read more &#8594;</a>
+      <p class="lead-body">This is a watershed moment. A US-backed strike killed a sitting head of state of a major regional power — something that hasn't happened since Hussein's capture, and nothing like the elimination of a supreme leader. Trump called Khamenei's death "necessary." Oil markets are bracing for $100-a-barrel scenarios. The world just changed in a very permanent way.</p>
+      <a class="lead-link" href="https://www.nytimes.com/live/2026/03/01/world/iran-attack-khamenei-trump" target="_blank">Read more &#8594;</a>
     </div>
   </section>
 
   <section class="news5">
     <div class="news5-label">News in 5</div>
     <ul class="news5-list">
-      <li>&#127963; Iran&#8217;s foreign minister confirmed Khamenei and President Pezeshkian are alive &#8212; but neither has been seen publicly since before the strikes.</li>
-      <li>&#127979; More than 80 people were killed at a girls&#8217; school in southern Iran hit during the strikes, per local Iranian officials.</li>
-      <li>&#128165; Shrapnel from an Iranian missile strike on the UAE capital killed one person &#8212; conflict spillover hitting neutral ground.</li>
-      <li>&#128379; Democrats are eyeing a &#8220;blue wave&#8221; in November&#8217;s midterms, hoping to capture the House while the Senate remains a tough climb.</li>
-      <li>&#9992; Canada&#8217;s new PM Mark Carney visited India to rebuild economic ties &#8212; part of a broader push to reduce US economic dependence.</li>
+      <li>&#128165; Iran fired 200+ missiles at Israel and launched retaliatory strikes on US military bases in Bahrain, Kuwait, and Qatar overnight.</li>
+      <li>&#127979; A US-Israeli strike hit an Iranian girls' school in southern Iran — Iran's judiciary says at least 85 students were killed.</li>
+      <li>&#9992; Dubai and Abu Dhabi airports were damaged in Iranian retaliatory strikes; airlines suspended Middle East routes globally.</li>
+      <li>&#127758; Pakistan declared "open war" on Afghanistan's Taliban government after PAF airstrikes killed 52+ in Nangarhar, Paktika, and Khost.</li>
+      <li>&#128200; Brent crude surged toward $100/barrel — Goldman Sachs says the oil shock is the biggest risk to their 2026 global economic outlook.</li>
     </ul>
   </section>
 
+  <!-- MIDDLE EAST & AFRICA -->
   <section class="zone zone-mideast">
-    <div class="zone-header"><div class="zone-name">Middle East</div><div class="zone-rule"></div></div>
+    <div class="zone-header"><div class="zone-name">Middle East &amp; Africa</div><div class="zone-rule"></div></div>
     <div class="grid">
-      <a class="card lead-card" href="https://www.bbc.com/news/live/cn5ge95q6y7t" target="_blank">
+
+      <a class="card lead-card" href="https://www.aljazeera.com/news/2026/3/1/more-blasts-rock-dubai-doha-and-manama-as-iran-targets-us-assets-in-gulf" target="_blank">
         <div class="lead-card-body">
           <div class="card-region">&#128308; Breaking</div>
-          <h3>Iran Retaliates &#8212; Strikes Hit Dubai, Doha, Kuwait &amp; Bahrain</h3>
-          <p>Iran launched retaliatory attacks across the region, hitting US allies. Explosions in Dubai, Doha, Bahrain, and Kuwait City. The UAE government urged citizens and residents to remain indoors.</p>
-          <div class="what-it-means"><strong>What it means:</strong> Iran is signaling it won&#8217;t absorb strikes passively &#8212; every US ally in the Gulf is now in range. The retaliation reshapes the calculus for every government that hosts American forces.</div>
-          <div class="card-foot"><span>BBC News</span><span>Feb 28, 2026</span></div>
+          <h3>Blasts Rock Dubai, Doha, Manama as Iran Targets Gulf States</h3>
+          <p>Iran launched retaliatory missile and drone strikes across Gulf states hosting US military assets. Explosions struck central Dubai, including the iconic Fairmont Hotel. Qatar's Doha and Bahrain's Manama were also hit. The UAE urged citizens to remain indoors; airports in Dubai and Abu Dhabi sustained damage.</p>
+          <div class="what-it-means"><strong>What it means:</strong> Iran isn't absorbing these strikes quietly — it's broadening the conflict to every country that hosts an American base. The Gulf's economic miracle cities are now directly in the blast radius, which changes the risk calculus for every government from Riyadh to Muscat.</div>
+          <div class="card-foot"><span>Al Jazeera</span><span>Mar 1, 2026</span></div>
         </div>
         <div class="lead-card-badge">Lead</div>
       </a>
-      <a class="card" href="https://www.yahoo.com/news/articles/airlines-suspend-middle-east-flights-100035838.html" target="_blank">
-        <div class="card-region">Middle East</div>
-        <h3>Airlines Cancel Flights Across the Middle East</h3>
-        <p>Carriers suspended routes including to Dubai, the world&#8217;s busiest international hub. Thousands of passengers stranded as airspace closures spread.</p>
-        <div class="card-foot"><span>Yahoo News</span><span>Feb 28, 2026</span></div>
+
+      <a class="card" href="https://www.aljazeera.com/news/2026/3/1/iran-begins-40-day-mourning-after-khamenei-killed-in-us-israeli-attack" target="_blank">
+        <div class="card-region">Iran</div>
+        <h3>Iran Appoints Interim Leader, Begins 40-Day Mourning for Khamenei</h3>
+        <p>Alireza Arafi was named interim Supreme Leader as Iran confirmed Khamenei's death. The country declared 40 days of national mourning, while Iran's surviving leadership vowed to "avenge" the killing and pledged to escalate military operations.</p>
+        <div class="card-foot"><span>Al Jazeera</span><span>Mar 1, 2026</span></div>
       </a>
-      <a class="card" href="https://www.americamagazine.org/news/2026/02/28/sorrow-shock-for-catholics-in-middle-east-as-us-and-israel-strike-iran-amid-negotiations/" target="_blank">
-        <div class="card-region">Middle East</div>
-        <h3>Sorrow and Shock &#8212; Catholics in the Middle East React</h3>
-        <p>Religious leaders across the region issued statements urging prayer and peace as strikes unfolded on a Saturday morning. Local communities gathered amid uncertainty.</p>
-        <div class="card-foot"><span>America Magazine</span><span>Feb 28, 2026</span></div>
+
+      <a class="card" href="https://au.int/en/pressreleases/20260228/au-commission-press-statement-us-iran-military-escalation" target="_blank">
+        <div class="card-region">Africa</div>
+        <h3>African Union Condemns Strikes, Warns of Global Destabilization</h3>
+        <p>The African Union Commission Chair issued a statement expressing "deep concern" over the US-Israel strikes on Iran and calling for an immediate ceasefire. The AU warned that wider conflict would devastate African economies dependent on Gulf trade routes and remittances.</p>
+        <div class="card-foot"><span>African Union</span><span>Feb 28, 2026</span></div>
       </a>
+
     </div>
   </section>
 
+  <!-- AMERICAS -->
   <section class="zone zone-americas">
     <div class="zone-header"><div class="zone-name">Americas</div><div class="zone-rule"></div></div>
     <div class="grid">
-      <a class="card lead-card" href="https://www.wsj.com/us-news/more-americans-are-leaving-the-us-than-moving-here" target="_blank">
+
+      <a class="card lead-card" href="https://www.pbs.org/newshour/nation/members-of-congress-demand-swift-vote-on-war-powers-resolution-after-trump-orders-iran-strike-without-congressional-approval" target="_blank">
         <div class="lead-card-body">
-          <div class="card-region">Americas</div>
-          <h3>The Donald Dash: More Americans Are Leaving Than Arriving</h3>
-          <p>For the first time since the Great Depression, more people left the US than moved in. Around 150,000 departed in 2025 alone. Ireland, Portugal, Albania, and Mexico are top destinations for the newly mobile.</p>
-          <div class="what-it-means"><strong>What it means:</strong> This isn&#8217;t just political &#8212; it&#8217;s a math problem. Housing, healthcare, student loans. Remote work made it possible. The political climate made it appealing. When people who can leave start doing so, that&#8217;s a signal worth watching.</div>
-          <div class="card-foot"><span>Wall Street Journal</span><span>Feb 28, 2026</span></div>
+          <div class="card-region">US Politics</div>
+          <h3>Congress Demands War Powers Vote — Trump Struck Iran Without Approval</h3>
+          <p>Democrats and some Republicans are demanding a swift vote on a war powers resolution after Trump ordered strikes on Iran without congressional authorization. Members called the action "unconstitutional." The Republican majority in both chambers has already drafted competing resolutions but faces internal fractures over the legality of the action.</p>
+          <div class="what-it-means"><strong>What it means:</strong> Trump has now launched combat operations against a major state actor without going to Congress — a major separation-of-powers flashpoint. The war powers fight won't stop the conflict, but it sets a precedent that either party will weaponize the next time the other holds the White House.</div>
+          <div class="card-foot"><span>PBS NewsHour</span><span>Feb 28, 2026</span></div>
         </div>
         <div class="lead-card-badge">Lead</div>
       </a>
-      <a class="card" href="https://www.cnn.com/2026/02/28/politics/regime-change-iran-trump" target="_blank">
+
+      <a class="card" href="https://www.nytimes.com/2026/02/28/us/politics/trump-peace-president-war.html" target="_blank">
         <div class="card-region">Analysis</div>
-        <h3>Trump Launches Regime-Change Effort He Pledged to Avoid</h3>
-        <p>CNN analysis on the contradiction at the heart of Trump&#8217;s Iran policy &#8212; he&#8217;s always positioned himself against regime change, and yet the strikes tell a different story.</p>
-        <div class="card-foot"><span>CNN</span><span>Feb 28, 2026</span></div>
+        <h3>Trump, the Self-Declared Peace President, Goes to War</h3>
+        <p>Analysis from the NYT on the contradiction at Trump's core: a politician who rode anti-war sentiment into office has now launched the most consequential military operation in decades, targeting a nation he was simultaneously negotiating with.</p>
+        <div class="card-foot"><span>New York Times</span><span>Feb 28, 2026</span></div>
       </a>
-      <a class="card" href="https://www.theguardian.com/us-news/2026/feb/28/midterms-democrats-house-senate" target="_blank">
-        <div class="card-region">Politics</div>
-        <h3>Midterm Blue Wave? Democrats Eye House Takeover</h3>
-        <p>Democrats are optimistic about flipping the House in November but face an uphill Senate battle. Trump plans to campaign as if he&#8217;s personally on the ballot.</p>
-        <div class="card-foot"><span>The Guardian</span><span>Feb 28, 2026</span></div>
+
+      <a class="card" href="https://www.america-times.com/trump-administration-finalizes-trade-deal-with-indonesia/" target="_blank">
+        <div class="card-region">Trade</div>
+        <h3>US-Indonesia Trade Deal Finalized — 99% of US Exports Get Tariff-Free Access</h3>
+        <p>The Trump administration finalized a bilateral trade agreement with Indonesia, giving US products tariff-free access to 99% of Indonesian markets. The deal is framed as a model for the administration's "reciprocal trade" approach as it restructures post-China trade relationships.</p>
+        <div class="card-foot"><span>America Times</span><span>Feb 28, 2026</span></div>
       </a>
+
     </div>
   </section>
 
+  <!-- EUROPE -->
+  <section class="zone zone-europe">
+    <div class="zone-header"><div class="zone-name">Europe</div><div class="zone-rule"></div></div>
+    <div class="grid">
+
+      <a class="card lead-card" href="https://www.theguardian.com/world/2026/feb/28/uk-france-germany-urge-iran-negotiate-solution-us-israel-attack-europe" target="_blank">
+        <div class="lead-card-body">
+          <div class="card-region">Diplomacy</div>
+          <h3>UK, France, Germany Urge Iran to Negotiate — Spain Breaks Ranks and Condemns Strikes</h3>
+          <p>The E3 — France, Germany, and the UK — called on Iran to seek a "negotiated solution" rather than escalate further, while stopping short of condemning the US and Israeli strikes. Spain broke from the consensus, slamming the attacks directly and demanding an emergency EU foreign ministers meeting. The bloc is visibly divided.</p>
+          <div class="what-it-means"><strong>What it means:</strong> Europe has no unified response to its biggest security test in years. The E3 are trying to hold the diplomatic middle — but Spain's reaction reflects growing sentiment that Europe can't simply back every American military decision. The cracks inside the EU's foreign policy consensus are widening fast.</div>
+          <div class="card-foot"><span>The Guardian / Reuters</span><span>Feb 28, 2026</span></div>
+        </div>
+        <div class="lead-card-badge">Lead</div>
+      </a>
+
+      <a class="card" href="https://www.consilium.europa.eu/en/press/press-releases/2026/02/28/joint-statement-by-president-costa-and-president-von-der-leyen-on-developments-in-iran/" target="_blank">
+        <div class="card-region">EU</div>
+        <h3>EU Issues Joint Statement — Extensive Sanctions Already in Place Against Iran</h3>
+        <p>European Council President Costa and Commission President von der Leyen issued a joint statement noting that the EU has "adopted extensive sanctions" against Iran's regime and Revolutionary Guards. The statement called for immediate de-escalation without taking sides on the strikes themselves.</p>
+        <div class="card-foot"><span>European Council</span><span>Feb 28, 2026</span></div>
+      </a>
+
+      <a class="card" href="https://www.aljazeera.com/news/2026/2/28/world-reacts-to-us-israel-attack-on-iran-tehran-retaliation" target="_blank">
+        <div class="card-region">Diplomacy</div>
+        <h3>Oman Warns US "Not to Get Sucked In" — Global Reactions Pour In</h3>
+        <p>Mediator Oman — which has historically served as a back-channel between Washington and Tehran — issued an unusually direct public warning to the US not to deepen its military involvement in Iran. Russia and China condemned the strikes as a violation of international law and called for an emergency UN Security Council session.</p>
+        <div class="card-foot"><span>Al Jazeera</span><span>Feb 28, 2026</span></div>
+      </a>
+
+    </div>
+  </section>
+
+  <!-- ASIA & PACIFIC -->
+  <section class="zone zone-asia">
+    <div class="zone-header"><div class="zone-name">Asia &amp; Pacific</div><div class="zone-rule"></div></div>
+    <div class="grid">
+
+      <a class="card lead-card" href="https://www.reuters.com/world/asia-pacific/blasts-heard-kabul-amid-clashes-between-afghan-pakistani-forces-2026-03-01/" target="_blank">
+        <div class="lead-card-body">
+          <div class="card-region">&#128308; Developing</div>
+          <h3>Pakistan-Afghanistan War Intensifies — Afghan Forces Fire on Pakistani Jets Over Kabul</h3>
+          <p>Afghanistan said it was firing on Pakistani Air Force jets directly over Kabul after fresh explosions rocked the capital Sunday morning. Pakistan's Operation "Ghazab Lil Haqq" — launched last week — has killed at least 52 people in airstrikes across Nangarhar, Paktika, and Khost. Taliban suicide drones targeted Pakistani positions in retaliation. Pakistan declared "open war" on the Taliban government Friday.</p>
+          <div class="what-it-means"><strong>What it means:</strong> Two nuclear-adjacent states with deep mutual grievances are now in active combat — and there's no clear endgame. Pakistan's goal is to eliminate TTP sanctuaries; Afghanistan's Taliban has every incentive to escalate to prove their staying power. This conflict has flared before, but the scale and rhetoric this time are different.</div>
+          <div class="card-foot"><span>Reuters / AP</span><span>Mar 1, 2026</span></div>
+        </div>
+        <div class="lead-card-badge">Lead</div>
+      </a>
+
+      <a class="card" href="https://apnews.com/article/afghanistan-pakistan-fighting-bagram-border-efccb510a9cc8fe4eaecd676a80faea6" target="_blank">
+        <div class="card-region">Afghanistan</div>
+        <h3>Taliban Says It Thwarted Pakistani Airstrike on Bagram Air Base</h3>
+        <p>Afghanistan's Taliban government claimed its air defenses intercepted a Pakistani airstrike targeting the strategically significant Bagram Air Base north of Kabul. Pakistan did not confirm the target. Border clashes have killed dozens of soldiers and civilians since October.</p>
+        <div class="card-foot"><span>AP News</span><span>Mar 1, 2026</span></div>
+      </a>
+
+      <a class="card" href="https://english.news.cn/20260301/4a0d5e1c8cf74c9b8a64436d5161e2b5/c.html" target="_blank">
+        <div class="card-region">South Asia</div>
+        <h3>Protests Erupt in Pakistan and Iraq Over Khamenei's Death</h3>
+        <p>Thousands took to the streets in Karachi, Lahore, and Baghdad following confirmation of Khamenei's killing. At least 9 people died in clashes in Karachi as security forces tried to disperse crowds. Shia communities across South Asia and the broader Muslim world are in mourning.</p>
+        <div class="card-foot"><span>Xinhua / Reuters</span><span>Mar 1, 2026</span></div>
+      </a>
+
+    </div>
+  </section>
+
+  <!-- ECONOMY -->
   <section class="zone zone-economy">
     <div class="zone-header"><div class="zone-name">Economy</div><div class="zone-rule"></div></div>
     <div class="grid">
-      <a class="card lead-card" href="https://invezz.com/news/2026/02/28/us-israel-strikes-on-iran-send-oil-prices-higher-markets-into-risk-mode/" target="_blank">
+
+      <a class="card lead-card" href="https://www.reuters.com/markets/commodities/iran-war-throws-oil-market-into-biggest-crisis-decades-2026-02-28/" target="_blank">
         <div class="lead-card-body">
-          <div class="card-region">Markets</div>
-          <h3>Oil Spikes, Markets Brace as Iran Conflict Erupts</h3>
-          <p>US-Israel strikes on Iran sent oil prices sharply higher and pushed markets into risk-off mode. February ends as the worst month for the S&amp;P 500 since 2020.</p>
-          <div class="what-it-means"><strong>What it means:</strong> Energy markets are pricing in a prolonged conflict. Every week of sustained fighting in the Gulf adds pressure to supply chains, inflation, and Fed calculations. The timing &#8212; mid-rate-cycle &#8212; makes it especially complicated.</div>
-          <div class="card-foot"><span>Invezz</span><span>Feb 28, 2026</span></div>
+          <div class="card-region">Energy Markets</div>
+          <h3>Iran War Throws Oil Markets Into Biggest Crisis in Decades</h3>
+          <p>Brent crude — already at $70/barrel heading into the weekend — is expected to surge toward $100 when markets open Monday, according to Goldman Sachs, JPMorgan, and Barclays. The Strait of Hormuz, through which roughly 20% of the world's oil flows, is under direct threat as Iran has vowed to block shipping. Defense stocks surged in after-hours trading Friday.</p>
+          <div class="what-it-means"><strong>What it means:</strong> A sustained $90-100 oil scenario would reignite inflation just as central banks were declaring victory. It would hit the US consumer directly at the gas pump, complicate the Fed's rate path, and create a new headwind for every economy that hasn't locked in energy supply. This is the scenario that keeps energy ministers up at night.</div>
+          <div class="card-foot"><span>Reuters / WSJ</span><span>Feb 28, 2026</span></div>
         </div>
         <div class="lead-card-badge">Lead</div>
       </a>
-      <div class="card">
-        <div class="card-region">Labor</div>
-        <h3>Block Cuts 50% of Workforce, Cites AI</h3>
-        <p>Payments firm Block fired nearly half its staff citing automation efficiencies. Stock jumped $6B on the news. Critics say AI is being used as cover for long-overdue restructuring.</p>
-        <div class="card-foot"><span>Multiple sources</span><span>Feb 28, 2026</span></div>
-      </div>
+
+      <a class="card" href="https://www.cnbc.com/2026/03/01/iran-khamenei-trump-us-investors-markets.html" target="_blank">
+        <div class="card-region">Markets</div>
+        <h3>Investors Brace for Risk-Off Open as Middle East Conflict Widens</h3>
+        <p>With US equity markets closed for the weekend, futures signaled sharp losses when trading resumes Monday. The S&amp;P 500 already had its worst February since 2020 on Iran risk. Investors are moving into gold, bonds, and defense equities as the conflict enters a second day with no ceasefire in sight.</p>
+        <div class="card-foot"><span>CNBC</span><span>Mar 1, 2026</span></div>
+      </a>
+
+      <a class="card" href="https://www.threads.com/@economictimes/post/DVVLs5YjunP/" target="_blank">
+        <div class="card-region">Trade</div>
+        <h3>Moody's: Trump's Uniform 15% Tariff Could Benefit Parts of Asia-Pacific</h3>
+        <p>A new Moody's analysis finds that a proposed uniform 15% US tariff — replacing the patchwork of bilateral rates — could ironically benefit countries like Vietnam, India, and Indonesia whose goods currently face higher duties. The report complicates the conventional narrative around tariff fallout.</p>
+        <div class="card-foot"><span>Economic Times / Moody's</span><span>Feb 28, 2026</span></div>
+      </a>
+
     </div>
   </section>
 
+  <!-- SCIENCE & TECH -->
+  <section class="zone zone-science">
+    <div class="zone-header"><div class="zone-name">Science &amp; Tech</div><div class="zone-rule"></div></div>
+    <div class="grid">
+
+      <a class="card lead-card" href="https://www.cnbc.com/2026/02/28/google-wants-intrinsic-to-be-android-for-robots-moves-into-physical-ai.html" target="_blank">
+        <div class="lead-card-body">
+          <div class="card-region">Robotics / AI</div>
+          <h3>Google Wants Intrinsic to Be the "Android of Robotics" — Bets Big on Physical AI</h3>
+          <p>Google is positioning its robotics subsidiary Intrinsic as the foundational platform layer for physical AI — the Android equivalent for robots. The pitch: give manufacturers an open operating system so Google controls the ecosystem without building every robot itself. Intrinsic is now opening its platform to outside developers.</p>
+          <div class="what-it-means"><strong>What it means:</strong> If it works, this is a land-grab for the next computing platform. Physical AI — robots that operate in the real world — is where the next decade of productivity gains are expected. Google learned from Android that controlling the OS layer beats building the hardware. They're trying the same playbook again.</div>
+          <div class="card-foot"><span>CNBC</span><span>Feb 28, 2026</span></div>
+        </div>
+        <div class="lead-card-badge">Lead</div>
+      </a>
+
+      <a class="card" href="https://www.sciencedaily.com/releases/2026/02/260228082723.htm" target="_blank">
+        <div class="card-region">Biology</div>
+        <h3>Scientists Discover a Bacterial "Kill Switch" That Could Transform Antibiotic Treatment</h3>
+        <p>Caltech researchers identified a genetic kill switch that forces drug-resistant bacteria to self-destruct without harming surrounding cells. The discovery — published Friday — could offer a new class of treatments precisely when antibiotic resistance is being called a global health crisis in the making.</p>
+        <div class="card-foot"><span>Science Daily / Caltech</span><span>Feb 28, 2026</span></div>
+      </a>
+
+      <a class="card" href="https://www.earth.com/news/google-launches-30-million-ai-initiative-for-climate-science/" target="_blank">
+        <div class="card-region">Climate / AI</div>
+        <h3>Google Launches $30M AI Initiative for Climate Science</h3>
+        <p>Google announced a $30 million commitment to fund AI-powered climate research, including weather modeling, carbon sequestration mapping, and wildfire prediction. The initiative will partner with leading research universities and national labs over five years.</p>
+        <div class="card-foot"><span>Earth.com</span><span>Feb 28, 2026</span></div>
+      </a>
+
+    </div>
+  </section>
+
+  <!-- AND FINALLY -->
   <section class="finally">
     <div class="finally-inner">
-      <div class="finally-label">And Finally&#8230;</div>
-      <h2 class="finally-headline">Punch the Monkey Is Doing His Best, and So Are We</h2>
-      <div class="finally-kicker">What&#8217;s going on:</div>
-      <p class="finally-body">A 7-month-old macaque named Punch at a Tokyo-area zoo was rejected by his mother, iced out by the other monkeys, and left clinging to a giant IKEA stuffed orangutan &#8212; the DJUNGELSKOG, for those keeping track. The internet adopted him instantly. He joined Harambe, Moo Deng, and others in the long lineage of collective emotional support animals the internet rallies behind in dark times.</p>
+      <div class="finally-label">And Finally&hellip;</div>
+      <h2 class="finally-headline">The Monkey Who Clung to an IKEA Toy Taught the Internet Tenderness Again</h2>
+      <div class="finally-kicker">What's going on:</div>
+      <p class="finally-body">A 7-month-old macaque named Punch at a Japanese zoo was rejected by his mother, iced out by the troop, and left clinging to a giant IKEA DJUNGELSKOG stuffed orangutan for comfort. Photos circulated globally this week. The internet — which had just spent 48 hours processing a war — stopped completely. Punch trended in 14 countries.</p>
       <div class="finally-kicker">The takeaway:</div>
-      <p class="finally-body">Even in a chaotic news week, people will stop for a small creature holding on tight. The other monkeys are reportedly starting to warm up to Punch. The internet is rooting for it harder than most geopolitical outcomes this week. Sometimes that&#8217;s enough.</p>
+      <p class="finally-body">The other monkeys are reportedly starting to warm up to him. Zookeepers say he's eating well and clinging a little less desperately to the plush. He joins Harambe, Moo Deng, and a long lineage of animals the internet rallies around when it needs something uncomplicated to root for. Sometimes the news cycle delivers exactly the right small creature at the right moment. Go, Punch.</p>
     </div>
   </section>
 
-  <footer>World Happenings &nbsp;&#183;&nbsp; Powered by Wally &nbsp;&#183;&nbsp; Refreshed Saturday, February 28, 2026</footer>
+  <footer>World Happenings &nbsp;&middot;&nbsp; Powered by Wally &nbsp;&middot;&nbsp; Refreshed Saturday, February 28, 2026</footer>
 
 </body>
 </html>
