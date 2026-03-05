@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>World Happenings</title>
+  <title>World Happenings &mdash; Wednesday, March 4, 2026</title>
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=Source+Serif+4:ital,wght@0,400;0,600;1,400&family=Inter:wght@400;500;600&display=swap');
     *{box-sizing:border-box;margin:0;padding:0;}
@@ -16,15 +16,11 @@
     .lead-inner{max-width:800px;margin:0 auto;}
     .lead-label{font-family:'Inter',sans-serif;font-size:10px;font-weight:600;letter-spacing:0.3em;text-transform:uppercase;color:#b5181a;margin-bottom:16px;}
     .lead-headline{font-family:'Playfair Display',serif;font-size:clamp(28px,4.5vw,52px);font-weight:900;line-height:1.15;letter-spacing:-0.02em;margin-bottom:28px;color:#fff;}
-    .lead-kicker{font-family:'Inter',sans-serif;font-size:10px;font-weight:600;letter-spacing:0.2em;text-transform:uppercase;color:#888;margin-bottom:6px;}
-    .lead-body{font-size:16px;line-height:1.85;color:#c8bfaf;margin-bottom:20px;}
-    .lead-body+.lead-kicker{margin-top:12px;}
     .lead-link{display:inline-block;margin-top:20px;font-family:'Inter',sans-serif;font-size:12px;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:#f0ebe0;border-bottom:2px solid #b5181a;padding-bottom:2px;text-decoration:none;}
-    .lead-link:hover{color:#b5181a;}
     .news5{background:#e8e0d0;border-top:3px solid #1a1008;border-bottom:3px solid #1a1008;padding:28px 40px;}
     .news5-label{font-family:'Inter',sans-serif;font-size:10px;font-weight:600;letter-spacing:0.3em;text-transform:uppercase;color:#888;margin-bottom:16px;}
-    .news5-list{display:flex;flex-wrap:wrap;gap:14px 32px;list-style:none;padding:0;}
-    .news5-list li{font-family:'Source Serif 4',serif;font-size:14px;line-height:1.6;color:#1a1008;flex:1 1 280px;}
+    .news5-list{list-style:disc;padding-left:20px;display:flex;flex-wrap:wrap;gap:10px 32px;}
+    .news5-list li{font-family:'Source Serif 4',serif;font-size:14px;line-height:1.6;color:#1a1008;flex:1 1 300px;}
     .zone{padding:40px;}
     .zone-mideast{background:#fffbf0;border-top:4px solid #92400e;}
     .zone-americas{background:#fff8f0;border-top:4px solid #b5181a;}
@@ -32,286 +28,222 @@
     .zone-climate{background:#f0f7f4;border-top:4px solid #065f46;}
     .zone-health{background:#fdf4ff;border-top:4px solid #6b21a8;}
     .zone-header{display:flex;align-items:baseline;gap:16px;margin-bottom:24px;padding-bottom:10px;border-bottom:2px solid;}
-    .zone-mideast .zone-header{border-color:#92400e;}.zone-americas .zone-header{border-color:#b5181a;}.zone-economy .zone-header{border-color:#374151;}
-    .zone-climate .zone-header{border-color:#065f46;}.zone-health .zone-header{border-color:#6b21a8;}
+    .zone-mideast .zone-header{border-color:#92400e;}
+    .zone-americas .zone-header{border-color:#b5181a;}
+    .zone-economy .zone-header{border-color:#374151;}
+    .zone-climate .zone-header{border-color:#065f46;}
+    .zone-health .zone-header{border-color:#6b21a8;}
     .zone-name{font-family:'Playfair Display',serif;font-size:22px;font-weight:700;}
-    .zone-mideast .zone-name{color:#92400e;}.zone-americas .zone-name{color:#b5181a;}.zone-economy .zone-name{color:#374151;}
-    .zone-climate .zone-name{color:#065f46;}.zone-health .zone-name{color:#6b21a8;}
+    .zone-mideast .zone-name{color:#92400e;}
+    .zone-americas .zone-name{color:#b5181a;}
+    .zone-economy .zone-name{color:#374151;}
+    .zone-climate .zone-name{color:#065f46;}
+    .zone-health .zone-name{color:#6b21a8;}
     .zone-rule{flex:1;height:1px;background:currentColor;opacity:0.2;}
     .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:20px;}
     .card{padding:20px;text-decoration:none;color:inherit;display:block;border:1px solid rgba(0,0,0,0.08);transition:box-shadow 0.15s;}
     .card:hover{box-shadow:0 4px 16px rgba(0,0,0,0.12);}
-    .zone-mideast .card{background:#fffdf7;}.zone-americas .card{background:#fff;}.zone-economy .card{background:#fff;}
-    .zone-climate .card{background:#f9fffe;}.zone-health .card{background:#fdf9ff;}
-    .card-region{font-family:'Inter',sans-serif;font-size:10px;text-transform:uppercase;letter-spacing:0.15em;font-weight:500;margin-bottom:8px;}
-    .zone-mideast .card-region{color:#92400e;}.zone-americas .card-region{color:#b5181a;}.zone-economy .card-region{color:#374151;}
-    .zone-climate .card-region{color:#065f46;}.zone-health .card-region{color:#6b21a8;}
+    .zone-mideast .card{background:#fffdf7;}
+    .zone-americas .card{background:#fff;}
+    .zone-economy .card{background:#fff;}
+    .zone-climate .card{background:#f9fffe;}
+    .zone-health .card{background:#fdf9ff;}
+    .card-region{font-family:'Inter',sans-serif;font-size:10px;text-transform:uppercase;letter-spacing:0.15em;font-weight:500;margin-bottom:8px;color:#888;}
     .card h3{font-family:'Playfair Display',serif;font-size:17px;font-weight:700;line-height:1.35;margin-bottom:10px;}
-    .card p{font-size:13px;line-height:1.75;color:#4a3f30;}
     .card-foot{margin-top:12px;padding-top:10px;border-top:1px solid rgba(0,0,0,0.08);font-family:'Inter',sans-serif;font-size:11px;color:#888;display:flex;justify-content:space-between;}
-    .card.lead-card{grid-column:1/-1;display:grid;grid-template-columns:1fr auto;gap:0;border-width:2px;}
-    .lead-card-body{padding:0;}
-    .lead-card .what-it-means{margin-top:12px;padding:10px 14px;border-left:3px solid;font-size:12.5px;line-height:1.7;font-style:italic;color:#4a3f30;background:rgba(0,0,0,0.03);}
-    .zone-mideast .lead-card{border-color:#92400e;}.zone-mideast .lead-card .what-it-means{border-color:#92400e;}
-    .zone-americas .lead-card{border-color:#b5181a;}.zone-americas .lead-card .what-it-means{border-color:#b5181a;}
-    .zone-economy .lead-card{border-color:#374151;}.zone-economy .lead-card .what-it-means{border-color:#374151;}
-    .card.lead-card h3{font-size:20px;}
-    .lead-card-badge{writing-mode:vertical-rl;text-orientation:mixed;font-family:'Inter',sans-serif;font-size:9px;font-weight:600;letter-spacing:0.25em;text-transform:uppercase;padding:16px 10px;display:flex;align-items:center;color:#fff;min-width:32px;}
-    .zone-mideast .lead-card-badge{background:#92400e;}.zone-americas .lead-card-badge{background:#b5181a;}.zone-economy .lead-card-badge{background:#374151;}
+    .empty-section{font-family:'Inter',sans-serif;font-size:13px;color:#888;font-style:italic;padding:12px 0;}
     .finally{background:#f5f0e6;border-top:4px solid #92400e;padding:48px 40px;}
     .finally-inner{max-width:720px;margin:0 auto;}
     .finally-label{font-family:'Inter',sans-serif;font-size:10px;font-weight:600;letter-spacing:0.3em;text-transform:uppercase;color:#92400e;margin-bottom:12px;}
     .finally-headline{font-family:'Playfair Display',serif;font-size:clamp(22px,3.5vw,34px);font-weight:700;font-style:italic;line-height:1.25;margin-bottom:20px;color:#1a1008;}
-    .finally-kicker{font-family:'Inter',sans-serif;font-size:10px;font-weight:600;letter-spacing:0.2em;text-transform:uppercase;color:#92400e;margin-bottom:6px;}
-    .finally-body{font-size:15px;line-height:1.85;color:#3a2f20;margin-bottom:16px;}
     footer{text-align:center;padding:24px 40px;font-family:'Inter',sans-serif;font-size:11px;border-top:3px double #1a1008;background:#1a1008;color:#888;}
     @media(max-width:768px){
       header,.zone,.lead-story,.news5,.finally{padding:20px 16px;}
       .masthead-meta{flex-direction:column;gap:4px;text-align:center;}
       .grid{grid-template-columns:1fr;}
-      .card.lead-card{grid-template-columns:1fr;display:block;}
-      .lead-card-badge{writing-mode:horizontal-tb;padding:6px 12px;min-width:unset;}
       .news5-list li{flex:1 1 100%;}
     }
   </style>
 </head>
 <body>
-
   <header>
     <div class="masthead-meta">
       <span>Wednesday, March 4, 2026</span>
       <span>World Desk &mdash; Wally</span>
-      <span>Morning Edition</span>
+      <span>Evening Edition</span>
     </div>
     <h1>World Happenings</h1>
     <div class="tagline">Global News &amp; Current Events</div>
   </header>
 
-  <div class="breaking">&#9889; Oil Surges, Shares Tumble as Iran Conflict Fears Grow &nbsp;&#183;&nbsp; US Planes Evacuate Citizens from Middle East &nbsp;&#183;&nbsp; Khamenei&#8217;s Son Emerges as Likely Successor &nbsp;&#183;&nbsp; Qatar Dismantles IRGC Spy Cells</div>
+  <div class="breaking">&#9889; Iran Postpones Khamenei Funeral &nbsp;&#183;&nbsp; US Sub Sinks Iranian Warship &nbsp;&#183;&nbsp; Higher Tariffs Likely This Week &nbsp;&#183;&nbsp; Strait of Hormuz Traffic Dries Up</div>
 
   <section class="lead-story">
     <div class="lead-inner">
       <div class="lead-label">The Big Story</div>
-      <h2 class="lead-headline">Markets Reel, Americans Flee &mdash; Iran Conflict Enters Day 5 With No Off-Ramp in Sight</h2>
-      <div class="lead-kicker">What&#8217;s going on:</div>
-      <p class="lead-body">Gas and oil prices surged Wednesday while global shares tumbled as markets priced in an escalating conflict with no clear ceiling. The U.S. has dispatched military planes to evacuate American nationals trapped across the Middle East, with citizens reporting &#8220;mayhem&#8221; and chaos trying to secure flights home. President Trump told Congress it is &#8220;too early to tell&#8221; the full scope of the Iran strikes, offering no timeline or defined endpoint. Canadian Prime Minister Mark Carney said he supports the strikes &#8220;with regret,&#8221; while France formally refused to approve military actions by the U.S. and Israel, calling them outside international law and ordering the Charles de Gaulle carrier to the Mediterranean. Meanwhile, Qatar announced it has dismantled two IRGC-linked spy cells operating on its soil, arresting 10 suspects &mdash; a sign the conflict&#8217;s covert dimensions are expanding across the Gulf. In Tehran, Ayatollah Khamenei&#8217;s son Mojtaba has emerged as the leading candidate to succeed his father, with Israel&rsquo;s Defense Minister simultaneously threatening to assassinate any future Iranian supreme leader.</p>
-      <div class="lead-kicker">The takeaway:</div>
-      <p class="lead-body">Trump&#8217;s &#8220;too early to tell&#8221; answer to Congress is the most honest thing he&#8217;s said about this war &mdash; and also the most alarming. Five days in, the scope is still undefined, the political pressure at home is growing, allies are breaking ranks, and the economic fallout is accelerating. The succession drama in Tehran adds a wild card: a new supreme leader could either harden or scramble Iran&#8217;s war calculus in ways that no one can predict. Israel&#8217;s preemptive threat to assassinate that successor &mdash; before one is even named &mdash; signals that the Israeli war cabinet sees no near-term exit either. The world is watching a conflict that everyone is in, and no one is steering.</p>
-      <a class="lead-link" href="https://www.bbc.com/news/articles/cx2gprk53pno?at_medium=RSS&at_campaign=rss" target="_blank">Read more &#8594;</a>
+      <h2 class="lead-headline">Iran postpones Khamenei funeral as US-Israeli bombardment continues</h2>
+      <a class="lead-link" href="https://www.bbc.com/news/articles/clygglq6v9go?at_medium=RSS&at_campaign=rss" target="_blank">Read more &#8594;</a>
     </div>
   </section>
 
   <section class="news5">
     <div class="news5-label">News in 5</div>
     <ul class="news5-list">
-      <li>&#128308; <strong>France breaks with allies</strong> &mdash; Macron calls US-Israeli strikes &ldquo;outside international law&rdquo; and deploys Charles de Gaulle to Mediterranean.</li>
-      <li>&#128200; <strong>Markets in retreat</strong> &mdash; Oil and gas spike as shares fall globally; IMF warns conflict poses significant risks to inflation and global growth.</li>
-      <li>&#127757; <strong>US-Ecuador drug op</strong> &mdash; American forces launch joint anti-trafficking operation in Ecuador targeting &ldquo;terrorist organizations.&rdquo;</li>
-      <li>&#127464;&#127475; <strong>China&#8217;s &#8220;Two Sessions&#8221; open</strong> &mdash; Beijing&#8217;s biggest political gathering of the year kicks off amid geopolitical turbulence.</li>
-      <li>&#128274; <strong>TikTok skips DM encryption</strong> &mdash; Platform won&#8217;t protect direct messages with end-to-end encryption, citing risk to users from compliance demands.</li>
+      <li><strong>US sub sinks Iranian warship in Indian Ocean, Hegseth says</strong> &mdash; <a href="https://www.bbc.com/news/articles/c0e55g03v2zo?at_medium=RSS&at_campaign=rss" target="_blank" style="color:#1a1008;">BBC World</a></li>
+<li><strong>Higher tariffs likely this week, says US Treasury</strong> &mdash; <a href="https://www.bbc.com/news/articles/cjwzzq70qgvo?at_medium=RSS&at_campaign=rss" target="_blank" style="color:#1a1008;">BBC World</a></li>
+<li><strong>A split Senate votes against measure to constrain Trump&#39;s authorities in Iran</strong> &mdash; <a href="https://www.npr.org/2026/03/04/nx-s1-5735867/war-powers-congress-iran" target="_blank" style="color:#1a1008;">NPR News</a></li>
+<li><strong>James Talarico Wins the Texas Democratic Senate Race. The Real Challenge Lies Ahead.</strong> &mdash; <a href="https://www.nytimes.com/2026/03/04/us/politics/james-talarico-texas-senate.html" target="_blank" style="color:#1a1008;">NY Times</a></li>
+<li><strong>Congress votes to summon Attorney General Bondi in Epstein case</strong> &mdash; <a href="https://www.bbc.com/news/articles/c23zz1x9dx0o?at_medium=RSS&at_campaign=rss" target="_blank" style="color:#1a1008;">BBC US</a></li>
+
     </ul>
   </section>
 
   <section class="zone zone-mideast">
     <div class="zone-header"><div class="zone-name">Middle East &amp; Conflict</div><div class="zone-rule"></div></div>
     <div class="grid">
-
-      <a class="card lead-card" href="https://www.nytimes.com/2026/03/03/world/middleeast/iran-mojtaba-khamenei-successor.html" target="_blank">
-        <div class="lead-card-body">
-          <div class="card-region">&#128308; Iran &mdash; Leadership</div>
-          <h3>Khamenei&#8217;s Son Emerges as Leading Choice to Succeed Him &mdash; Israel Threatens to Kill the Successor</h3>
-          <p>Mojtaba Khamenei, son of Supreme Leader Ayatollah Ali Khamenei, has emerged as the leading candidate to become the next supreme leader, according to the New York Times. The potential succession is happening in real time during an active war. Israel&rsquo;s Defense Minister Israel Katz responded by threatening to assassinate any Iranian leader chosen as successor, framing it as a continuation of the military campaign. The move signals Israel sees no near-term end to the conflict and is attempting to extend deterrence into Iran&rsquo;s political transition.</p>
-          <div class="what-it-means"><strong>What it means:</strong> A succession fight inside a country under active bombardment is historically destabilizing in unpredictable ways. Mojtaba Khamenei is a hardliner with IRGC ties, which suggests no moderation in Iran&rsquo;s strategic posture. Israel&rsquo;s assassination threat before a successor is even named is extraordinary &mdash; it telegraphs intent, which could accelerate Iran&rsquo;s timeline or provoke factions within the country to coalesce around a single candidate faster. The conflict is no longer just military. It&#8217;s now shaping Iran&#8217;s political future in real time.</div>
-          <div class="card-foot"><span>NY Times / Associated Press / The Hindu</span><span>Mar 3&ndash;4, 2026</span></div>
-        </div>
-        <div class="lead-card-badge">Lead</div>
+      
+      <a class="card " href="https://www.bbc.com/news/articles/c0e55g03v2zo?at_medium=RSS&at_campaign=rss" target="_blank">
+        <div class="card-region">Middle East &amp; Conflict</div>
+        <h3>US sub sinks Iranian warship in Indian Ocean, Hegseth says</h3>
+        <div class="card-foot"><span>BBC World</span><span>Mar 4, 2026</span></div>
       </a>
-
-      <a class="card" href="https://www.nytimes.com/2026/03/03/world/middleeast/the-4-americans-killed-in-the-iran-war-who-have-been-identified.html" target="_blank">
-        <div class="card-region">Middle East &mdash; US Military</div>
-        <h3>These American Service Members Died in the Iran Conflict</h3>
-        <p>The New York Times has identified American service members killed in the ongoing Iran conflict. The casualties mark a deepening human cost as operations enter their fifth day. Trump told Congress Tuesday it was &ldquo;too early to tell&rdquo; the full scope of the strikes, offering no defined endpoint for the campaign.</p>
-        <div class="card-foot"><span>NY Times / BBC US</span><span>Mar 3&ndash;4, 2026</span></div>
+      <a class="card " href="https://www.bbc.com/news/articles/c93wwq1n542o?at_medium=RSS&at_campaign=rss" target="_blank">
+        <div class="card-region">Middle East &amp; Conflict</div>
+        <h3>Spain&#39;s Pedro Sánchez hits back at Trump threat to sever trade saying &#39;no to war&#39;</h3>
+        <div class="card-foot"><span>BBC World</span><span>Mar 4, 2026</span></div>
       </a>
-
-      <a class="card" href="https://www.chinadaily.com.cn/a/202603/04/WS69a73b1aa310d6866eb3b700.html" target="_blank">
-        <div class="card-region">Middle East &mdash; Diplomacy</div>
-        <h3>France Disapproves of US-Israeli Military Actions, Deploys Carrier to Mediterranean</h3>
-        <p>French President Emmanuel Macron stated France cannot approve of US-Israeli military operations, calling them &ldquo;outside international law.&rdquo; He confirmed the deployment of the aircraft carrier Charles de Gaulle to the Mediterranean in response to the deteriorating regional situation. The move underscores a growing rift within Western alliances over the conflict.</p>
-        <div class="card-foot"><span>Xinhua / CGTN / China Daily</span><span>Mar 4, 2026</span></div>
+      <a class="card " href="https://www.bbc.com/news/articles/cjwzzq70qgvo?at_medium=RSS&at_campaign=rss" target="_blank">
+        <div class="card-region">Middle East &amp; Conflict</div>
+        <h3>Higher tariffs likely this week, says US Treasury</h3>
+        <div class="card-foot"><span>BBC World</span><span>Mar 4, 2026</span></div>
       </a>
-
-      <a class="card" href="https://news.cgtn.com/news/2026-03-04/Macron-France-doesn-t-approve-military-actions-by-US-Israel-1LehXGlRUfm/p.html" target="_blank">
-        <div class="card-region">Middle East &mdash; Gulf</div>
-        <h3>Qatar Dismantles Two Iran-Linked IRGC Spy Cells, Arrests 10</h3>
-        <p>Qatar announced it has dismantled two cells linked to Iran&#8217;s Islamic Revolutionary Guard Corps operating within the country. State security units arrested 10 suspects involved in espionage and sabotage missions. The disclosure reveals how the covert dimension of the conflict is spreading throughout the Gulf states even as conventional fighting continues.</p>
-        <div class="card-foot"><span>Anadolu Agency / CGTN</span><span>Mar 4, 2026</span></div>
+      <a class="card " href="https://www.bbc.com/news/articles/cvg11pne0rro?at_medium=RSS&at_campaign=rss" target="_blank">
+        <div class="card-region">Middle East &amp; Conflict</div>
+        <h3>Israel tells people in large parts of southern Lebanon to leave ahead of attacks</h3>
+        <div class="card-foot"><span>BBC World</span><span>Mar 4, 2026</span></div>
       </a>
-
-      <a class="card" href="https://www.bbc.com/news/articles/cpd8ygee9e3o?at_medium=RSS&at_campaign=rss" target="_blank">
-        <div class="card-region">Middle East &mdash; US Citizens</div>
-        <h3>US Citizens in the Middle East Face &#8216;Mayhem&#8217; Trying to Get Home</h3>
-        <p>American citizens across the Middle East are reporting chaos and confusion as they scramble to leave the region. The U.S. has dispatched military planes to help evacuate nationals as the State Department urges all Americans to depart immediately. Long lines, sold-out flights, and overwhelmed consular services are leaving thousands stranded or uncertain.</p>
-        <div class="card-foot"><span>BBC US</span><span>Mar 4, 2026</span></div>
+      <a class="card " href="https://www.youtube.com/watch?v=_OSKs3U1iNs" target="_blank">
+        <div class="card-region">Middle East &amp; Conflict</div>
+        <h3>War in Middle East Escalates as Iran Strikes US Bases, Embassies</h3>
+        <div class="card-foot"><span>Global National</span><span>Mar 4, 2026</span></div>
       </a>
-
-      <a class="card" href="https://www.bbc.com/news/articles/cvg35401nrqo?at_medium=RSS&at_campaign=rss" target="_blank">
-        <div class="card-region">Middle East &mdash; US Politics</div>
-        <h3>Trump Voters Back Him on Iran &mdash; But That Could Change If War Drags On</h3>
-        <p>Early polling shows Trump&#8217;s base largely supports the Iran strikes, but analysts and the BBC note that support is conditional on a short, successful campaign. As the conflict enters day five with no defined endpoint, no clear victory benchmark, and American casualties mounting, the window of political tolerance may be narrower than the White House assumes.</p>
-        <div class="card-foot"><span>BBC US</span><span>Mar 4, 2026</span></div>
+      <a class="card " href="https://www.ctvnews.ca/world/mideast-conflict/article/country-by-country-heres-how-the-unfolding-war-is-affecting-the-middle-east-and-beyond/" target="_blank">
+        <div class="card-region">Middle East &amp; Conflict</div>
+        <h3>Unfolding War&#39;s Impact Across the Middle East</h3>
+        <div class="card-foot"><span>CTV News</span><span>Mar 4, 2026</span></div>
       </a>
-
     </div>
   </section>
 
   <section class="zone zone-americas">
     <div class="zone-header"><div class="zone-name">Americas</div><div class="zone-rule"></div></div>
     <div class="grid">
-
-      <a class="card lead-card" href="https://www.nytimes.com/2026/03/03/us/politics/us-ecuador-trump-military-operations.html" target="_blank">
-        <div class="lead-card-body">
-          <div class="card-region">Americas &mdash; Military</div>
-          <h3>US Takes Military Action in Ecuador Against &#8216;Terrorist Organizations&#8217; &mdash; Second Front Opens as Iran War Rages</h3>
-          <p>The United States has launched military operations in Ecuador targeting what it calls &ldquo;terrorist organizations&rdquo; involved in drug trafficking, according to the New York Times and BBC. American and Ecuadorian forces are conducting joint operations against criminal networks that Washington has formally designated as terrorist groups. The move reflects the Trump administration&#8217;s broader doctrine of using military force as a counternarcotics tool across Latin America &mdash; even as US forces are simultaneously engaged in the Middle East.</p>
-          <div class="what-it-means"><strong>What it means:</strong> Launching a second military operation in the Western Hemisphere while simultaneously managing an active war in the Middle East is an enormous logistical and political stretch. Ecuador has been dealing with gang violence and cartel infiltration at a level that has destabilized its government, but US military involvement introduces new sovereignty questions. The domestic politics are interesting: Trump is using the military on two fronts simultaneously, which plays to his base but creates real capacity and credibility questions if either theater gets complicated.</div>
-          <div class="card-foot"><span>NY Times / BBC World</span><span>Mar 3&ndash;4, 2026</span></div>
-        </div>
-        <div class="lead-card-badge">Lead</div>
+      
+      <a class="card " href="https://www.bbc.com/news/articles/c4gq33ynl07o?at_medium=RSS&at_campaign=rss" target="_blank">
+        <div class="card-region">Americas</div>
+        <h3>Pentagon identifies four of six US soldiers killed in Iran conflict</h3>
+        <div class="card-foot"><span>BBC US</span><span>Mar 4, 2026</span></div>
       </a>
-
-      <a class="card" href="https://www.nytimes.com/2026/03/03/us/elections/north-carolina-senate-primary-whatley-cooper.html" target="_blank">
-        <div class="card-region">Americas &mdash; Elections</div>
-        <h3>Roy Cooper and Michael Whatley Advance in High-Stakes North Carolina Senate Race</h3>
-        <p>Former Governor Roy Cooper and Republican Party Chair Michael Whatley have advanced in North Carolina&#8217;s U.S. Senate primary, setting up a marquee general election matchup. The race is considered a key battleground seat for 2026 midterm control of the Senate. Cooper, a Democrat, faces Whatley, a Trump ally who helped run the national party apparatus.</p>
-        <div class="card-foot"><span>NY Times / NPR</span><span>Mar 3&ndash;4, 2026</span></div>
+      <a class="card " href="https://www.bbc.com/news/articles/c23zz1x9dx0o?at_medium=RSS&at_campaign=rss" target="_blank">
+        <div class="card-region">Americas</div>
+        <h3>Congress votes to summon Attorney General Bondi in Epstein case</h3>
+        <div class="card-foot"><span>BBC US</span><span>Mar 4, 2026</span></div>
       </a>
-
-      <a class="card" href="https://www.nytimes.com/2026/03/04/us/elections/texas-district-2-primary.html" target="_blank">
-        <div class="card-region">Americas &mdash; Elections</div>
-        <h3>Dan Crenshaw Loses Texas Primary to Steve Toth in Upset</h3>
-        <p>Rep. Dan Crenshaw, the high-profile Republican congressman and former Navy SEAL, has lost his Texas District 2 primary to challenger Steve Toth. Separately, James Talarico won the Democratic nomination for a Texas U.S. Senate seat, while Republicans headed to a runoff to face him. Texas primaries are reshaping the state&#8217;s congressional representation heading into the fall.</p>
-        <div class="card-foot"><span>NY Times / NPR</span><span>Mar 4, 2026</span></div>
+      <a class="card " href="https://www.npr.org/2026/03/04/g-s1-112556/carney-says-he-backs-strikes-on-iran-with-some-regret-as-world-order-frays" target="_blank">
+        <div class="card-region">Americas</div>
+        <h3>Carney says he backs strikes on Iran &#39;with some regret&#39; as world order frays</h3>
+        <div class="card-foot"><span>NPR News</span><span>Mar 4, 2026</span></div>
       </a>
-
-      <a class="card" href="https://www.bbc.com/news/articles/c93wwq1n542o?at_medium=RSS&at_campaign=rss" target="_blank">
-        <div class="card-region">Americas &mdash; Trade</div>
-        <h3>Spain&#8217;s Sanchez Hits Back at Trump Trade Threat: &#8216;No to War&#8217;</h3>
-        <p>Spanish Prime Minister Pedro S&aacute;nchez pushed back against Trump&#8217;s threat to sever trade ties, declaring &ldquo;no to war&rdquo; and positioning Spain as a voice of European resistance to both the military escalation and economic coercion coming from Washington. The statement reflects growing tension between the US and European allies on multiple fronts simultaneously.</p>
-        <div class="card-foot"><span>BBC World</span><span>Mar 4, 2026</span></div>
+      <a class="card " href="https://www.npr.org/2026/03/04/nx-s1-5735867/war-powers-congress-iran" target="_blank">
+        <div class="card-region">Americas</div>
+        <h3>A split Senate votes against measure to constrain Trump&#39;s authorities in Iran</h3>
+        <div class="card-foot"><span>NPR News</span><span>Mar 4, 2026</span></div>
       </a>
-
-      <a class="card" href="https://www.npr.org/2026/03/03/nx-s1-5712323/pregnant-migrant-girls-texas-shelter" target="_blank">
-        <div class="card-region">Americas &mdash; Immigration</div>
-        <h3>Pregnant Migrant Girls Being Sent to Texas Shelter Flagged as Medically Risky</h3>
-        <p>NPR reports that pregnant migrant girls are being transferred to a Texas shelter that has previously been flagged by inspectors as medically inadequate. The facility lacks sufficient obstetric care infrastructure for the vulnerable population being housed there. Advocates say the situation reflects a broader collapse of appropriate care standards inside the detention system.</p>
-        <div class="card-foot"><span>NPR News</span><span>Mar 3, 2026</span></div>
+      <a class="card " href="https://www.nytimes.com/2026/03/04/us/politics/james-talarico-texas-senate.html" target="_blank">
+        <div class="card-region">Americas</div>
+        <h3>James Talarico Wins the Texas Democratic Senate Race. The Real Challenge Lies Ahead.</h3>
+        <div class="card-foot"><span>NY Times</span><span>Mar 4, 2026</span></div>
       </a>
-
+      <a class="card " href="https://www.nytimes.com/2026/03/04/us/texas-john-cornyn-ken-paxton-senate-runoff.html" target="_blank">
+        <div class="card-region">Americas</div>
+        <h3>John Cornyn’s Biggest Challenges as Republican Senate Primary Heads for Runoff in Texas</h3>
+        <div class="card-foot"><span>NY Times</span><span>Mar 4, 2026</span></div>
+      </a>
+      <a class="card " href="https://www.bbc.com/news/articles/c7433dz4ykwo?at_medium=RSS&at_campaign=rss" target="_blank">
+        <div class="card-region">Americas</div>
+        <h3>Musk tells jury &#39;people read too much&#39; into his posts</h3>
+        <div class="card-foot"><span>BBC US</span><span>Mar 4, 2026</span></div>
+      </a>
     </div>
   </section>
 
   <section class="zone zone-economy">
-    <div class="zone-header"><div class="zone-name">Economy</div><div class="zone-rule"></div></div>
+    <div class="zone-header"><div class="zone-name">Economy &amp; Markets</div><div class="zone-rule"></div></div>
     <div class="grid">
-
-      <a class="card lead-card" href="https://www.bbc.com/news/articles/cr5lz0vgy52o?at_medium=RSS&at_campaign=rss" target="_blank">
-        <div class="lead-card-body">
-          <div class="card-region">Markets &mdash; Conflict Impact</div>
-          <h3>Gas and Oil Prices Soar, Shares Tumble as Middle East Conflict Escalates</h3>
-          <p>Global energy prices surged Wednesday as markets priced in the risk of prolonged conflict in the Middle East and potential disruption to oil shipping routes. Stock indices fell across Europe and Asia as investors fled to safe-haven assets. The IMF&#8217;s First Deputy Managing Director Daniel Katz warned that the escalating conflict poses significant risks to the global economy, citing its impact on inflation and growth. The Fund had expected solid global expansion this year; that forecast is now under threat.</p>
-          <div class="what-it-means"><strong>What it means:</strong> Energy markets are forward-looking, and right now they are pricing in a prolonged conflict without a clear exit. Every central bank with a meeting on the calendar is recalculating. The inflation-growth tradeoff that was already tense before the war just got substantially harder. IMF warnings tend to be measured and understated &mdash; when they use the word &ldquo;significant,&rdquo; they mean it.</div>
-          <div class="card-foot"><span>BBC World / Anadolu Agency / IMF</span><span>Mar 4, 2026</span></div>
-        </div>
-        <div class="lead-card-badge">Lead</div>
+      
+      <a class="card " href="https://english.news.cn/20260304/f7682e0df5174a58950f9f44280154ad/c.html" target="_blank">
+        <div class="card-region">Economy &amp; Markets</div>
+        <h3>Middle East War Pushes Up Oil Prices, Disturbing Global Economy</h3>
+        <div class="card-foot"><span>Xinhua</span><span>Mar 4, 2026</span></div>
       </a>
-
-      <a class="card" href="https://www.washingtonpost.com/national/2026/03/04/iran-israel-us-latest-march-04-2026/11cb9e42-1788-11f1-aef0-0aac8e8e94db_story.html" target="_blank">
-        <div class="card-region">Economy &mdash; Japan</div>
-        <h3>Bank of Japan Governor Warns of &#8216;Significant&#8217; Economic Impact From Conflict</h3>
-        <p>Bank of Japan Governor Kazuo Ueda stated that the Middle East conflict could significantly affect Japan&#8217;s economy through crude oil prices and international financial markets. Japan imports virtually all of its oil and is acutely exposed to Hormuz disruption. His comments suggest the central bank may hold its current policy settings when it meets later this month rather than continuing its gradual rate normalization path.</p>
-        <div class="card-foot"><span>The Japan Times / Washington Post</span><span>Mar 4, 2026</span></div>
+      <a class="card " href="https://www.hellenicshippingnews.com/three-scenarios-for-the-global-economy-and-the-iran-crisis/" target="_blank">
+        <div class="card-region">Economy &amp; Markets</div>
+        <h3>Three Scenarios for the Global Economy and the Iran Crisis</h3>
+        <div class="card-foot"><span>Hellenic Shipping News Worldwide</span><span>Mar 4, 2026</span></div>
       </a>
-
-      <a class="card" href="https://www.bbc.com/news/articles/c2lrxyke7kro?at_medium=RSS&at_campaign=rss" target="_blank">
-        <div class="card-region">Economy &mdash; China</div>
-        <h3>China&#8217;s &#8216;Two Sessions&#8217; Open Amid Global Turbulence</h3>
-        <p>China&#8217;s most important annual political meeting &mdash; the &#8220;Two Sessions&#8221; gathering of the National People&#8217;s Congress and the Chinese People&#8217;s Political Consultative Conference &mdash; opened Wednesday. The agenda includes economic targets, defense spending, and institutional appointments. The geopolitical backdrop of a US-Iran war and rising trade tensions with Washington adds unusual external pressure to this year&#8217;s proceedings.</p>
+      <a class="card " href="https://www.bbc.com/news/articles/cjwzzq70qgvo?at_medium=RSS&at_campaign=rss" target="_blank">
+        <div class="card-region">Economy &amp; Markets</div>
+        <h3>Higher tariffs likely this week, says US Treasury</h3>
         <div class="card-foot"><span>BBC World</span><span>Mar 4, 2026</span></div>
       </a>
-
+      <a class="card " href="https://www.bbc.com/news/articles/cx244kdplnzo?at_medium=RSS&at_campaign=rss" target="_blank">
+        <div class="card-region">Economy &amp; Markets</div>
+        <h3>Tech firms pledge to pay for AI data centre power costs. But will they?</h3>
+        <div class="card-foot"><span>BBC US</span><span>Mar 4, 2026</span></div>
+      </a>
     </div>
   </section>
 
   <section class="zone zone-climate">
     <div class="zone-header"><div class="zone-name">Climate &amp; Science</div><div class="zone-rule"></div></div>
     <div class="grid">
-
-      <a class="card" href="https://www.doncaster-roofing.co.uk/03-163810-a-polar-vortex-disruption-on-march-4-2026-becomes-official-large-planetary-waves-are-driving-the-change-reports-atmospheric-analysts-mauvaise-nouvelle-for-climate-stability/" target="_blank">
-        <div class="card-region">Climate &mdash; Atmosphere</div>
-        <h3>Polar Vortex Disruption Officially Confirmed for March 4, 2026</h3>
-        <p>Atmospheric analysts have confirmed a major sudden stratospheric warming event, making today the official date of a polar vortex disruption. Large planetary waves are driving the change. The event could bring significant shifts in late winter and early spring weather across the Northern Hemisphere, potentially pushing frigid Arctic air southward in the weeks ahead.</p>
-        <div class="card-foot"><span>Atmospheric analysts</span><span>Mar 3&ndash;4, 2026</span></div>
+      
+      <a class="card " href="https://www.sciencedaily.com/releases/2026/03/260303201755.htm" target="_blank">
+        <div class="card-region">Climate &amp; Science</div>
+        <h3>Climate Models May Be Missing Massive Carbon Emissions from Boreal Wildfires</h3>
+        <div class="card-foot"><span>University of California - Berkeley</span><span>Mar 4, 2026</span></div>
       </a>
-
-      <a class="card" href="https://theecologist.org/2026/mar/04/climate-nears-tipping-points" target="_blank">
-        <div class="card-region">Climate &mdash; Research</div>
-        <h3>Climate Nears Tipping Points &mdash; Warming Must Peak Below 2&#8451; and Return Fast</h3>
-        <p>An international team of researchers warns that global warming must peak below 2&#8451; and return below 1.5&#8451; as quickly as possible to limit catastrophic tipping point risks. Earth systems at acute risk include tropical coral reefs, the Amazon rainforest, and major ice sheets. The paper describes the window for avoiding the worst outcomes as narrow and closing.</p>
-        <div class="card-foot"><span>The Ecologist</span><span>Mar 4, 2026</span></div>
+      <a class="card " href="https://www.aa.com.tr/en/environment/weak-la-nina-to-shift-toward-el-nino-wmo-warns/3849938" target="_blank">
+        <div class="card-region">Climate &amp; Science</div>
+        <h3>Weak La Nina to Shift Toward El Nino, WMO Warns</h3>
+        <div class="card-foot"><span>Anadolu</span><span>Mar 4, 2026</span></div>
       </a>
-
-      <a class="card" href="https://carbon-pulse.com/489217/" target="_blank">
-        <div class="card-region">Climate &mdash; Soil Science</div>
-        <h3>Microplastics in Soil Could Alter How Carbon Is Stored and Released</h3>
-        <p>New research finds that microplastics accumulating in terrestrial soils could significantly change how carbon is stored and released from land ecosystems. The findings complicate climate mitigation strategies and carbon accounting models that assume stable soil carbon dynamics. Microplastics are now present in virtually every soil type studied globally.</p>
-        <div class="card-foot"><span>Carbon Pulse</span><span>Mar 4, 2026</span></div>
+      <a class="card " href="https://skift.com/2026/03/04/climate-change-eu-tourism-coastal-mountain/" target="_blank">
+        <div class="card-region">Climate &amp; Science</div>
+        <h3>Coastal, Mountain Destinations Already Hit By Climate Change - EU Tourism Chief</h3>
+        <div class="card-foot"><span>Skift</span><span>Mar 4, 2026</span></div>
       </a>
-
+      <a class="card " href="https://www.npr.org/2026/03/04/nx-s1-5704318/colossal-woolly-mammoth-dire-wolf" target="_blank">
+        <div class="card-region">Climate &amp; Science</div>
+        <h3>Colossal Biosciences breeds controversy while trying to revive mammoths</h3>
+        <div class="card-foot"><span>NPR News</span><span>Mar 4, 2026</span></div>
+      </a>
     </div>
   </section>
 
   <section class="zone zone-health">
     <div class="zone-header"><div class="zone-name">Health</div><div class="zone-rule"></div></div>
-    <div class="grid">
-
-      <a class="card" href="https://www.amnesty.org/en/latest/news/2026/03/south-korea-conviction-of-woman-seeking-abortion-exposes-government-failure-to-guarantee-access-to-vital-healthcare/" target="_blank">
-        <div class="card-region">Health &mdash; Rights</div>
-        <h3>South Korea Convicts Woman for Later-Term Abortion, Sentencing Her to Three Years Suspended</h3>
-        <p>A South Korean court convicted a woman for undergoing a later-term abortion and sentenced her to three years in prison, suspended for five years. Amnesty International said the ruling exposes the government&#8217;s failure to guarantee access to vital healthcare, noting that South Korea has yet to fill a legal vacuum following its 2021 decriminalization of abortion in early pregnancy.</p>
-        <div class="card-foot"><span>Amnesty International</span><span>Mar 4, 2026</span></div>
-      </a>
-
-      <a class="card" href="https://www.weforum.org/stories/2026/03/cancer-measles-fgm-health-news/" target="_blank">
-        <div class="card-region">Health &mdash; Global</div>
-        <h3>WHO: 7 Million Preventable Cancer Cases Annually; 4.5 Million Girls at FGM Risk in 2026</h3>
-        <p>The World Health Organization estimates that up to 4 in 10 cancer cases globally &mdash; roughly 7.1 million annually &mdash; are preventable through existing interventions. Separately, a joint UN statement warns that an estimated 4.5 million girls face risk of female genital mutilation in 2026, with progress on elimination stalling in several high-prevalence regions.</p>
-        <div class="card-foot"><span>WHO / World Economic Forum</span><span>Mar 3, 2026</span></div>
-      </a>
-
-      <a class="card" href="https://www.weforum.org/stories/2026/03/cancer-measles-fgm-health-news/" target="_blank">
-        <div class="card-region">Health &mdash; Policy</div>
-        <h3>2026&#8217;s Top Global Health Priorities: Antimicrobial Resistance, Climate, and Mental Health</h3>
-        <p>A new paper identifies the leading global health priorities for 2026: addressing antimicrobial resistance before it becomes untreatable at scale, treating climate change as a direct public health emergency rather than a background condition, and integrating mental health fully into public health planning. The authors call for youth-driven, equitable transformation of health systems worldwide.</p>
-        <div class="card-foot"><span>The European Sting</span><span>Mar 3, 2026</span></div>
-      </a>
-
-    </div>
+    <p class="empty-section">No verified stories today.</p>
   </section>
 
   <section class="finally">
     <div class="finally-inner">
       <div class="finally-label">And Finally&hellip;</div>
-      <h2 class="finally-headline">Chimps Drink Fermented Fruit Juice. Now Scientists Think That&#8217;s Why You Drink Beer.</h2>
-      <div class="finally-kicker">What&#8217;s going on:</div>
-      <p class="finally-body">A new study published this week found that chimpanzees actively seek out and consume fermented fruit juice in the wild, metabolizing alcohol at a surprisingly efficient rate. Researchers analyzed chimp urine &mdash; the scientific method, glamorous as ever &mdash; and found consistent evidence of alcohol consumption as a habitual behavior, not just an accidental byproduct of eating overripe fruit. The implication: our relationship with alcohol may predate humanity itself, stretching back millions of years along our shared primate lineage.</p>
-      <div class="finally-kicker">The takeaway:</div>
-      <p class="finally-body">Scientists now have evidence that reaching for a drink after a long, hard week is not a modern coping mechanism. It is, apparently, ancient primate tradition. The chimps of the African forest have been doing this for millions of years, before there were wars, markets, spy cells, or polar vortices to worry about. In the entire week&#8217;s news &mdash; Iran, Ecuador, Texas primaries, oil prices, microplastics &mdash; the most relatable beings on the planet may be the ones sitting in the forest, quietly sipping fermented juice. We were always going to end up here.</p>
-      <a class="lead-link" href="https://www.npr.org/2026/03/03/nx-s1-5726442/humans-pull-toward-alcohol-may-have-ancient-origins-according-to-chimp-pee" target="_blank" style="color:#92400e;border-color:#92400e;">Read more &#8594;</a>
+      <h2 class="finally-headline">Colossal Biosciences breeds controversy while trying to revive mammoths</h2>
+      <a class="lead-link" href="https://www.npr.org/2026/03/04/nx-s1-5704318/colossal-woolly-mammoth-dire-wolf" target="_blank" style="color:#92400e;border-color:#92400e;">Read more &#8594;</a>
     </div>
   </section>
 
-  <footer>World Happenings &nbsp;&#183;&nbsp; Powered by Wally &nbsp;&#183;&nbsp; Refreshed Wednesday, March 4, 2026 &middot; 7:13 AM EST</footer>
-
+  <footer>World Happenings &nbsp;&#183;&nbsp; Powered by Wally &nbsp;&#183;&nbsp; Refreshed Wednesday, March 4, 2026 &middot; 7:11 PM EST</footer>
 </body>
 </html>
