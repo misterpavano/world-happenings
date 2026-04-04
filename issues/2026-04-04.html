@@ -18,8 +18,6 @@
       --rule: #c9c5ba;
       --rule-light: #e5e2d8;
       --accent: #8b0000;
-      --tab-active: #1a1a1a;
-      --tab-inactive: #6a6a6a;
     }
     
     body {
@@ -33,9 +31,12 @@
     /* Masthead */
     .masthead {
       text-align: center;
-      padding: 2rem 1rem 1rem;
+      padding: 2rem 1rem 1.5rem;
       border-bottom: 3px double var(--ink);
       background: linear-gradient(to bottom, var(--paper) 0%, #f0ede6 100%);
+      position: sticky;
+      top: 0;
+      z-index: 100;
     }
     
     .masthead-weather {
@@ -77,70 +78,34 @@
       border-top: 1px solid var(--rule);
     }
     
-    /* Navigation Tabs */
-    .nav-tabs {
-      display: flex;
-      justify-content: center;
-      gap: 0;
-      background: var(--paper);
-      border-bottom: 2px solid var(--ink);
-      padding: 0 1rem;
-      flex-wrap: wrap;
-    }
-    
-    .nav-tab {
-      font-family: 'Libre Franklin', sans-serif;
-      font-size: 0.75rem;
-      font-weight: 600;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      padding: 1rem 1.5rem;
-      color: var(--tab-inactive);
-      text-decoration: none;
-      border-bottom: 3px solid transparent;
-      margin-bottom: -2px;
-      transition: all 0.2s ease;
-      cursor: pointer;
-      background: none;
-      border: none;
-    }
-    
-    .nav-tab:hover {
-      color: var(--ink);
-    }
-    
-    .nav-tab.active {
-      color: var(--tab-active);
-      border-bottom-color: var(--accent);
-    }
-    
-    /* Tab Content */
-    .tab-content {
-      display: none;
-    }
-    
-    .tab-content.active {
-      display: block;
-    }
-    
     /* Main content */
     .newspaper {
-      max-width: 1200px;
+      max-width: 1000px;
       margin: 0 auto;
       padding: 2rem 1.5rem;
     }
     
-    /* Front Page Hero */
+    /* Above the fold - Hero */
     .hero {
       text-align: center;
-      padding-bottom: 2rem;
-      border-bottom: 2px solid var(--ink);
-      margin-bottom: 2rem;
+      padding: 2rem 0 3rem;
+      border-bottom: 3px double var(--ink);
+      margin-bottom: 3rem;
+    }
+    
+    .hero-label {
+      font-family: 'Libre Franklin', sans-serif;
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 1rem;
     }
     
     .hero-headline {
       font-family: 'Playfair Display', serif;
-      font-size: clamp(2rem, 5vw, 3.5rem);
+      font-size: clamp(2.2rem, 6vw, 4rem);
       font-weight: 900;
       line-height: 1.05;
       margin-bottom: 1rem;
@@ -157,107 +122,110 @@
     
     .hero-summary {
       font-family: 'IM Fell English', serif;
-      font-size: 1.15rem;
+      font-size: 1.2rem;
       font-style: italic;
       color: var(--ink-light);
-      max-width: 700px;
-      margin: 0 auto 1rem;
+      max-width: 650px;
+      margin: 0 auto 1.5rem;
       line-height: 1.5;
     }
     
     .hero-meta {
-      font-size: 0.7rem;
+      font-size: 0.75rem;
       font-weight: 600;
       letter-spacing: 0.1em;
       text-transform: uppercase;
       color: var(--ink-faint);
     }
     
-    /* Front Page Grid */
-    .front-grid {
+    /* Secondary stories grid */
+    .secondary-grid {
       display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 1.5rem;
-      margin-bottom: 2rem;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2rem;
+      margin-bottom: 3rem;
+      padding-bottom: 2rem;
+      border-bottom: 1px solid var(--rule);
     }
     
-    .front-story {
-      padding: 1rem;
+    .secondary-story {
+      padding: 1rem 0;
+    }
+    
+    .secondary-story:not(:last-child) {
       border-right: 1px solid var(--rule);
+      padding-right: 2rem;
     }
     
-    .front-story:last-child {
-      border-right: none;
+    .secondary-label {
+      font-size: 0.65rem;
+      font-weight: 700;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 0.5rem;
     }
     
-    .front-story-headline {
+    .secondary-headline {
       font-family: 'Playfair Display', serif;
-      font-size: 1.1rem;
+      font-size: 1.15rem;
       font-weight: 700;
       line-height: 1.25;
       margin-bottom: 0.5rem;
     }
     
-    .front-story-headline a {
+    .secondary-headline a {
       color: var(--ink);
       text-decoration: none;
     }
     
-    .front-story-headline a:hover {
+    .secondary-headline a:hover {
       color: var(--accent);
     }
     
-    .front-story-summary {
-      font-size: 0.85rem;
+    .secondary-summary {
+      font-size: 0.9rem;
       color: var(--ink-light);
       line-height: 1.5;
     }
     
-    .front-story-meta {
-      font-size: 0.65rem;
-      font-weight: 600;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      color: var(--ink-faint);
-      margin-top: 0.75rem;
-    }
-    
-    /* Section Pages */
+    /* Section headers */
     .section-header {
       display: flex;
       align-items: center;
-      margin: 0 0 1.5rem;
-      gap: 1rem;
+      margin: 3rem 0 1.5rem;
+      gap: 1.5rem;
     }
     
     .section-header::before,
     .section-header::after {
       content: '';
       flex: 1;
-      height: 1px;
-      background: var(--rule);
+      height: 2px;
+      background: var(--ink);
     }
     
     .section-title {
       font-family: 'Playfair Display', serif;
-      font-size: 1.5rem;
-      font-weight: 700;
+      font-size: 1.75rem;
+      font-weight: 900;
       letter-spacing: 0.05em;
       text-transform: uppercase;
       color: var(--ink);
+      white-space: nowrap;
     }
     
-    /* News columns */
-    .news-columns {
-      column-count: 3;
-      column-gap: 2rem;
+    /* Article styling */
+    .articles {
+      column-count: 2;
+      column-gap: 3rem;
       column-rule: 1px solid var(--rule);
     }
     
     .article {
       break-inside: avoid;
-      margin-bottom: 1.5rem;
-      padding-bottom: 1.5rem;
+      margin-bottom: 2rem;
+      padding-bottom: 2rem;
       border-bottom: 1px solid var(--rule-light);
     }
     
@@ -267,10 +235,10 @@
     
     .article-headline {
       font-family: 'Playfair Display', serif;
-      font-size: 1.05rem;
+      font-size: 1.15rem;
       font-weight: 700;
       line-height: 1.3;
-      margin-bottom: 0.5rem;
+      margin-bottom: 0.75rem;
     }
     
     .article-headline a {
@@ -283,10 +251,10 @@
     }
     
     .article-summary {
-      font-size: 0.9rem;
+      font-size: 0.95rem;
       color: var(--ink-light);
-      line-height: 1.5;
-      margin-bottom: 0.5rem;
+      line-height: 1.6;
+      margin-bottom: 0.75rem;
     }
     
     .article-meta {
@@ -297,28 +265,43 @@
       color: var(--ink-faint);
     }
     
-    /* Responsive */
-    @media (max-width: 900px) {
-      .front-grid { grid-template-columns: repeat(2, 1fr); }
-      .front-story:nth-child(2) { border-right: none; }
-      .front-story:nth-child(1),
-      .front-story:nth-child(2) { border-bottom: 1px solid var(--rule); }
-      .news-columns { column-count: 2; }
-      .nav-tab { padding: 0.75rem 1rem; font-size: 0.7rem; }
+    /* Jump to section nav */
+    .section-nav {
+      display: flex;
+      justify-content: center;
+      gap: 1.5rem;
+      padding: 1rem;
+      background: #f0ede6;
+      border-bottom: 1px solid var(--rule);
+      flex-wrap: wrap;
     }
     
-    @media (max-width: 600px) {
-      .front-grid { grid-template-columns: 1fr; }
-      .front-story { border-right: none; border-bottom: 1px solid var(--rule); }
-      .news-columns { column-count: 1; }
-      .nav-tabs { justify-content: flex-start; overflow-x: auto; flex-wrap: nowrap; }
+    .section-nav a {
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--ink-light);
+      text-decoration: none;
+    }
+    
+    .section-nav a:hover {
+      color: var(--accent);
+    }
+    
+    /* Responsive */
+    @media (max-width: 800px) {
+      .secondary-grid { grid-template-columns: 1fr; }
+      .secondary-story:not(:last-child) { border-right: none; border-bottom: 1px solid var(--rule); padding-right: 0; padding-bottom: 1.5rem; }
+      .articles { column-count: 1; }
+      .masthead { position: relative; }
     }
     
     /* Footer */
     .footer {
       text-align: center;
-      padding: 2rem;
-      margin-top: 2rem;
+      padding: 3rem 2rem;
+      margin-top: 3rem;
       border-top: 3px double var(--rule);
       font-size: 0.75rem;
       color: var(--ink-faint);
@@ -329,142 +312,131 @@
 </head>
 <body>
   <header class="masthead">
-    <div class="masthead-weather">2026-04-04 — Est. 2026</div>
+    <div class="masthead-weather">2026-04-04 — All the News, All Day</div>
     <h1 class="masthead-title">World Happenings</h1>
     <div class="masthead-tagline">The world, every morning</div>
     <div class="masthead-date">2026-04-04</div>
   </header>
   
-  <nav class="nav-tabs">
-    <button class="nav-tab active" onclick="showTab('front')">Front Page</button>
-    <button class="nav-tab" onclick="showTab('world')">World</button>
-    <button class="nav-tab" onclick="showTab('us')">U.S.</button>
-    <button class="nav-tab" onclick="showTab('local')">Local</button>
-    <button class="nav-tab" onclick="showTab('business')">Business</button>
-    <button class="nav-tab" onclick="showTab('science')">Science</button>
-    <button class="nav-tab" onclick="showTab('sports')">Sports</button>
+  <nav class="section-nav">
+    <a href="#world">World</a>
+    <a href="#us">U.S.</a>
+    <a href="#local">Local</a>
+    <a href="#business">Business</a>
+    <a href="#science">Science</a>
+    <a href="#sports">Sports</a>
   </nav>
   
   <main class="newspaper">
-    <!-- Front Page -->
-    <div id="tab-front" class="tab-content active">
+    
+    
       
-      
-        
-          
-        
-          
-        
-          
         
       
         
-          
+      
         
-          
-        
-          
+      
+    
+      
         
       
         
-          
+      
         
-          
-        
-          
+      
+    
+      
         
       
         
-          
+      
         
-          
-        
-          
+      
+    
+      
         
       
         
-          
+      
         
-          
-        
-          
+      
+    
+      
         
       
         
-          
-        
-          
-        
-          
+      
         
       
+    
       
+        
       
-      <div class="hero">
-        <h2 class="hero-headline">
-          <a href="https://m.youtube.com/watch?v=y5y-i59z0b4" target="_blank" rel="noopener">Supreme Court Justice Alito Hospitalized, Fueling Speculation on Future Appointments</a>
-        </h2>
         
-        <p class="hero-summary">U.S. Supreme Court Justice Samuel Alito was reportedly hospitalized in March after falling ill at a Federalist Society dinner, though he has since resumed duties. This incident has intensified speculation about potential new appointments to the high court.</p>
-        
-        <div class="hero-meta">Go Local Prov — US</div>
-      </div>
       
-      <div class="front-grid">
         
-        <article class="front-story">
-          <h3 class="front-story-headline">
-            <a href="https://www.jurist.org/news/2026/04/us-federal-judge-will-not-reconsider-quashed-subpoenas-in-federal-reserve-criminal-case/" target="_blank" rel="noopener">Federal Judge Refuses to Reconsider Quashed Subpoenas in Federal Reserve Criminal Case</a>
-          </h3>
-          
-          <p class="front-story-summary">A U.S. District Judge has denied a government motion to reconsider his order that quashed subpoenas issued to the Federa...</p>
-          
-          <div class="front-story-meta">JURIST — US</div>
-        </article>
+      
+    
+    
+    
+    <!-- Above the fold -->
+    <div class="hero">
+      <div class="hero-label">Top Story</div>
+      <h2 class="hero-headline">
+        <a href="https://m.youtube.com/watch?v=y5y-i59z0b4" target="_blank" rel="noopener">Supreme Court Justice Alito Hospitalized, Fueling Speculation on Future Appointments</a>
+      </h2>
+      
+      <p class="hero-summary">U.S. Supreme Court Justice Samuel Alito was reportedly hospitalized in March after falling ill at a Federalist Society dinner, though he has since resumed duties. This incident has intensified speculation about potential new appointments to the high court.</p>
+      
+      <div class="hero-meta">Go Local Prov — US</div>
+    </div>
+    
+    <!-- Secondary stories -->
+    <div class="secondary-grid">
+      
+      <article class="secondary-story">
+        <div class="secondary-label">US</div>
+        <h3 class="secondary-headline">
+          <a href="https://www.jurist.org/news/2026/04/us-federal-judge-will-not-reconsider-quashed-subpoenas-in-federal-reserve-criminal-case/" target="_blank" rel="noopener">Federal Judge Refuses to Reconsider Quashed Subpoenas in Federal Reserve Criminal Case</a>
+        </h3>
         
-        <article class="front-story">
-          <h3 class="front-story-headline">
-            <a href="https://www.latimes.com/california/story/2026-04-04/bill-essayli-first-assistant-us-attorney-trump" target="_blank" rel="noopener">House Democrats to Hold California &#39;Shadow Hearings&#39; on Midterm Election Security</a>
-          </h3>
-          
-          <p class="front-story-summary">House Democrats are planning to conduct &#34;shadow hearings&#34; in California to address concerns about midterm election secur...</p>
-          
-          <div class="front-story-meta">Los Angeles Times — US</div>
-        </article>
+        <p class="secondary-summary">A U.S. District Judge has denied a government motion to reconsider his order that quashed subpoenas issued to the Federal Reserve&#39;s Board of...</p>
         
-        <article class="front-story">
-          <h3 class="front-story-headline">
-            <a href="https://www.golocalprov.com/news/5-big-news-stories-overnight-saturday-april-4-2026" target="_blank" rel="noopener">Regional Efforts to Broker US-Iran Ceasefire Hit Dead End</a>
-          </h3>
-          
-          <p class="front-story-summary">Mediation efforts by regional countries, including Pakistan, to secure a ceasefire between the United States and Iran ha...</p>
-          
-          <div class="front-story-meta">Go Local Prov — WORLD</div>
-        </article>
+      </article>
+      
+      <article class="secondary-story">
+        <div class="secondary-label">US</div>
+        <h3 class="secondary-headline">
+          <a href="https://www.latimes.com/california/story/2026-04-04/bill-essayli-first-assistant-us-attorney-trump" target="_blank" rel="noopener">House Democrats to Hold California &#39;Shadow Hearings&#39; on Midterm Election Security</a>
+        </h3>
         
-        <article class="front-story">
-          <h3 class="front-story-headline">
-            <a href="https://www.thehindu.com/news/international/iran-israel-war-west-asia-conflict-april-4-2026-live-updates/article70822179.ece" target="_blank" rel="noopener">China Steps Up Diplomacy in Iran War, US Appears Uninterested</a>
-          </h3>
-          
-          <p class="front-story-summary">China is increasing its diplomatic involvement in the Iran conflict, proposing a five-point plan with Pakistan and seeki...</p>
-          
-          <div class="front-story-meta">ClickOnDetroit — WORLD</div>
-        </article>
+        <p class="secondary-summary">House Democrats are planning to conduct &#34;shadow hearings&#34; in California to address concerns about midterm election security. This initiative...</p>
         
-      </div>
+      </article>
+      
+      <article class="secondary-story">
+        <div class="secondary-label">WORLD</div>
+        <h3 class="secondary-headline">
+          <a href="https://www.golocalprov.com/news/5-big-news-stories-overnight-saturday-april-4-2026" target="_blank" rel="noopener">Regional Efforts to Broker US-Iran Ceasefire Hit Dead End</a>
+        </h3>
+        
+        <p class="secondary-summary">Mediation efforts by regional countries, including Pakistan, to secure a ceasefire between the United States and Iran have reportedly failed...</p>
+        
+      </article>
       
     </div>
     
-    <!-- Section Tabs -->
     
-    <div id="tab-world" class="tab-content">
+    <!-- Sections -->
+    
+    
+    <section id="world">
       <div class="section-header">
         <span class="section-title">WORLD</span>
       </div>
       
-      
-      <div class="news-columns">
+      <div class="articles">
         
         <article class="article">
           <h3 class="article-headline">
@@ -497,16 +469,16 @@
         </article>
         
       </div>
-      
-    </div>
+    </section>
     
-    <div id="tab-us" class="tab-content">
+    
+    
+    <section id="us">
       <div class="section-header">
         <span class="section-title">US</span>
       </div>
       
-      
-      <div class="news-columns">
+      <div class="articles">
         
         <article class="article">
           <h3 class="article-headline">
@@ -539,16 +511,16 @@
         </article>
         
       </div>
-      
-    </div>
+    </section>
     
-    <div id="tab-local" class="tab-content">
+    
+    
+    <section id="local">
       <div class="section-header">
         <span class="section-title">LOCAL</span>
       </div>
       
-      
-      <div class="news-columns">
+      <div class="articles">
         
         <article class="article">
           <h3 class="article-headline">
@@ -581,16 +553,16 @@
         </article>
         
       </div>
-      
-    </div>
+    </section>
     
-    <div id="tab-business" class="tab-content">
+    
+    
+    <section id="business">
       <div class="section-header">
         <span class="section-title">BUSINESS</span>
       </div>
       
-      
-      <div class="news-columns">
+      <div class="articles">
         
         <article class="article">
           <h3 class="article-headline">
@@ -623,16 +595,16 @@
         </article>
         
       </div>
-      
-    </div>
+    </section>
     
-    <div id="tab-science" class="tab-content">
+    
+    
+    <section id="science">
       <div class="section-header">
         <span class="section-title">SCIENCE</span>
       </div>
       
-      
-      <div class="news-columns">
+      <div class="articles">
         
         <article class="article">
           <h3 class="article-headline">
@@ -665,16 +637,16 @@
         </article>
         
       </div>
-      
-    </div>
+    </section>
     
-    <div id="tab-sports" class="tab-content">
+    
+    
+    <section id="sports">
       <div class="section-header">
         <span class="section-title">SPORTS</span>
       </div>
       
-      
-      <div class="news-columns">
+      <div class="articles">
         
         <article class="article">
           <h3 class="article-headline">
@@ -707,29 +679,13 @@
         </article>
         
       </div>
-      
-    </div>
+    </section>
+    
     
   </main>
   
   <footer class="footer">
     Compiled by Pavano — 2026-04-04
   </footer>
-  
-  <script>
-    function showTab(tabName) {
-      // Hide all tabs
-      document.querySelectorAll('.tab-content').forEach(tab => {
-        tab.classList.remove('active');
-      });
-      document.querySelectorAll('.nav-tab').forEach(tab => {
-        tab.classList.remove('active');
-      });
-      
-      // Show selected tab
-      document.getElementById('tab-' + tabName).classList.add('active');
-      event.target.classList.add('active');
-    }
-  </script>
 </body>
 </html>
