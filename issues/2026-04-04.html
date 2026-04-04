@@ -1,751 +1,442 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>World Happenings - 2026-04-04</title>
-<style>
-  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
-  :root {
-    --bg: #0f0f0f;
-    --bg-card: #1a1a1a;
-    --text: #e8e8e8;
-    --text-muted: #888;
-    --accent: #4ade80;
-    --accent-dim: rgba(74, 222, 128, 0.12);
-    --border: #2a2a2a;
-    --radius: 6px;
-  }
-
-  @media (prefers-color-scheme: light) {
-    :root {
-      --bg: #fafafa;
-      --bg-card: #ffffff;
-      --text: #1a1a1a;
-      --text-muted: #666;
-      --accent: #16a34a;
-      --accent-dim: rgba(22, 163, 74, 0.08);
-      --border: #e0e0e0;
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>🌍 World Happenings — 2026-04-04</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      background: #f4f4f5;
+      color: #111;
+      min-height: 100vh;
     }
-  }
-
-  body {
-    background: var(--bg);
-    color: var(--text);
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-    font-size: 15px;
-    line-height: 1.6;
-    -webkit-font-smoothing: antialiased;
-  }
-
-  .container {
-    max-width: 680px;
-    margin: 0 auto;
-    padding: 32px 20px;
-  }
-
-  /* ── Header ── */
-  .header {
-    margin-bottom: 40px;
-    padding-bottom: 24px;
-    border-bottom: 1px solid var(--border);
-  }
-
-  .header h1 {
-    font-size: 28px;
-    font-weight: 700;
-    letter-spacing: -0.5px;
-    color: var(--text);
-    margin-bottom: 4px;
-  }
-
-  .header .tagline {
-    font-size: 14px;
-    color: var(--text-muted);
-    margin-bottom: 8px;
-  }
-
-  .header .date {
-    font-family: "SF Mono", "Fira Code", "Cascadia Code", monospace;
-    font-size: 12px;
-    color: var(--accent);
-    letter-spacing: 0.5px;
-  }
-
-  /* ── Sections ── */
-  .section {
-    margin-bottom: 36px;
-  }
-
-  .section-title {
-    font-size: 13px;
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 1.2px;
-    color: var(--accent);
-    margin-bottom: 16px;
-    padding-bottom: 8px;
-    border-bottom: 1px solid var(--border);
-  }
-
-  /* ── Story cards ── */
-  .story {
-    background: var(--bg-card);
-    border: 1px solid var(--border);
-    border-radius: var(--radius);
-    padding: 14px 16px;
-    margin-bottom: 10px;
-    transition: border-color 0.15s ease;
-  }
-
-  .story:hover {
-    border-color: var(--accent);
-  }
-
-  .story-title a {
-    color: var(--text);
-    text-decoration: none;
-    font-weight: 600;
-    font-size: 15px;
-    line-height: 1.4;
-  }
-
-  .story-title a:hover {
-    color: var(--accent);
-  }
-
-  .story-summary {
-    color: var(--text-muted);
-    font-size: 13px;
-    margin-top: 6px;
-    line-height: 1.5;
-  }
-
-  .story-meta {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    margin-top: 8px;
-    font-family: "SF Mono", "Fira Code", "Cascadia Code", monospace;
-    font-size: 11px;
-    color: var(--text-muted);
-  }
-
-  .source-badge {
-    background: var(--accent-dim);
-    color: var(--accent);
-    padding: 2px 8px;
-    border-radius: 3px;
-    font-size: 10px;
-    font-weight: 600;
-    letter-spacing: 0.3px;
-  }
-
-  /* ── Footer ── */
-  .footer {
-    margin-top: 48px;
-    padding-top: 20px;
-    border-top: 1px solid var(--border);
-    text-align: center;
-    font-family: "SF Mono", "Fira Code", "Cascadia Code", monospace;
-    font-size: 11px;
-    color: var(--text-muted);
-  }
-
-  /* ── Empty state ── */
-  .empty {
-    color: var(--text-muted);
-    font-style: italic;
-    font-size: 13px;
-    padding: 12px 0;
-  }
-
-  /* ── Responsive ── */
-  @media (max-width: 680px) {
-    .container { padding: 20px 16px; }
-    .header h1 { font-size: 24px; }
-    .story { padding: 12px 14px; }
-  }
-</style>
+    header {
+      background: #111;
+      color: #fff;
+      padding: 2rem 1.5rem 1.5rem;
+      text-align: center;
+    }
+    header h1 {
+      font-size: 2rem;
+      font-weight: 800;
+      letter-spacing: -0.5px;
+    }
+    header .date {
+      margin-top: 0.4rem;
+      font-size: 0.95rem;
+      color: #aaa;
+    }
+    main {
+      max-width: 860px;
+      margin: 2rem auto;
+      padding: 0 1rem;
+      display: flex;
+      flex-direction: column;
+      gap: 2.5rem;
+    }
+    .section-title {
+      font-size: 1.2rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+      padding-bottom: 0.4rem;
+      border-bottom: 2px solid #222;
+    }
+    .card {
+      background: #fff;
+      border-radius: 10px;
+      padding: 1.2rem 1.4rem;
+      margin-bottom: 1rem;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.07);
+      border-left: 4px solid #ddd;
+    }
+    .card-tag {
+      display: inline-block;
+      font-size: 0.7rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+      color: #fff;
+      padding: 2px 8px;
+      border-radius: 4px;
+      margin-bottom: 0.6rem;
+    }
+    .card-title {
+      font-size: 1.05rem;
+      font-weight: 700;
+      line-height: 1.4;
+      margin-bottom: 0.5rem;
+    }
+    .card-title a {
+      color: #111;
+      text-decoration: none;
+    }
+    .card-title a:hover {
+      text-decoration: underline;
+    }
+    .card-summary {
+      font-size: 0.88rem;
+      color: #444;
+      line-height: 1.5;
+    }
+    .card-meta {
+      font-size: 0.75rem;
+      color: #888;
+      margin-top: 0.6rem;
+    }
+    footer {
+      text-align: center;
+      padding: 2rem;
+      font-size: 0.8rem;
+      color: #888;
+    }
+  </style>
 </head>
 <body>
-<div class="container">
-
-  <div class="header">
-    <h1>World Happenings</h1>
-    
-    <div class="tagline">The world, every morning</div>
-    
+  <header>
+    <h1>🌍 World Happenings</h1>
     <div class="date">2026-04-04</div>
-  </div>
-
-  
-  
-  <div class="section">
-    <div class="section-title">npr</div>
+  </header>
+  <main>
     
-    <div class="story">
-      <div class="story-title">
-        <a href="https://www.npr.org/2026/04/04/nx-s1-5768273/after-minnesota-ice-surge-shift-to-quieter-enforcement" target="_blank" rel="noopener">After the Minnesota surge, ICE is moving to a quieter enforcement approach</a>
-      </div>
-      
-      <div class="story-meta">
-        
-        <span class="source-badge">NPR News</span>
-        
-        
-        <span>2026-04-04</span>
-        
-      </div>
-    </div>
     
-    <div class="story">
-      <div class="story-title">
-        <a href="https://www.npr.org/2026/04/04/nx-s1-5766048/london-falling-review-patrick-radden-keefe" target="_blank" rel="noopener">&#39;London Falling&#39;: A teenage imposter, an aging gangster and a body in the Thames</a>
+    <section>
+      <h2 class="section-title">Npr</h2>
+      
+      <div class="card">
+        <div class="card-title">
+          <a href="https://www.npr.org/2026/04/04/nx-s1-5768273/after-minnesota-ice-surge-shift-to-quieter-enforcement" target="_blank" rel="noopener">After the Minnesota surge, ICE is moving to a quieter enforcement approach</a>
+        </div>
+        
+        <div class="card-meta">NPR News · 2026-04-04</div>
       </div>
       
-      <div class="story-meta">
+      <div class="card">
+        <div class="card-title">
+          <a href="https://www.npr.org/2026/04/04/nx-s1-5766048/london-falling-review-patrick-radden-keefe" target="_blank" rel="noopener">&#39;London Falling&#39;: A teenage imposter, an aging gangster and a body in the Thames</a>
+        </div>
         
-        <span class="source-badge">NPR News</span>
-        
-        
-        <span>2026-04-04</span>
-        
+        <div class="card-meta">NPR News · 2026-04-04</div>
       </div>
-    </div>
+      
+      <div class="card">
+        <div class="card-title">
+          <a href="https://www.npr.org/2026/04/04/nx-s1-5764829/opinion-humanitys-hopes-ascended-with-artemis-ii" target="_blank" rel="noopener">Opinion: Humanity&#39;s hopes ascended with Artemis II</a>
+        </div>
+        
+        <div class="card-meta">NPR News · 2026-04-04</div>
+      </div>
+      
+      <div class="card">
+        <div class="card-title">
+          <a href="https://www.npr.org/2026/04/04/nx-s1-5773436/iran-war-updates" target="_blank" rel="noopener">Iran war enters its 6th week as military searches for downed jet crew member</a>
+        </div>
+        
+        <div class="card-meta">NPR News · 2026-04-04</div>
+      </div>
+      
+      <div class="card">
+        <div class="card-title">
+          <a href="https://www.npr.org/sections/the-picture-show/2026/04/04/g-s1-116218/life-on-tristan-da-cunha" target="_blank" rel="noopener">The busiest place you&#39;ve never seen</a>
+        </div>
+        
+        <div class="card-meta">NPR News · 2026-04-04</div>
+      </div>
+      
+    </section>
     
-    <div class="story">
-      <div class="story-title">
-        <a href="https://www.npr.org/2026/04/04/nx-s1-5764829/opinion-humanitys-hopes-ascended-with-artemis-ii" target="_blank" rel="noopener">Opinion: Humanity&#39;s hopes ascended with Artemis II</a>
-      </div>
-      
-      <div class="story-meta">
-        
-        <span class="source-badge">NPR News</span>
-        
-        
-        <span>2026-04-04</span>
-        
-      </div>
-    </div>
     
-    <div class="story">
-      <div class="story-title">
-        <a href="https://www.npr.org/2026/04/04/nx-s1-5773436/iran-war-updates" target="_blank" rel="noopener">Iran war enters its 6th week as military searches for downed jet crew member</a>
-      </div>
-      
-      <div class="story-meta">
-        
-        <span class="source-badge">NPR News</span>
-        
-        
-        <span>2026-04-04</span>
-        
-      </div>
-    </div>
     
-    <div class="story">
-      <div class="story-title">
-        <a href="https://www.npr.org/sections/the-picture-show/2026/04/04/g-s1-116218/life-on-tristan-da-cunha" target="_blank" rel="noopener">The busiest place you&#39;ve never seen</a>
+    <section>
+      <h2 class="section-title">Bbc World</h2>
+      
+      <div class="card">
+        <div class="card-title">
+          <a href="https://www.bbc.com/news/articles/c5y90jl8veyo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener">UN watchdog voices &#39;deep concern&#39; as Iran reports new attacks on nuclear plant</a>
+        </div>
+        
+        <div class="card-meta">BBC World · 2026-04-04</div>
       </div>
       
-      <div class="story-meta">
+      <div class="card">
+        <div class="card-title">
+          <a href="https://www.bbc.com/news/articles/cgqkn4j48qdo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener">US arrests relatives of deceased Iranian ​general Qasem ​Soleimani</a>
+        </div>
         
-        <span class="source-badge">NPR News</span>
-        
-        
-        <span>2026-04-04</span>
-        
+        <div class="card-meta">BBC World · 2026-04-04</div>
       </div>
-    </div>
+      
+      <div class="card">
+        <div class="card-title">
+          <a href="https://www.bbc.com/news/articles/cp869m2gzr0o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener">Russian attack on Ukraine market kills five</a>
+        </div>
+        
+        <div class="card-meta">BBC World · 2026-04-04</div>
+      </div>
+      
+      <div class="card">
+        <div class="card-title">
+          <a href="https://www.bbc.com/news/articles/cn437qkk80lo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener">Fugitive mafia boss wanted for murder arrested in Amalfi Coast luxury villa</a>
+        </div>
+        
+        <div class="card-meta">BBC World · 2026-04-04</div>
+      </div>
+      
+      <div class="card">
+        <div class="card-title">
+          <a href="https://www.bbc.com/news/articles/c3dlpk0zzy1o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener">Trump seeks $152m to reopen notorious Alcatraz prison</a>
+        </div>
+        
+        <div class="card-meta">BBC World · 2026-04-04</div>
+      </div>
+      
+    </section>
     
-  </div>
-  
-  
-  
-  <div class="section">
-    <div class="section-title">bbc world</div>
     
-    <div class="story">
-      <div class="story-title">
-        <a href="https://www.bbc.com/news/articles/c5y90jl8veyo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener">UN watchdog voices &#39;deep concern&#39; as Iran reports new attacks on nuclear plant</a>
-      </div>
-      
-      <div class="story-meta">
-        
-        <span class="source-badge">BBC World</span>
-        
-        
-        <span>2026-04-04</span>
-        
-      </div>
-    </div>
     
-    <div class="story">
-      <div class="story-title">
-        <a href="https://www.bbc.com/news/articles/cgqkn4j48qdo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener">US arrests relatives of deceased Iranian ​general Qasem ​Soleimani</a>
+    <section>
+      <h2 class="section-title">Bbc Us</h2>
+      
+      <div class="card">
+        <div class="card-title">
+          <a href="https://www.bbc.com/news/articles/c3r395l91l3o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener">US pilot rescued after fighter jet downed over Iran, US media report</a>
+        </div>
+        
+        <div class="card-meta">BBC US · 2026-04-04</div>
       </div>
       
-      <div class="story-meta">
+      <div class="card">
+        <div class="card-title">
+          <a href="https://www.bbc.com/news/articles/c0le43jw8e9o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener">Rescue team in Iran face &#39;harrowing and dangerous&#39; search for US crew member</a>
+        </div>
         
-        <span class="source-badge">BBC World</span>
-        
-        
-        <span>2026-04-04</span>
-        
+        <div class="card-meta">BBC US · 2026-04-04</div>
       </div>
-    </div>
+      
+      <div class="card">
+        <div class="card-title">
+          <a href="https://www.bbc.com/news/articles/cgqkn4j48qdo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener">US arrests relatives of deceased Iranian ​general Qasem ​Soleimani</a>
+        </div>
+        
+        <div class="card-meta">BBC US · 2026-04-04</div>
+      </div>
+      
+      <div class="card">
+        <div class="card-title">
+          <a href="https://www.bbc.com/news/articles/cvg09dq4x5qo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener">How Canada&#39;s largest gun control effort in decades is missing the mark</a>
+        </div>
+        
+        <div class="card-meta">BBC US · 2026-04-04</div>
+      </div>
+      
+      <div class="card">
+        <div class="card-title">
+          <a href="https://www.bbc.com/news/articles/c3dlpk0zzy1o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener">Trump seeks $152m to reopen notorious Alcatraz prison</a>
+        </div>
+        
+        <div class="card-meta">BBC US · 2026-04-04</div>
+      </div>
+      
+    </section>
     
-    <div class="story">
-      <div class="story-title">
-        <a href="https://www.bbc.com/news/articles/cp869m2gzr0o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener">Russian attack on Ukraine market kills five</a>
-      </div>
-      
-      <div class="story-meta">
-        
-        <span class="source-badge">BBC World</span>
-        
-        
-        <span>2026-04-04</span>
-        
-      </div>
-    </div>
     
-    <div class="story">
-      <div class="story-title">
-        <a href="https://www.bbc.com/news/articles/cn437qkk80lo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener">Fugitive mafia boss wanted for murder arrested in Amalfi Coast luxury villa</a>
-      </div>
-      
-      <div class="story-meta">
-        
-        <span class="source-badge">BBC World</span>
-        
-        
-        <span>2026-04-04</span>
-        
-      </div>
-    </div>
     
-    <div class="story">
-      <div class="story-title">
-        <a href="https://www.bbc.com/news/articles/c3dlpk0zzy1o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener">Trump seeks $152m to reopen notorious Alcatraz prison</a>
+    <section>
+      <h2 class="section-title">Nyt</h2>
+      
+      <div class="card">
+        <div class="card-title">
+          <a href="https://www.nytimes.com/2026/04/04/world/middleeast/missing-airman-iran.html" target="_blank" rel="noopener">Missing Airman Raises Concerns That Iran Could Gain Leverage Over the U.S.</a>
+        </div>
+        
+        <div class="card-meta">NY Times · 2026-04-04</div>
       </div>
       
-      <div class="story-meta">
+      <div class="card">
+        <div class="card-title">
+          <a href="https://www.nytimes.com/2026/04/03/world/middleeast/f-15-us-fighter-jet-iran.html" target="_blank" rel="noopener">What We Know About the F-15E Strike Eagle Shot Down by Iran</a>
+        </div>
         
-        <span class="source-badge">BBC World</span>
-        
-        
-        <span>2026-04-04</span>
-        
+        <div class="card-meta">NY Times · 2026-04-04</div>
       </div>
-    </div>
+      
+      <div class="card">
+        <div class="card-title">
+          <a href="https://www.nytimes.com/2026/04/04/us/politics/trump-endless-wars.html" target="_blank" rel="noopener">Trump Pledged a Quick End to the Iran War, but He Hasn’t Explained How</a>
+        </div>
+        
+        <div class="card-meta">NY Times · 2026-04-04</div>
+      </div>
+      
+      <div class="card">
+        <div class="card-title">
+          <a href="https://www.nytimes.com/2026/04/04/us/politics/attorney-general-trump.html" target="_blank" rel="noopener">New Attorney General, Same Albatross: Trump’s Quest for Retribution</a>
+        </div>
+        
+        <div class="card-meta">NY Times · 2026-04-04</div>
+      </div>
+      
+      <div class="card">
+        <div class="card-title">
+          <a href="https://www.nytimes.com/2026/04/03/us/politics/trump-cabinet-changes.html" target="_blank" rel="noopener">Trump Contemplates Other Cabinet Changes as He Faces Political Clock</a>
+        </div>
+        
+        <div class="card-meta">NY Times · 2026-04-04</div>
+      </div>
+      
+    </section>
     
-  </div>
-  
-  
-  
-  <div class="section">
-    <div class="section-title">bbc us</div>
     
-    <div class="story">
-      <div class="story-title">
-        <a href="https://www.bbc.com/news/articles/c3r395l91l3o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener">US pilot rescued after fighter jet downed over Iran, US media report</a>
-      </div>
-      
-      <div class="story-meta">
-        
-        <span class="source-badge">BBC US</span>
-        
-        
-        <span>2026-04-04</span>
-        
-      </div>
-    </div>
     
-    <div class="story">
-      <div class="story-title">
-        <a href="https://www.bbc.com/news/articles/c0le43jw8e9o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener">Rescue team in Iran face &#39;harrowing and dangerous&#39; search for US crew member</a>
+    <section>
+      <h2 class="section-title">Conflict</h2>
+      
+      <div class="card">
+        <div class="card-title">
+          <a href="https://www.golocalprov.com/news/5-big-news-stories-overnight-saturday-april-4-2026" target="_blank" rel="noopener">US-Iran Ceasefire Efforts Reportedly Hit Dead End</a>
+        </div>
+        
+        <div class="card-summary">Current mediation efforts by regional countries, including Pakistan, to broker a ceasefire between the United States and Iran have reportedly reached a dead end. This development comes as the war against the Islamic Republic is set to enter its sixth week.</div>
+        
+        <div class="card-meta">Go Local Prov · April 04 2026</div>
       </div>
       
-      <div class="story-meta">
+      <div class="card">
+        <div class="card-title">
+          <a href="https://www.timesofisrael.com/liveblog-april-4-2026/" target="_blank" rel="noopener">Israel Bombs Iranian Petrochemical Facilities, Halting Ballistic Missile Material Production</a>
+        </div>
         
-        <span class="source-badge">BBC US</span>
+        <div class="card-summary">The IDF has confirmed bombing petrochemical facilities in southern Iran, stating that these sites were used by the regime to manufacture materials for ballistic missiles. The strikes are expected to cause billions of dollars in financial damage and have halted all production of the chemical materials.</div>
         
-        
-        <span>2026-04-04</span>
-        
+        <div class="card-meta">The Times of Israel · April 04 2026</div>
       </div>
-    </div>
+      
+      <div class="card">
+        <div class="card-title">
+          <a href="https://www.thehindu.com/news/international/iran-israel-war-west-asia-conflict-april-4-2026-live-updates/article70822179.ece" target="_blank" rel="noopener">Iraq Closes Border Crossing with Iran After Airstrikes Kill Iraqi Citizen</a>
+        </div>
+        
+        <div class="card-summary">Iraq has closed the Shalamcheh border crossing with Iran following airstrikes on the Iranian side that resulted in the death of an Iraqi citizen. This vital supply artery, used for imports of vegetables and other food supplies from Iran, has been shut off due to the escalating tensions.</div>
+        
+        <div class="card-meta">thehindu.com · 2026-04-04</div>
+      </div>
+      
+    </section>
     
-    <div class="story">
-      <div class="story-title">
-        <a href="https://www.bbc.com/news/articles/cgqkn4j48qdo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener">US arrests relatives of deceased Iranian ​general Qasem ​Soleimani</a>
-      </div>
-      
-      <div class="story-meta">
-        
-        <span class="source-badge">BBC US</span>
-        
-        
-        <span>2026-04-04</span>
-        
-      </div>
-    </div>
     
-    <div class="story">
-      <div class="story-title">
-        <a href="https://www.bbc.com/news/articles/cvg09dq4x5qo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener">How Canada&#39;s largest gun control effort in decades is missing the mark</a>
-      </div>
-      
-      <div class="story-meta">
-        
-        <span class="source-badge">BBC US</span>
-        
-        
-        <span>2026-04-04</span>
-        
-      </div>
-    </div>
     
-    <div class="story">
-      <div class="story-title">
-        <a href="https://www.bbc.com/news/articles/c3dlpk0zzy1o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener">Trump seeks $152m to reopen notorious Alcatraz prison</a>
+    <section>
+      <h2 class="section-title">Economy</h2>
+      
+      <div class="card">
+        <div class="card-title">
+          <a href="https://www.spglobal.com/ratings/en/regulatory/article/global-economic-outlook-q2-2026-middle-east-war-dents-the-forecast-s101677805" target="_blank" rel="noopener">Middle East War Dents Global Economic Outlook, Raises Inflation Concerns</a>
+        </div>
+        
+        <div class="card-summary">The ongoing Middle East war has significantly impacted the global economic outlook for 2026, causing the largest energy supply shock on record. This has led to forecasts of moderately lower growth and materially higher inflation, complicating central bank policy decisions.</div>
+        
+        <div class="card-meta">S&amp;P Global · March 31 2026</div>
       </div>
       
-      <div class="story-meta">
+      <div class="card">
+        <div class="card-title">
+          <a href="https://www.nippon.com/en/news/yjj2026040400152/" target="_blank" rel="noopener">IMF Recommends Bank of Japan Continue Gradual Rate Hikes to Combat Inflation</a>
+        </div>
         
-        <span class="source-badge">BBC US</span>
+        <div class="card-summary">The International Monetary Fund has recommended that the Bank of Japan continue to gradually raise its policy rate towards a neutral level. This measure is advised to bring down underlying inflation and help the central bank meet its 2% inflation target.</div>
         
-        
-        <span>2026-04-04</span>
-        
+        <div class="card-meta">Nippon.com · April 04 2026</div>
       </div>
-    </div>
+      
+      <div class="card">
+        <div class="card-title">
+          <a href="https://www.swissinfo.ch/eng/various/swiss-metals-and-machine-industry-worried-about-new-us-tariff-rules/91208731?utm_source=multiple&amp;utm_campaign=swi-rss&amp;utm_medium=rss&amp;utm_content=o" target="_blank" rel="noopener">US Imposes New Tariffs on Swiss Metals and Pharma Products</a>
+        </div>
+        
+        <div class="card-summary">The United States has announced new tariff rules for steel, aluminum, and pharmaceutical products imported from Switzerland. Swiss metal suppliers are concerned about increased uncertainty and administrative burdens, while tariffs of up to 100% are imposed on patented medicines.</div>
+        
+        <div class="card-meta">SWI swissinfo.ch · April 04 2026</div>
+      </div>
+      
+    </section>
     
-  </div>
-  
-  
-  
-  <div class="section">
-    <div class="section-title">nyt</div>
     
-    <div class="story">
-      <div class="story-title">
-        <a href="https://www.nytimes.com/2026/04/04/world/middleeast/missing-airman-iran.html" target="_blank" rel="noopener">Missing Airman Raises Concerns That Iran Could Gain Leverage Over the U.S.</a>
-      </div>
-      
-      <div class="story-meta">
-        
-        <span class="source-badge">NY Times</span>
-        
-        
-        <span>2026-04-04</span>
-        
-      </div>
-    </div>
     
-    <div class="story">
-      <div class="story-title">
-        <a href="https://www.nytimes.com/2026/04/03/world/middleeast/f-15-us-fighter-jet-iran.html" target="_blank" rel="noopener">What We Know About the F-15E Strike Eagle Shot Down by Iran</a>
+    <section>
+      <h2 class="section-title">Climate</h2>
+      
+      <div class="card">
+        <div class="card-title">
+          <a href="https://www.weforum.org/stories/2026/03/world-on-course-breach-15c-before-2030-climate-nature-news/" target="_blank" rel="noopener">Humanity Set to Breach 1.5°C Warming Limit Before 2030, Study Reveals</a>
+        </div>
+        
+        <div class="card-summary">New research indicates that human activity is accelerating global warming, with data suggesting a breach of the 1.5°C limit of the Paris Agreement before 2030. The long-term warming rate has increased significantly over the past decade, marking the fastest rate since records began.</div>
+        
+        <div class="card-meta">World Economic Forum · March 13 2026</div>
       </div>
       
-      <div class="story-meta">
+      <div class="card">
+        <div class="card-title">
+          <a href="https://www.houstonchronicle.com/news/world/article/floods-landslides-triggered-by-heavy-rain-in-22188948.php" target="_blank" rel="noopener">Floods and Landslides Kill 77 in Afghanistan Over 10 Days</a>
+        </div>
         
-        <span class="source-badge">NY Times</span>
+        <div class="card-summary">Widespread flooding, landslides, and lightning strikes triggered by heavy rain and storms across Afghanistan have resulted in 77 deaths and 137 injuries in the past 10 days. The disaster management authority reported that 793 homes were completely destroyed and over 2,600 damaged.</div>
         
-        
-        <span>2026-04-04</span>
-        
+        <div class="card-meta">Houston Chronicle · April 04 2026</div>
       </div>
-    </div>
+      
+      <div class="card">
+        <div class="card-title">
+          <a href="https://www.ctpost.com/news/world/article/floods-landslides-triggered-by-heavy-rain-in-22188948.php" target="_blank" rel="noopener">Renewable Energy Accounts for Nearly Half of Global Power Capacity in 2025</a>
+        </div>
+        
+        <div class="card-summary">According to new data from the International Renewable Energy Agency (IRENA), renewable energy comprised nearly half of the global power capacity by the end of 2025. Last year saw the largest-ever recorded increase in renewable energy capacity, a 15.5% annual rise.</div>
+        
+        <div class="card-meta">Earth.Org · April 04 2026</div>
+      </div>
+      
+    </section>
     
-    <div class="story">
-      <div class="story-title">
-        <a href="https://www.nytimes.com/2026/04/04/us/politics/trump-endless-wars.html" target="_blank" rel="noopener">Trump Pledged a Quick End to the Iran War, but He Hasn’t Explained How</a>
-      </div>
-      
-      <div class="story-meta">
-        
-        <span class="source-badge">NY Times</span>
-        
-        
-        <span>2026-04-04</span>
-        
-      </div>
-    </div>
     
-    <div class="story">
-      <div class="story-title">
-        <a href="https://www.nytimes.com/2026/04/04/us/politics/attorney-general-trump.html" target="_blank" rel="noopener">New Attorney General, Same Albatross: Trump’s Quest for Retribution</a>
-      </div>
-      
-      <div class="story-meta">
-        
-        <span class="source-badge">NY Times</span>
-        
-        
-        <span>2026-04-04</span>
-        
-      </div>
-    </div>
     
-    <div class="story">
-      <div class="story-title">
-        <a href="https://www.nytimes.com/2026/04/03/us/politics/trump-cabinet-changes.html" target="_blank" rel="noopener">Trump Contemplates Other Cabinet Changes as He Faces Political Clock</a>
+    <section>
+      <h2 class="section-title">Health</h2>
+      
+      <div class="card">
+        <div class="card-title">
+          <a href="https://earth.org/this-week-in-climate-news-april-2026-week-1/" target="_blank" rel="noopener">US Measles Cases in 2026 on Pace to Surpass 2024 Outbreak Total</a>
+        </div>
+        
+        <div class="card-summary">The United States is on track to exceed its 2024 measles outbreak total, with 1,671 confirmed cases reported as of April 2, 2026. This surge puts the country at risk of losing its measles elimination status, which it has held since 2000.</div>
+        
+        <div class="card-meta">Oregon Capital Chronicle · April 04 2026</div>
       </div>
       
-      <div class="story-meta">
+      <div class="card">
+        <div class="card-title">
+          <a href="https://philomathnews.com/oregon-measles-cases-in-2026-already-on-pace-to-surpass-2024-outbreak-total/" target="_blank" rel="noopener">Antibiotic-Resistant Gonorrhea Emerges as Growing Men&#39;s Health Crisis</a>
+        </div>
         
-        <span class="source-badge">NY Times</span>
+        <div class="card-summary">Antibiotic-resistant gonorrhea is rapidly escalating into a significant men&#39;s health crisis, demanding a reframing of public health messaging. Experts caution that the infection is evolving to evade treatment, posing unique risks and consequences.</div>
         
-        
-        <span>2026-04-04</span>
-        
+        <div class="card-meta">Contagion Live · April 04 2026</div>
       </div>
-    </div>
+      
+      <div class="card">
+        <div class="card-title">
+          <a href="https://www.cdc.gov/measles/data-research/index.html" target="_blank" rel="noopener">Unintentional Drug Overdose and Violence Account for Over a Quarter of US Maternal Deaths</a>
+        </div>
+        
+        <div class="card-summary">A study published in The New England Journal of Medicine revealed that unintentional drug overdose and violence, including homicide and suicide, now contribute to more than one-fourth of maternal deaths in the United States. These findings broaden the definition of maternal risk.</div>
+        
+        <div class="card-meta">Contemporary OB/GYN · April 04 2026</div>
+      </div>
+      
+    </section>
     
-  </div>
-  
-  
-  
-  <div class="section">
-    <div class="section-title">conflict</div>
     
-    <div class="story">
-      <div class="story-title">
-        <a href="https://www.golocalprov.com/news/5-big-news-stories-overnight-saturday-april-4-2026" target="_blank" rel="noopener">US-Iran Ceasefire Efforts Reportedly Hit Dead End</a>
-      </div>
-      
-      <div class="story-summary">Current mediation efforts by regional countries, including Pakistan, to broker a ceasefire between the United States and Iran have reportedly reached a dead end. This development comes as the war against the Islamic Republic is set to enter its sixth week.</div>
-      
-      <div class="story-meta">
-        
-        <span class="source-badge">Go Local Prov</span>
-        
-        
-        <span>April 04 2026</span>
-        
-      </div>
-    </div>
-    
-    <div class="story">
-      <div class="story-title">
-        <a href="https://www.timesofisrael.com/liveblog-april-4-2026/" target="_blank" rel="noopener">Israel Bombs Iranian Petrochemical Facilities, Halting Ballistic Missile Material Production</a>
-      </div>
-      
-      <div class="story-summary">The IDF has confirmed bombing petrochemical facilities in southern Iran, stating that these sites were used by the regime to manufacture materials for ballistic missiles. The strikes are expected to cause billions of dollars in financial damage and have halted all production of the chemical materials.</div>
-      
-      <div class="story-meta">
-        
-        <span class="source-badge">The Times of Israel</span>
-        
-        
-        <span>April 04 2026</span>
-        
-      </div>
-    </div>
-    
-    <div class="story">
-      <div class="story-title">
-        <a href="https://www.thehindu.com/news/international/iran-israel-war-west-asia-conflict-april-4-2026-live-updates/article70822179.ece" target="_blank" rel="noopener">Iraq Closes Border Crossing with Iran After Airstrikes Kill Iraqi Citizen</a>
-      </div>
-      
-      <div class="story-summary">Iraq has closed the Shalamcheh border crossing with Iran following airstrikes on the Iranian side that resulted in the death of an Iraqi citizen. This vital supply artery, used for imports of vegetables and other food supplies from Iran, has been shut off due to the escalating tensions.</div>
-      
-      <div class="story-meta">
-        
-        <span class="source-badge">thehindu.com</span>
-        
-        
-        <span>2026-04-04</span>
-        
-      </div>
-    </div>
-    
-  </div>
-  
-  
-  
-  <div class="section">
-    <div class="section-title">economy</div>
-    
-    <div class="story">
-      <div class="story-title">
-        <a href="https://www.spglobal.com/ratings/en/regulatory/article/global-economic-outlook-q2-2026-middle-east-war-dents-the-forecast-s101677805" target="_blank" rel="noopener">Middle East War Dents Global Economic Outlook, Raises Inflation Concerns</a>
-      </div>
-      
-      <div class="story-summary">The ongoing Middle East war has significantly impacted the global economic outlook for 2026, causing the largest energy supply shock on record. This has led to forecasts of moderately lower growth and materially higher inflation, complicating central bank policy decisions.</div>
-      
-      <div class="story-meta">
-        
-        <span class="source-badge">S&amp;P Global</span>
-        
-        
-        <span>March 31 2026</span>
-        
-      </div>
-    </div>
-    
-    <div class="story">
-      <div class="story-title">
-        <a href="https://www.nippon.com/en/news/yjj2026040400152/" target="_blank" rel="noopener">IMF Recommends Bank of Japan Continue Gradual Rate Hikes to Combat Inflation</a>
-      </div>
-      
-      <div class="story-summary">The International Monetary Fund has recommended that the Bank of Japan continue to gradually raise its policy rate towards a neutral level. This measure is advised to bring down underlying inflation and help the central bank meet its 2% inflation target.</div>
-      
-      <div class="story-meta">
-        
-        <span class="source-badge">Nippon.com</span>
-        
-        
-        <span>April 04 2026</span>
-        
-      </div>
-    </div>
-    
-    <div class="story">
-      <div class="story-title">
-        <a href="https://www.swissinfo.ch/eng/various/swiss-metals-and-machine-industry-worried-about-new-us-tariff-rules/91208731?utm_source=multiple&amp;utm_campaign=swi-rss&amp;utm_medium=rss&amp;utm_content=o" target="_blank" rel="noopener">US Imposes New Tariffs on Swiss Metals and Pharma Products</a>
-      </div>
-      
-      <div class="story-summary">The United States has announced new tariff rules for steel, aluminum, and pharmaceutical products imported from Switzerland. Swiss metal suppliers are concerned about increased uncertainty and administrative burdens, while tariffs of up to 100% are imposed on patented medicines.</div>
-      
-      <div class="story-meta">
-        
-        <span class="source-badge">SWI swissinfo.ch</span>
-        
-        
-        <span>April 04 2026</span>
-        
-      </div>
-    </div>
-    
-  </div>
-  
-  
-  
-  <div class="section">
-    <div class="section-title">climate</div>
-    
-    <div class="story">
-      <div class="story-title">
-        <a href="https://www.weforum.org/stories/2026/03/world-on-course-breach-15c-before-2030-climate-nature-news/" target="_blank" rel="noopener">Humanity Set to Breach 1.5°C Warming Limit Before 2030, Study Reveals</a>
-      </div>
-      
-      <div class="story-summary">New research indicates that human activity is accelerating global warming, with data suggesting a breach of the 1.5°C limit of the Paris Agreement before 2030. The long-term warming rate has increased significantly over the past decade, marking the fastest rate since records began.</div>
-      
-      <div class="story-meta">
-        
-        <span class="source-badge">World Economic Forum</span>
-        
-        
-        <span>March 13 2026</span>
-        
-      </div>
-    </div>
-    
-    <div class="story">
-      <div class="story-title">
-        <a href="https://www.houstonchronicle.com/news/world/article/floods-landslides-triggered-by-heavy-rain-in-22188948.php" target="_blank" rel="noopener">Floods and Landslides Kill 77 in Afghanistan Over 10 Days</a>
-      </div>
-      
-      <div class="story-summary">Widespread flooding, landslides, and lightning strikes triggered by heavy rain and storms across Afghanistan have resulted in 77 deaths and 137 injuries in the past 10 days. The disaster management authority reported that 793 homes were completely destroyed and over 2,600 damaged.</div>
-      
-      <div class="story-meta">
-        
-        <span class="source-badge">Houston Chronicle</span>
-        
-        
-        <span>April 04 2026</span>
-        
-      </div>
-    </div>
-    
-    <div class="story">
-      <div class="story-title">
-        <a href="https://www.ctpost.com/news/world/article/floods-landslides-triggered-by-heavy-rain-in-22188948.php" target="_blank" rel="noopener">Renewable Energy Accounts for Nearly Half of Global Power Capacity in 2025</a>
-      </div>
-      
-      <div class="story-summary">According to new data from the International Renewable Energy Agency (IRENA), renewable energy comprised nearly half of the global power capacity by the end of 2025. Last year saw the largest-ever recorded increase in renewable energy capacity, a 15.5% annual rise.</div>
-      
-      <div class="story-meta">
-        
-        <span class="source-badge">Earth.Org</span>
-        
-        
-        <span>April 04 2026</span>
-        
-      </div>
-    </div>
-    
-  </div>
-  
-  
-  
-  <div class="section">
-    <div class="section-title">health</div>
-    
-    <div class="story">
-      <div class="story-title">
-        <a href="https://earth.org/this-week-in-climate-news-april-2026-week-1/" target="_blank" rel="noopener">US Measles Cases in 2026 on Pace to Surpass 2024 Outbreak Total</a>
-      </div>
-      
-      <div class="story-summary">The United States is on track to exceed its 2024 measles outbreak total, with 1,671 confirmed cases reported as of April 2, 2026. This surge puts the country at risk of losing its measles elimination status, which it has held since 2000.</div>
-      
-      <div class="story-meta">
-        
-        <span class="source-badge">Oregon Capital Chronicle</span>
-        
-        
-        <span>April 04 2026</span>
-        
-      </div>
-    </div>
-    
-    <div class="story">
-      <div class="story-title">
-        <a href="https://philomathnews.com/oregon-measles-cases-in-2026-already-on-pace-to-surpass-2024-outbreak-total/" target="_blank" rel="noopener">Antibiotic-Resistant Gonorrhea Emerges as Growing Men&#39;s Health Crisis</a>
-      </div>
-      
-      <div class="story-summary">Antibiotic-resistant gonorrhea is rapidly escalating into a significant men&#39;s health crisis, demanding a reframing of public health messaging. Experts caution that the infection is evolving to evade treatment, posing unique risks and consequences.</div>
-      
-      <div class="story-meta">
-        
-        <span class="source-badge">Contagion Live</span>
-        
-        
-        <span>April 04 2026</span>
-        
-      </div>
-    </div>
-    
-    <div class="story">
-      <div class="story-title">
-        <a href="https://www.cdc.gov/measles/data-research/index.html" target="_blank" rel="noopener">Unintentional Drug Overdose and Violence Account for Over a Quarter of US Maternal Deaths</a>
-      </div>
-      
-      <div class="story-summary">A study published in The New England Journal of Medicine revealed that unintentional drug overdose and violence, including homicide and suicide, now contribute to more than one-fourth of maternal deaths in the United States. These findings broaden the definition of maternal risk.</div>
-      
-      <div class="story-meta">
-        
-        <span class="source-badge">Contemporary OB/GYN</span>
-        
-        
-        <span>April 04 2026</span>
-        
-      </div>
-    </div>
-    
-  </div>
-  
-  
-
-  <div class="footer">
-    Built by Pavano &middot; 2026-04-04
-  </div>
-
-</div>
+  </main>
+  <footer>Compiled by Pavano · 2026-04-04</footer>
 </body>
 </html>
