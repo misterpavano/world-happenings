@@ -1,465 +1,317 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>World Happenings — 2026-04-03</title>
-<style>
-  * { margin: 0; padding: 0; box-sizing: border-box; }
-  body {
-    background: #0d1b2a;
-    color: #e8e8e8;
-    font-family: Georgia, 'Times New Roman', 'Noto Serif', serif;
-    font-size: 15px;
-    line-height: 1.7;
-    -webkit-font-smoothing: antialiased;
-  }
-  .container {
-    max-width: 740px;
-    margin: 0 auto;
-    padding: 40px 24px;
-  }
-  .masthead {
-    text-align: center;
-    border-bottom: 3px double #e63946;
-    padding-bottom: 20px;
-    margin-bottom: 36px;
-  }
-  .masthead h1 {
-    font-size: 32px;
-    font-weight: 700;
-    color: #ffffff;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-  }
-  .masthead .edition {
-    font-size: 12px;
-    color: #8899aa;
-    margin-top: 6px;
-    font-family: -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif;
-    letter-spacing: 3px;
-    text-transform: uppercase;
-  }
-  .dateline {
-    text-align: center;
-    font-size: 11px;
-    color: #667788;
-    font-family: -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif;
-    letter-spacing: 1px;
-    margin-bottom: 32px;
-  }
-  .section {
-    margin-bottom: 40px;
-  }
-  .section-badge {
-    display: inline-block;
-    background: #e63946;
-    color: #ffffff;
-    font-family: -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif;
-    font-size: 10px;
-    font-weight: 700;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    padding: 4px 12px;
-    margin-bottom: 16px;
-  }
-  .story {
-    padding: 14px 0;
-    border-bottom: 1px solid #1b2d44;
-  }
-  .story:last-child {
-    border-bottom: none;
-  }
-  .story-headline a {
-    color: #ffffff;
-    text-decoration: none;
-    font-size: 17px;
-    font-weight: 700;
-    line-height: 1.3;
-  }
-  .story-headline a:hover {
-    color: #e63946;
-  }
-  .story-meta {
-    font-family: -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif;
-    font-size: 11px;
-    color: #667788;
-    margin-top: 4px;
-  }
-  .story-meta .source {
-    color: #e63946;
-    font-weight: 600;
-  }
-  .story-summary {
-    color: #bbc8d8;
-    font-size: 14px;
-    margin-top: 8px;
-    line-height: 1.6;
-  }
-  .divider {
-    border: none;
-    border-top: 1px solid #1b2d44;
-    margin: 0;
-  }
-  .footer {
-    border-top: 3px double #e63946;
-    padding-top: 20px;
-    margin-top: 40px;
-    text-align: center;
-    font-family: -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif;
-    font-size: 11px;
-    color: #556677;
-    letter-spacing: 1px;
-  }
-  @media (max-width: 600px) {
-    .container { padding: 24px 16px; }
-    .masthead h1 { font-size: 24px; }
-    .story-headline a { font-size: 16px; }
-  }
-</style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>🌍 World Happenings — Thursday, April 2, 2026</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      background: #f4f4f5;
+      color: #111;
+      min-height: 100vh;
+    }
+    header {
+      background: #111;
+      color: #fff;
+      padding: 2rem 1.5rem 1.5rem;
+      text-align: center;
+    }
+    header h1 {
+      font-size: 2rem;
+      font-weight: 800;
+      letter-spacing: -0.5px;
+    }
+    header .date {
+      margin-top: 0.4rem;
+      font-size: 0.95rem;
+      color: #aaa;
+    }
+    main {
+      max-width: 860px;
+      margin: 2rem auto;
+      padding: 0 1rem;
+      display: flex;
+      flex-direction: column;
+      gap: 2.5rem;
+    }
+    .section-title {
+      font-size: 1.2rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+      padding-bottom: 0.4rem;
+      border-bottom: 2px solid #222;
+    }
+    .card {
+      background: #fff;
+      border-radius: 10px;
+      padding: 1.2rem 1.4rem;
+      margin-bottom: 1rem;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.07);
+      border-left: 4px solid #ddd;
+    }
+    .card-tag {
+      display: inline-block;
+      font-size: 0.7rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+      color: #fff;
+      padding: 2px 8px;
+      border-radius: 4px;
+      margin-bottom: 0.6rem;
+    }
+    .card-title {
+      font-size: 1.05rem;
+      font-weight: 700;
+      line-height: 1.4;
+      margin-bottom: 0.5rem;
+    }
+    .card-title a {
+      color: #111;
+      text-decoration: none;
+    }
+    .card-title a:hover {
+      text-decoration: underline;
+    }
+    .card-summary {
+      font-size: 0.88rem;
+      color: #444;
+      line-height: 1.5;
+      margin-bottom: 0.5rem;
+    }
+    .card-meta {
+      font-size: 0.78rem;
+      color: #888;
+    }
+    .empty-section {
+      color: #888;
+      font-style: italic;
+      padding: 0.5rem 0;
+    }
+    footer {
+      text-align: center;
+      padding: 2rem 1rem;
+      color: #999;
+      font-size: 0.82rem;
+    }
+  </style>
 </head>
 <body>
-<div class="container">
-  <div class="masthead">
-    <h1>World Happenings</h1>
-    <div class="edition">The world, every morning</div>
-  </div>
-  <div class="dateline">2026-04-03 &bull; Built 2026-04-03T23:20:05Z</div>
+  <header>
+    <h1>&#127757; World Happenings</h1>
+    <div class="date">Thursday, April 2, 2026</div>
+  </header>
+  <main>
 
-  
-  <div class="section">
-    <div class="section-badge">NYT</div>
-    
-    <div class="story">
-      <div class="story-headline"><a href="https://www.nytimes.com/2026/04/03/world/middleeast/f-15-us-fighter-jet-iran.html">What We Know About the F-15E Strike Eagle Shot Down by Iran</a></div>
-      <div class="story-meta">
-        <span class="source">NY Times</span>
-        &middot; 2026-04-03
-      </div>
-      
-    </div>
-    
-    <div class="story">
-      <div class="story-headline"><a href="https://www.nytimes.com/2026/04/03/us/politics/iran-missiles-launchers.html">Iran Is Quickly Repairing Missile Bunkers, U.S. Intelligence Says</a></div>
-      <div class="story-meta">
-        <span class="source">NY Times</span>
-        &middot; 2026-04-03
-      </div>
-      
-    </div>
-    
-    <div class="story">
-      <div class="story-headline"><a href="https://www.nytimes.com/2026/04/03/world/middleeast/iraq-us-pow-rescue-survival.html">Ex-US Army Pilot Recalls Battle for Survival When Shot Down in Iraq</a></div>
-      <div class="story-meta">
-        <span class="source">NY Times</span>
-        &middot; 2026-04-03
-      </div>
-      
-    </div>
-    
-    <div class="story">
-      <div class="story-headline"><a href="https://www.nytimes.com/2026/04/03/us/trump-alcatraz-funding.html">Trump Seeks $152 Million to Begin to Turn Alcatraz Back Into a Prison</a></div>
-      <div class="story-meta">
-        <span class="source">NY Times</span>
-        &middot; 2026-04-03
-      </div>
-      
-    </div>
-    
-    <div class="story">
-      <div class="story-headline"><a href="https://www.nytimes.com/2026/04/03/climate/forest-service-research-stations.html">Forest Service Will Close Research Stations That Study Wildfire Risk</a></div>
-      <div class="story-meta">
-        <span class="source">NY Times</span>
-        &middot; 2026-04-03
-      </div>
-      
-    </div>
-    
-  </div>
-  
-  <div class="section">
-    <div class="section-badge">BBC_WORLD</div>
-    
-    <div class="story">
-      <div class="story-headline"><a href="https://www.bbc.com/news/articles/c0le43jw8e9o?at_medium=RSS&amp;at_campaign=rss">How elite US teams tackle combat rescue missions</a></div>
-      <div class="story-meta">
-        <span class="source">BBC World</span>
-        &middot; 2026-04-03
-      </div>
-      
-    </div>
-    
-    <div class="story">
-      <div class="story-headline"><a href="https://www.bbc.com/news/articles/ce8jzr423p9o?at_medium=RSS&amp;at_campaign=rss">Artemis II crew take &#39;spectacular&#39; image of Earth</a></div>
-      <div class="story-meta">
-        <span class="source">BBC World</span>
-        &middot; 2026-04-03
-      </div>
-      
-    </div>
-    
-    <div class="story">
-      <div class="story-headline"><a href="https://www.bbc.com/news/articles/cly0zp1xgz3o?at_medium=RSS&amp;at_campaign=rss">Burkina Faso must &#39;forget&#39; about democracy, military leader says</a></div>
-      <div class="story-meta">
-        <span class="source">BBC World</span>
-        &middot; 2026-04-03
-      </div>
-      
-    </div>
-    
-    <div class="story">
-      <div class="story-headline"><a href="https://www.bbc.com/news/articles/cjd8275jrrko?at_medium=RSS&amp;at_campaign=rss">French-owned ship passes through Strait of Hormuz</a></div>
-      <div class="story-meta">
-        <span class="source">BBC World</span>
-        &middot; 2026-04-03
-      </div>
-      
-    </div>
-    
-    <div class="story">
-      <div class="story-headline"><a href="https://www.bbc.com/news/articles/cwyjekvwww0o?at_medium=RSS&amp;at_campaign=rss">France&#39;s Muslim gathering ban overturned by courts</a></div>
-      <div class="story-meta">
-        <span class="source">BBC World</span>
-        &middot; 2026-04-03
-      </div>
-      
-    </div>
-    
-  </div>
-  
-  <div class="section">
-    <div class="section-badge">NPR</div>
-    
-    <div class="story">
-      <div class="story-headline"><a href="https://www.npr.org/2026/04/03/nx-s1-5772665/trump-ballroom-underground-military-bunker">Trump&#39;s ballroom fight sheds new light on an underground White House bunker</a></div>
-      <div class="story-meta">
-        <span class="source">NPR News</span>
-        &middot; 2026-04-03
-      </div>
-      
-    </div>
-    
-    <div class="story">
-      <div class="story-headline"><a href="https://www.npr.org/2026/04/03/nx-s1-5771511/seville-spain-semana-santa-easter-holy-week">Seville, Spain&#39;s Holy Week blends faith, tradition and spectacle</a></div>
-      <div class="story-meta">
-        <span class="source">NPR News</span>
-        &middot; 2026-04-03
-      </div>
-      
-    </div>
-    
-    <div class="story">
-      <div class="story-headline"><a href="https://www.npr.org/2026/04/03/nx-s1-5773108/american-jet-shot-down-iran">A U.S. jet goes down over Iran, a U.S. official confirms</a></div>
-      <div class="story-meta">
-        <span class="source">NPR News</span>
-        &middot; 2026-04-03
-      </div>
-      
-    </div>
-    
-    <div class="story">
-      <div class="story-headline"><a href="https://www.npr.org/2026/04/03/nx-s1-5772696/jobs-employment-economy-labor-market">The labor market springs back to life in March as employers add 178,000 jobs</a></div>
-      <div class="story-meta">
-        <span class="source">NPR News</span>
-        &middot; 2026-04-03
-      </div>
-      
-    </div>
-    
-    <div class="story">
-      <div class="story-headline"><a href="https://www.npr.org/2026/04/03/nx-s1-5772701/trump-budget-defense-spending">Trump budget seeks $1.5 trillion in defense spending alongside domestic program cuts</a></div>
-      <div class="story-meta">
-        <span class="source">NPR News</span>
-        &middot; 2026-04-03
-      </div>
-      
-    </div>
-    
-  </div>
-  
-  <div class="section">
-    <div class="section-badge">BBC_US</div>
-    
-    <div class="story">
-      <div class="story-headline"><a href="https://www.bbc.com/news/articles/crr1q4kjvn2o?at_medium=RSS&amp;at_campaign=rss">Trump seeks $1.5tn for defence alongside domestic spending cuts</a></div>
-      <div class="story-meta">
-        <span class="source">BBC US</span>
-        &middot; 2026-04-03
-      </div>
-      
-    </div>
-    
-    <div class="story">
-      <div class="story-headline"><a href="https://www.bbc.com/news/articles/c0le43jw8e9o?at_medium=RSS&amp;at_campaign=rss">How elite US teams tackle combat rescue missions</a></div>
-      <div class="story-meta">
-        <span class="source">BBC US</span>
-        &middot; 2026-04-03
-      </div>
-      
-    </div>
-    
-    <div class="story">
-      <div class="story-headline"><a href="https://www.bbc.com/news/articles/c93e9r62py4o?at_medium=RSS&amp;at_campaign=rss">US warns its citizens to leave Lebanon citing escalating security risks</a></div>
-      <div class="story-meta">
-        <span class="source">BBC US</span>
-        &middot; 2026-04-03
-      </div>
-      
-    </div>
-    
-    <div class="story">
-      <div class="story-headline"><a href="https://www.bbc.com/news/articles/ce8jzr423p9o?at_medium=RSS&amp;at_campaign=rss">Artemis II crew take &#39;spectacular&#39; image of Earth</a></div>
-      <div class="story-meta">
-        <span class="source">BBC US</span>
-        &middot; 2026-04-03
-      </div>
-      
-    </div>
-    
-    <div class="story">
-      <div class="story-headline"><a href="https://www.bbc.com/news/videos/cpqxn8zx8ydo?at_medium=RSS&amp;at_campaign=rss">Watch: Artemis II&#39;s journey so far as it leaves Earth orbit... in 85 seconds</a></div>
-      <div class="story-meta">
-        <span class="source">BBC US</span>
-        &middot; 2026-04-03
-      </div>
-      
-    </div>
-    
-  </div>
-  
-  <div class="section">
-    <div class="section-badge">CONFLICT</div>
-    
-    <div class="story">
-      <div class="story-headline"><a href="https://www.washingtonpost.com/national-security/2026/04/03/f-15-crash-iran-missing/">Two U.S. Warplanes Shot Down by Iran, Search Ongoing for Missing Crew Member</a></div>
-      <div class="story-meta">
-        <span class="source">Various (e.g., Washington Post, The Hindu, ClickOnDetroit)</span>
-        &middot; 2026-04-03
-      </div>
-      <div class="story-summary">Two U.S. military aircraft, an F-15E fighter jet and an A-10 attack plane, were shot down in separate incidents by Iran, leading to a frantic search-and-rescue effort for one missing crew member. One F-15 crew member was rescued after their jet crashed inside Iran, while the A-10 pilot ejected over Kuwaiti airspace and was also rescued.</div>
-    </div>
-    
-    <div class="story">
-      <div class="story-headline"><a href="https://www.thehindu.com/news/international/iran-israel-war-live-updates-april-3-2026-west-asia-crisis-conflict/article70818422.ece">War Shakes Gulf Confidence in US-Backed Security as Regional Order Falters</a></div>
-      <div class="story-meta">
-        <span class="source">LiCAS News / Sunday Examiner</span>
-        &middot; 2026-04-03
-      </div>
-      <div class="story-summary">Trust in long-standing security guarantees in the Gulf is collapsing due to the ongoing war involving the United States, Israel, and Iran, exposing vulnerabilities and forcing a reassessment of regional geopolitics. The conflict is disrupting daily life, restricting air travel, and causing economic uncertainty, with fears rising among vulnerable populations.</div>
-    </div>
-    
-    <div class="story">
-      <div class="story-headline"><a href="https://www.clickondetroit.com/news/world/2026/04/03/the-latest-iran-launches-missiles-at-israel-and-gulf-states-as-explosions-heard-around-tehran/">Geopolitical Unrest Now Top Obstacle to International Travel</a></div>
-      <div class="story-meta">
-        <span class="source">Forbes</span>
-        &middot; 2026-04-03
-      </div>
-      <div class="story-summary">A new survey indicates that geopolitical unrest and anti-American sentiment abroad have surpassed economic concerns as the primary deterrent for Americans considering international travel. More than 7 in 10 travel advisors reported clients are hesitant to book international trips due to global conflicts, nearly doubling from previous months.</div>
-    </div>
-    
-  </div>
-  
-  <div class="section">
-    <div class="section-badge">ECONOMY</div>
-    
-    <div class="story">
-      <div class="story-headline"><a href="https://www.militarytimes.com/news/your-military/2026/04/03/us-forces-rescue-downed-fighter-pilot-in-iran-search-for-second-continues/">US Adjusts Tariffs on Steel, Aluminum, and Related Products</a></div>
-      <div class="story-meta">
-        <span class="source">GMK Center, EUROMETAL</span>
-        &middot; 2026-04-03
-      </div>
-      <div class="story-summary">The Trump administration has adjusted tariffs on imports of steel, aluminum, and copper to simplify compliance and prevent undervaluation. Changes include maintaining a 50% import tariff on steel and aluminum based on prices paid by consumers, and eliminating tariffs on derivative products with less than 15% metal content by weight.</div>
-    </div>
-    
-    <div class="story">
-      <div class="story-headline"><a href="https://www.examiner.org.hk/2026/04/03/war-shakes-gulf-confidence-in-us-backed-security-as-regional-order-falters/news/">Iran War&#39;s Economic Aftershocks Spread Globally, Impacting Energy and Trade</a></div>
-      <div class="story-meta">
-        <span class="source">The Independent, CityNews Toronto, The Washington Post</span>
-        &middot; 2026-04-03
-      </div>
-      <div class="story-summary">The ongoing war in Iran is causing significant economic aftershocks, particularly disrupting global commodity markets and leading to increased energy prices. This has weakened consumer sentiment in the United States and created an even more acute shock for industries and households in Europe.</div>
-    </div>
-    
-    <div class="story">
-      <div class="story-headline"><a href="https://www.forbes.com/sites/suzannerowankelleher/2026/04/03/geopolitical-unrest-obstacle-international-travel/">Trump&#39;s New Pharma Tariffs Expected to Have Limited Economic Effect</a></div>
-      <div class="story-meta">
-        <span class="source">Focus Taiwan, ING Think</span>
-        &middot; 2026-04-03
-      </div>
-      <div class="story-summary">New U.S. tariffs of up to 100% on patented drug imports are anticipated to have a limited economic impact due to numerous negotiated exemptions and the geopolitical nature of the policy. Most of Taiwan&#39;s pharmaceutical exports to the U.S., primarily generic drugs, are not immediately affected, though their tariff-free status will be reviewed.</div>
-    </div>
-    
-  </div>
-  
-  <div class="section">
-    <div class="section-badge">CLIMATE</div>
-    
-    <div class="story">
-      <div class="story-headline"><a href="https://gmk.center/en/news/the-us-has-adjusted-tariffs-on-steel-aluminum-and-related-products/">Extreme Heat Shatters Records Across American West, Increasing Wildfire Risk</a></div>
-      <div class="story-meta">
-        <span class="source">Yuma Today</span>
-        &middot; 2026-04-03
-      </div>
-      <div class="story-summary">A historic heat wave swept across the American West in March, with dozens of cities and states setting all-time high temperature records, some up to 30°F above normal. This extreme heat, combined with severe drought conditions, has dramatically increased the risk of wildfires in the region.</div>
-    </div>
-    
-    <div class="story">
-      <div class="story-headline"><a href="https://eurometal.net/trump-overhauls-section-232-tariffs-25-duty-to-be-levied-on-full-value-of-derivative-products/">IPCC Timeline Derailed as Consensus on Climate Action Falters</a></div>
-      <div class="story-meta">
-        <span class="source">Environmental Security Weekly Watch</span>
-        &middot; 2026-04-03
-      </div>
-      <div class="story-summary">The Intergovernmental Panel on Climate Change (IPCC) concluded its plenary without approving a timeline for its seventh assessment report, marking a significant setback due to funding pressures and political gridlock. This failure raises concerns about the ability of current climate models to accurately predict and prepare for extreme weather patterns.</div>
-    </div>
-    
-    <div class="story">
-      <div class="story-headline"><a href="https://www.independent.co.ug/how-escalation-in-middle-east-spills-over-impacts-global-economy/">Environmental Groups Sue Over Stripping Protections from Imperiled Gulf Species</a></div>
-      <div class="story-meta">
-        <span class="source">Florida Phoenix</span>
-        &middot; 2026-04-03
-      </div>
-      <div class="story-summary">A coalition of environmental groups has filed a lawsuit against the Trump administration for its decision to remove Endangered Species Act protections from species threatened by oil and gas drilling in the Gulf of Mexico. The groups argue that the administration is abusing a national security exemption, putting over two dozen species at direct risk.</div>
-    </div>
-    
-  </div>
-  
-  <div class="section">
-    <div class="section-badge">HEALTH</div>
-    
-    <div class="story">
-      <div class="story-headline"><a href="https://toronto.citynews.ca/2026/04/03/most-canadians-concerned-about-the-impact-of-strait-of-hormuz-restrictions-on-economy-their-pocketbooks-poll/">Measles Cases Continue to Rise in US, Utah Outbreak at 559</a></div>
-      <div class="story-meta">
-        <span class="source">AHA News, Contagion Live, WLRN</span>
-        &middot; 2026-04-03
-      </div>
-      <div class="story-summary">The Centers for Disease Control and Prevention (CDC) reported 1,671 measles cases nationwide across 33 jurisdictions as of April 2, 2026, marking a 6.10% increase week-over-week. Utah&#39;s outbreak alone has reached 559 cases, with 362 diagnosed this year, contributing to historically high numbers for the state.</div>
-    </div>
-    
-    <div class="story">
-      <div class="story-headline"><a href="https://www.washingtonpost.com/politics/2026/04/03/trump-iran-midterms-gas-prices/">China Reports Outbreak of Foot-and-Mouth Disease Near Russian Border</a></div>
-      <div class="story-meta">
-        <span class="source">The Moscow Times</span>
-        &middot; 2026-04-03
-      </div>
-      <div class="story-summary">China is tightening border controls and culling livestock in its northwestern Xinjiang region following the detection of a small outbreak of foot-and-mouth disease. This highly contagious strain, immune to current domestic vaccines, is believed to have entered from abroad, raising concerns about cross-border spread after mass cattle culls in Russia.</div>
-    </div>
-    
-    <div class="story">
-      <div class="story-headline"><a href="https://focustaiwan.tw/business/202604030010">WHO Reaffirms Support for Lebanon&#39;s Health System Amid Escalating Needs</a></div>
-      <div class="story-meta">
-        <span class="source">World Health Organization (WHO)</span>
-        &middot; 2026-04-03
-      </div>
-      <div class="story-summary">The World Health Organization&#39;s head of emergencies reaffirmed support for Lebanon&#39;s health system, which continues to function despite mounting pressures from conflict, displacement, and repeated attacks on healthcare facilities. Recent deliveries of medical supplies are sufficient to support 50,000 patients, including 40,000 surgical interventions.</div>
-    </div>
-    
-  </div>
-  
+    <section class="section" id="nyt">
+      <h2 class="section-title">📰 NY Times</h2>
+      <article class="card">
+        <div class="card-tag" style="background:#2b2b2b">📰 NY Times</div>
+        <h2 class="card-title"><a href="https://www.nytimes.com/2026/04/01/science/artemis-ii-nasa-moon-launch.html" target="_blank" rel="noopener">Artemis II Completes First Day of Its NASA Lunar Mission</a></h2>
+        <div class="card-meta">NY Times &middot; 2026-04-02</div>
+      </article>
+      <article class="card">
+        <div class="card-tag" style="background:#2b2b2b">📰 NY Times</div>
+        <h2 class="card-title"><a href="https://www.nytimes.com/2026/04/02/world/asia/china-space-moon-nasa-artemis.html" target="_blank" rel="noopener">China’s Aiming for the Moon, and NASA Is Looking Over Its Shoulder</a></h2>
+        <div class="card-meta">NY Times &middot; 2026-04-02</div>
+      </article>
+      <article class="card">
+        <div class="card-tag" style="background:#2b2b2b">📰 NY Times</div>
+        <h2 class="card-title"><a href="https://www.nytimes.com/2026/04/01/science/artemis-ii-bathroom-toilet.html" target="_blank" rel="noopener">The Artemis II Toilet Had a Problem</a></h2>
+        <div class="card-meta">NY Times &middot; 2026-04-02</div>
+      </article>
+      <article class="card">
+        <div class="card-tag" style="background:#2b2b2b">📰 NY Times</div>
+        <h2 class="card-title"><a href="https://www.nytimes.com/2026/04/01/us/politics/trump-iran-war-address-takeaways.html" target="_blank" rel="noopener">5 Takeaways From Trump’s Address on Iran</a></h2>
+        <div class="card-meta">NY Times &middot; 2026-04-02</div>
+      </article>
+      <article class="card">
+        <div class="card-tag" style="background:#2b2b2b">📰 NY Times</div>
+        <h2 class="card-title"><a href="https://www.nytimes.com/2026/04/02/business/korea-missile-defense-iran.html" target="_blank" rel="noopener">Iran War Showcases Strength of South Korean Defense Sector</a></h2>
+        <div class="card-meta">NY Times &middot; 2026-04-02</div>
+      </article>
+    </section>
 
-  <div class="footer">
-    <p>World Happenings &mdash; The world, every morning</p>
-    <p>Published 2026-04-03</p>
-  </div>
-</div>
+    <section class="section" id="npr">
+      <h2 class="section-title">🎙️ NPR News</h2>
+      <article class="card">
+        <div class="card-tag" style="background:#1a6334">🎙️ NPR News</div>
+        <h2 class="card-title"><a href="https://www.npr.org/2026/04/02/g-s1-116142/u-s-lift-sanctions-venezuela-president-delcy-rodriguez" target="_blank" rel="noopener">U.S. lifts sanctions on Venezuela&#x27;s acting President Delcy Rodríguez</a></h2>
+        <div class="card-meta">NPR News &middot; 2026-04-02</div>
+      </article>
+      <article class="card">
+        <div class="card-tag" style="background:#1a6334">🎙️ NPR News</div>
+        <h2 class="card-title"><a href="https://www.npr.org/2026/04/01/nx-s1-5770629/appeals-court-rejects-hud-homelessness-overhaul" target="_blank" rel="noopener">Appeals court rejects HUD homelessness overhaul saying it would be &quot;disastrous&quot;</a></h2>
+        <div class="card-meta">NPR News &middot; 2026-04-02</div>
+      </article>
+      <article class="card">
+        <div class="card-tag" style="background:#1a6334">🎙️ NPR News</div>
+        <h2 class="card-title"><a href="https://www.npr.org/2026/04/01/nx-s1-5770564/fifa-world-cup-ticket-prices" target="_blank" rel="noopener">FIFA hikes World Cup prices, again. A finals ticket can now cost as much as $11,000</a></h2>
+        <div class="card-meta">NPR News &middot; 2026-04-02</div>
+      </article>
+      <article class="card">
+        <div class="card-tag" style="background:#1a6334">🎙️ NPR News</div>
+        <h2 class="card-title"><a href="https://www.npr.org/2026/04/01/nx-s1-5770566/dhs-shutdown-congress-republicans" target="_blank" rel="noopener">Republicans in Congress say they have a deal to end the record-long shutdown at DHS</a></h2>
+        <div class="card-meta">NPR News &middot; 2026-04-02</div>
+      </article>
+      <article class="card">
+        <div class="card-tag" style="background:#1a6334">🎙️ NPR News</div>
+        <h2 class="card-title"><a href="https://www.npr.org/2026/04/01/nx-s1-5760899/weight-loss-pill-foundayo" target="_blank" rel="noopener">The FDA approves a new obesity pill, giving patients another option</a></h2>
+        <div class="card-meta">NPR News &middot; 2026-04-02</div>
+      </article>
+    </section>
+
+    <section class="section" id="bbc_us">
+      <h2 class="section-title">🇺🇸 BBC US</h2>
+      <article class="card">
+        <div class="card-tag" style="background:#1a4fbb">🇺🇸 BBC US</div>
+        <h2 class="card-title"><a href="https://www.bbc.com/news/articles/cz90yp7w104o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener">&#x27;We go for all humanity&#x27; - emotional moment as Artemis II blasts off</a></h2>
+        <div class="card-meta">BBC US &middot; 2026-04-02</div>
+      </article>
+      <article class="card">
+        <div class="card-tag" style="background:#1a4fbb">🇺🇸 BBC US</div>
+        <h2 class="card-title"><a href="https://www.bbc.com/news/articles/cql72qk97gpo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener">Trump says Iran war objectives &#x27;nearing completion&#x27; in address to nation</a></h2>
+        <div class="card-meta">BBC US &middot; 2026-04-02</div>
+      </article>
+      <article class="card">
+        <div class="card-tag" style="background:#1a4fbb">🇺🇸 BBC US</div>
+        <h2 class="card-title"><a href="https://www.bbc.com/news/articles/cnv81ven263o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener">Trump leaves key questions unanswered as he seeks to calm nerves over Iran war</a></h2>
+        <div class="card-meta">BBC US &middot; 2026-04-02</div>
+      </article>
+      <article class="card">
+        <div class="card-tag" style="background:#1a4fbb">🇺🇸 BBC US</div>
+        <h2 class="card-title"><a href="https://www.bbc.com/news/articles/c79j1rd92ypo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener">A year on: Four ways Trump&#x27;s tariffs have changed the global economy</a></h2>
+        <div class="card-meta">BBC US &middot; 2026-04-02</div>
+      </article>
+      <article class="card">
+        <div class="card-tag" style="background:#1a4fbb">🇺🇸 BBC US</div>
+        <h2 class="card-title"><a href="https://www.bbc.com/news/articles/c0lendp6390o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener">Utah teen identified as victim of serial killer Ted Bundy</a></h2>
+        <div class="card-meta">BBC US &middot; 2026-04-02</div>
+      </article>
+    </section>
+
+    <section class="section" id="bbc_world">
+      <h2 class="section-title">🌍 BBC World</h2>
+      <article class="card">
+        <div class="card-tag" style="background:#8b4513">🌍 BBC World</div>
+        <h2 class="card-title"><a href="https://www.bbc.com/news/videos/cwydnrmggnno?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener">Watch the moment Artemis II blasts into space</a></h2>
+        <div class="card-meta">BBC World &middot; 2026-04-02</div>
+      </article>
+      <article class="card">
+        <div class="card-tag" style="background:#8b4513">🌍 BBC World</div>
+        <h2 class="card-title"><a href="https://www.bbc.com/news/articles/cnv81ven263o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener">Trump leaves key questions unanswered as he seeks to calm nerves over Iran war</a></h2>
+        <div class="card-meta">BBC World &middot; 2026-04-02</div>
+      </article>
+      <article class="card">
+        <div class="card-tag" style="background:#8b4513">🌍 BBC World</div>
+        <h2 class="card-title"><a href="https://www.bbc.com/news/articles/cn53krrrr24o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener">Magnitude 7.4 earthquake hits off Indonesia, killing one</a></h2>
+        <div class="card-meta">BBC World &middot; 2026-04-02</div>
+      </article>
+      <article class="card">
+        <div class="card-tag" style="background:#8b4513">🌍 BBC World</div>
+        <h2 class="card-title"><a href="https://www.bbc.com/news/articles/cvg07j6yeweo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener">Israel intensifies Lebanon attacks and hits areas not in Hezbollah&#x27;s control</a></h2>
+        <div class="card-meta">BBC World &middot; 2026-04-02</div>
+      </article>
+      <article class="card">
+        <div class="card-tag" style="background:#8b4513">🌍 BBC World</div>
+        <h2 class="card-title"><a href="https://www.bbc.com/news/articles/c0lendp6390o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener">Utah teen identified as victim of serial killer Ted Bundy</a></h2>
+        <div class="card-meta">BBC World &middot; 2026-04-02</div>
+      </article>
+    </section>
+
+    <section class="section" id="conflict">
+      <h2 class="section-title">⚔️ Conflict &amp; Security</h2>
+      <article class="card">
+        <div class="card-tag" style="background:#8b0000">⚔️ Conflict &amp; Security</div>
+        <h2 class="card-title"><a href="https://www.thehindu.com/news/international/donald-trump-addresses-nation-on-iran-israel-war-live-updates-world-news/article70813995.ece" target="_blank" rel="noopener">Iran&#x27;s Military Vows &#x27;Crushing&#x27; Attacks Against US and Israel</a></h2>
+        <div class="card-summary">Iran&#x27;s military has vowed to carry out &quot;crushing&quot; attacks against the United States and Israel, following threats from U.S. President Donald Trump to bomb the country. The military&#x27;s operational command stated that the war would continue until the humiliation and surrender of the opposing forces.</div>
+        <div class="card-meta">The Hindu / The Times of Israel &middot; 2026-04-02</div>
+      </article>
+      <article class="card">
+        <div class="card-tag" style="background:#8b0000">⚔️ Conflict &amp; Security</div>
+        <h2 class="card-title"><a href="https://www.timesofisrael.com/liveblog-april-02-2026/" target="_blank" rel="noopener">Hezbollah Launches Drone and Rocket Attacks on Northern Israel</a></h2>
+        <div class="card-summary">Lebanese militant group Hezbollah announced its fighters launched drones and rockets at northern Israel on Thursday. The Israeli military&#x27;s Home Front Command confirmed air raid sirens were activated across the border in response to the attacks.</div>
+        <div class="card-meta">The Hindu / Gulf News &middot; 2026-04-02</div>
+      </article>
+      <article class="card">
+        <div class="card-tag" style="background:#8b0000">⚔️ Conflict &amp; Security</div>
+        <h2 class="card-title"><a href="https://gulfnews.com/world/mena/usisrael-war-on-iran-day-34-trump-says-us-to-hit-iran-extremely-hard-for-2-3-weeks-2-1.500493799" target="_blank" rel="noopener">US Embassy in Baghdad Warns of Attacks by Pro-Iran Groups</a></h2>
+        <div class="card-summary">The U.S. embassy in Baghdad issued a warning that pro-Iran armed groups in Iraq might attack the city within the next one to two days. The embassy urged Americans in the country to leave immediately due to the heightened security threat.</div>
+        <div class="card-meta">The Times of Israel &middot; 2026-04-02</div>
+      </article>
+    </section>
+
+    <section class="section" id="economy">
+      <h2 class="section-title">💰 Economy &amp; Markets</h2>
+      <article class="card">
+        <div class="card-tag" style="background:#1a5276">💰 Economy &amp; Markets</div>
+        <h2 class="card-title"><a href="https://qna.org.qa/en/News-Area/News/2026-4/2/rising-oil-prices-put-global-economy-on-brink-of-stagflation" target="_blank" rel="noopener">Rising Oil Prices Push Global Economy Towards Stagflation</a></h2>
+        <div class="card-summary">Surging global oil and gas prices are creating new economic challenges worldwide, with fears of stagflation growing. Central banks face a dilemma between raising interest rates to control inflation or lowering them to boost growth.</div>
+        <div class="card-meta">Qatar News Agency &middot; 2026-04-02</div>
+      </article>
+      <article class="card">
+        <div class="card-tag" style="background:#1a5276">💰 Economy &amp; Markets</div>
+        <h2 class="card-title"><a href="https://koreajoongangdaily.joins.com/news/2026-04-02/business/economy/Inflation-likely-to-accelerate-after-April-from-high-oil-prices-BOK/2559650" target="_blank" rel="noopener">Bank of Korea Expects Inflation to Accelerate Due to High Oil Prices</a></h2>
+        <div class="card-summary">The Bank of Korea anticipates consumer inflation will accelerate after April, driven by surging global oil prices amidst the ongoing Iran war. This outlook comes as government data showed the consumer price index rose 2.2 percent in March, the steepest year-on-year increase since December of last year.</div>
+        <div class="card-meta">Korea JoongAng Daily &middot; 2026-04-02</div>
+      </article>
+      <article class="card">
+        <div class="card-tag" style="background:#1a5276">💰 Economy &amp; Markets</div>
+        <h2 class="card-title"><a href="https://www.aa.com.tr/en/world/morning-briefing-april-2-2026/3888811" target="_blank" rel="noopener">IMF, World Bank, IEA to Coordinate Efforts on Iran War Economic Impacts</a></h2>
+        <div class="card-summary">The International Energy Agency (IEA), International Monetary Fund (IMF), and World Bank announced they will establish a coordination group. This group aims to maximize their response to the energy and economic fallout from the war in the Middle East.</div>
+        <div class="card-meta">Anadolu Ajansı / The Edge Singapore &middot; 2026-04-02</div>
+      </article>
+    </section>
+
+    <section class="section" id="climate">
+      <h2 class="section-title">🌱 Climate &amp; Environment</h2>
+      <article class="card">
+        <div class="card-tag" style="background:#2e7d32">🌱 Climate &amp; Environment</div>
+        <h2 class="card-title"><a href="https://www.theedgesingapore.com/news/geopolitics/asian-nations-jockey-leverage-re-open-strait-hormuz" target="_blank" rel="noopener">EF-1 Tornado Strikes Near Machias, Western New York</a></h2>
+        <div class="card-summary">A confirmed EF-1 tornado tore through parts of Cattaraugus County in western New York, leaving a narrow but damaging path southwest of Machias. The National Weather Service rated the tornado with peak winds reaching 107 mph, causing snapped trees and localized structural damage.</div>
+        <div class="card-meta">Buffalo Today &middot; 2026-04-02</div>
+      </article>
+      <article class="card">
+        <div class="card-tag" style="background:#2e7d32">🌱 Climate &amp; Environment</div>
+        <h2 class="card-title"><a href="https://www.theedgesingapore.com/news/geopolitics/uae-asks-un-approve-measures-including-force-open-hormuz" target="_blank" rel="noopener">EPA Watchdog Finds Toxic Waste Sites Vulnerable to Flooding and Wildfires</a></h2>
+        <div class="card-summary">An internal watchdog at the U.S. Environmental Protection Agency (EPA) has found that approximately 100 of the nation&#x27;s most contaminated toxic waste sites are in areas prone to flooding and wildfires. This poses a potential public health threat to millions of Americans in surrounding communities.</div>
+        <div class="card-meta">Associated Press &middot; 2026-04-02</div>
+      </article>
+      <article class="card">
+        <div class="card-tag" style="background:#2e7d32">🌱 Climate &amp; Environment</div>
+        <h2 class="card-title"><a href="https://nationaltoday.com/us/ny/buffalo/news/2026/04/02/ef-1-tornado-strikes-near-machias-leaving-damage-in-western-new-york/" target="_blank" rel="noopener">Mapping the Blue Economy: Sectors, Policies, and Challenges Amid Climate Change</a></h2>
+        <div class="card-summary">The blue economy is emerging as a critical frontier for sustainable development, with oceans vital for food, energy, and climate regulation. However, mounting pressures threaten marine ecosystems and the communities dependent on them, highlighting the need for balanced industrial growth and marine restoration.</div>
+        <div class="card-meta">Earth.Org &middot; 2026-04-02</div>
+      </article>
+    </section>
+
+    <section class="section" id="health">
+      <h2 class="section-title">🏥 Health &amp; Science</h2>
+      <article class="card">
+        <div class="card-tag" style="background:#5b2c6f">🏥 Health &amp; Science</div>
+        <h2 class="card-title"><a href="https://www.insurancejournal.com/news/national/2026/04/02/864228.htm" target="_blank" rel="noopener">Washington State Joins Global Outbreak Network After US Exits WHO</a></h2>
+        <div class="card-summary">Washington state is joining the Global Outbreak Alert and Response Network, a partnership of over 360 public health agencies. This move follows the United States&#x27; official withdrawal from the World Health Organization, aiming to maintain access to critical global disease data and coordinated response capabilities.</div>
+        <div class="card-meta">Olympia Today &middot; 2026-04-02</div>
+      </article>
+      <article class="card">
+        <div class="card-tag" style="background:#5b2c6f">🏥 Health &amp; Science</div>
+        <h2 class="card-title"><a href="https://earth.org/mapping-the-blue-economy-sectors-policies-and-challenges-amid-climate-change/" target="_blank" rel="noopener">National Medical Association Raises Alarm on Public Health Crisis in Cuba</a></h2>
+        <div class="card-summary">The National Medical Association has raised an alarm regarding a public health crisis in Cuba, citing significant slowdowns in national pharmaceutical production and risks to vaccine storage due to electricity disruptions. Hospitals and clinics face persistent power outages, disrupting life-saving services and leading to long waiting lists for surgeries.</div>
+        <div class="card-meta">National Medical Association &middot; 2026-04-02</div>
+      </article>
+      <article class="card">
+        <div class="card-tag" style="background:#5b2c6f">🏥 Health &amp; Science</div>
+        <h2 class="card-title"><a href="https://nationaltoday.com/us/wa/olympia/news/2026/04/02/washington-state-joins-global-outbreak-network-after-u-s-exits-who/" target="_blank" rel="noopener">Long COVID Associated with Increased Risk of Cardiovascular Disease</a></h2>
+        <div class="card-summary">A new study from Karolinska Institutet indicates that Long COVID is associated with an increased risk of cardiovascular disease, even in younger, previously healthy individuals. The research highlights a higher risk of conditions like cardiac arrhythmias and coronary artery disease, even among those not hospitalized during acute infection.</div>
+        <div class="card-meta">Karolinska Institutet &middot; 2026-04-02</div>
+      </article>
+    </section>
+
+  </main>
+  <footer>
+    Curated by Pavano &middot; Updated daily
+  </footer>
 </body>
 </html>
