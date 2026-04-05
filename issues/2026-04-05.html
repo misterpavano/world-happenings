@@ -28,7 +28,6 @@
       min-height: 100vh;
     }
     
-    /* Masthead */
     .masthead {
       text-align: center;
       padding: 2rem 1rem 1.5rem;
@@ -78,123 +77,18 @@
       border-top: 1px solid var(--rule);
     }
     
-    /* Main content */
     .newspaper {
       max-width: 1000px;
       margin: 0 auto;
       padding: 2rem 1.5rem;
     }
     
-    /* Above the fold - Hero */
-    .hero {
-      text-align: center;
-      padding: 2rem 0 3rem;
-      border-bottom: 3px double var(--ink);
-      margin-bottom: 3rem;
-    }
-    
-    .hero-label {
-      font-family: 'Libre Franklin', sans-serif;
-      font-size: 0.7rem;
-      font-weight: 700;
-      letter-spacing: 0.2em;
-      text-transform: uppercase;
-      color: var(--accent);
-      margin-bottom: 1rem;
-    }
-    
-    .hero-headline {
-      font-family: 'Playfair Display', serif;
-      font-size: clamp(2.2rem, 6vw, 4rem);
-      font-weight: 900;
-      line-height: 1.05;
-      margin-bottom: 1rem;
-    }
-    
-    .hero-headline a {
-      color: var(--ink);
-      text-decoration: none;
-    }
-    
-    .hero-headline a:hover {
-      color: var(--accent);
-    }
-    
-    .hero-summary {
-      font-family: 'IM Fell English', serif;
-      font-size: 1.2rem;
-      font-style: italic;
-      color: var(--ink-light);
-      max-width: 650px;
-      margin: 0 auto 1.5rem;
-      line-height: 1.5;
-    }
-    
-    .hero-meta {
-      font-size: 0.75rem;
-      font-weight: 600;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      color: var(--ink-faint);
-    }
-    
-    /* Secondary stories grid */
-    .secondary-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 2rem;
-      margin-bottom: 3rem;
-      padding-bottom: 2rem;
-      border-bottom: 1px solid var(--rule);
-    }
-    
-    .secondary-story {
-      padding: 1rem 0;
-    }
-    
-    .secondary-story:not(:last-child) {
-      border-right: 1px solid var(--rule);
-      padding-right: 2rem;
-    }
-    
-    .secondary-label {
-      font-size: 0.65rem;
-      font-weight: 700;
-      letter-spacing: 0.15em;
-      text-transform: uppercase;
-      color: var(--accent);
-      margin-bottom: 0.5rem;
-    }
-    
-    .secondary-headline {
-      font-family: 'Playfair Display', serif;
-      font-size: 1.15rem;
-      font-weight: 700;
-      line-height: 1.25;
-      margin-bottom: 0.5rem;
-    }
-    
-    .secondary-headline a {
-      color: var(--ink);
-      text-decoration: none;
-    }
-    
-    .secondary-headline a:hover {
-      color: var(--accent);
-    }
-    
-    .secondary-summary {
-      font-size: 0.9rem;
-      color: var(--ink-light);
-      line-height: 1.5;
-    }
-    
-    /* Section headers */
     .section-header {
       display: flex;
       align-items: center;
       margin: 3rem 0 1.5rem;
       gap: 1.5rem;
+      scroll-margin-top: 180px;
     }
     
     .section-header::before,
@@ -215,17 +109,14 @@
       white-space: nowrap;
     }
     
-    /* Article styling */
     .articles {
-      column-count: 2;
-      column-gap: 3rem;
-      column-rule: 1px solid var(--rule);
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
     }
     
     .article {
-      break-inside: avoid;
-      margin-bottom: 2rem;
-      padding-bottom: 2rem;
+      padding: 1.5rem 0;
       border-bottom: 1px solid var(--rule-light);
     }
     
@@ -235,7 +126,7 @@
     
     .article-headline {
       font-family: 'Playfair Display', serif;
-      font-size: 1.15rem;
+      font-size: 1.35rem;
       font-weight: 700;
       line-height: 1.3;
       margin-bottom: 0.75rem;
@@ -265,7 +156,6 @@
       color: var(--ink-faint);
     }
     
-    /* Jump to section nav */
     .section-nav {
       display: flex;
       justify-content: center;
@@ -274,6 +164,9 @@
       background: #f0ede6;
       border-bottom: 1px solid var(--rule);
       flex-wrap: wrap;
+      position: sticky;
+      top: 140px;
+      z-index: 99;
     }
     
     .section-nav a {
@@ -289,15 +182,12 @@
       color: var(--accent);
     }
     
-    /* Responsive */
     @media (max-width: 800px) {
-      .secondary-grid { grid-template-columns: 1fr; }
-      .secondary-story:not(:last-child) { border-right: none; border-bottom: 1px solid var(--rule); padding-right: 0; padding-bottom: 1.5rem; }
-      .articles { column-count: 1; }
       .masthead { position: relative; }
+      .section-nav { position: relative; top: 0; }
+      .articles { column-count: 1; }
     }
     
-    /* Footer */
     .footer {
       text-align: center;
       padding: 3rem 2rem;
@@ -319,153 +209,395 @@
   </header>
   
   <nav class="section-nav">
-    <a href="#world">World</a>
-    <a href="#us">U.S.</a>
-    <a href="#local">Local</a>
-    <a href="#business">Business</a>
-    <a href="#science">Science</a>
-    <a href="#sports">Sports</a>
+    
+      
+      <a href="#nyt">Nyt</a>
+      
+    
+      
+      <a href="#bbc_us">Bbc Us</a>
+      
+    
+      
+      <a href="#bbc_world">Bbc World</a>
+      
+    
+      
+      <a href="#npr">Npr</a>
+      
+    
+      
+      <a href="#conflict">Conflict</a>
+      
+    
+      
+      <a href="#economy">Economy</a>
+      
+    
+      
+      <a href="#climate">Climate</a>
+      
+    
+      
+      <a href="#health">Health</a>
+      
+    
   </nav>
   
   <main class="newspaper">
     
-    
       
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-    
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-    
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-    
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-    
-      
-        
-      
-        
-      
-        
+      <section id="nyt">
+        <div class="section-header">
+          <h2 class="section-title">Nyt</h2>
+        </div>
+        <div class="articles">
+          
+          <article class="article">
+            <h3 class="article-headline">
+              <a href="https://www.nytimes.com/2026/04/04/us/politics/military-iran-airman-rescue.html" target="_blank" rel="noopener">U.S. Rescues Downed Air Force Officer Deep Inside Iran, Trump Says</a>
+            </h3>
+            
+            <div class="article-meta">NY Times — 2026-04-05</div>
+          </article>
+          
+          <article class="article">
+            <h3 class="article-headline">
+              <a href="https://www.nytimes.com/2026/04/05/world/middleeast/iran-us-rescue.html" target="_blank" rel="noopener">Iran’s Downing of Plane and U.S. Rescue Leave Both Sides Dangerously Emboldened</a>
+            </h3>
+            
+            <div class="article-meta">NY Times — 2026-04-05</div>
+          </article>
+          
+          <article class="article">
+            <h3 class="article-headline">
+              <a href="https://www.nytimes.com/2026/04/03/world/middleeast/f-15-us-fighter-jet-iran.html" target="_blank" rel="noopener">What We Know About the F-15E Strike Eagle Shot Down by Iran</a>
+            </h3>
+            
+            <div class="article-meta">NY Times — 2026-04-05</div>
+          </article>
+          
+          <article class="article">
+            <h3 class="article-headline">
+              <a href="https://www.nytimes.com/2026/04/05/us/politics/stephen-miller-immigration-agenda.html" target="_blank" rel="noopener">Stephen Miller Is Still Pursuing His Immigration Agenda, but More Quietly</a>
+            </h3>
+            
+            <div class="article-meta">NY Times — 2026-04-05</div>
+          </article>
+          
+          <article class="article">
+            <h3 class="article-headline">
+              <a href="https://www.nytimes.com/2026/04/05/us/their-parents-were-taken-by-ice-the-children-had-to-raise-one-another.html" target="_blank" rel="noopener">ICE Arrests in Texas Leave Children to Raise Their Siblings After Parents Are Detained</a>
+            </h3>
+            
+            <div class="article-meta">NY Times — 2026-04-05</div>
+          </article>
+          
+        </div>
+      </section>
       
     
       
-        
+      <section id="bbc_us">
+        <div class="section-header">
+          <h2 class="section-title">Bbc Us</h2>
+        </div>
+        <div class="articles">
+          
+          <article class="article">
+            <h3 class="article-headline">
+              <a href="https://www.bbc.com/news/articles/cm2k1dgz142o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener">What we know so far about rescue of US airman in Iran</a>
+            </h3>
+            
+            <div class="article-meta">BBC US — 2026-04-05</div>
+          </article>
+          
+          <article class="article">
+            <h3 class="article-headline">
+              <a href="https://www.bbc.com/news/articles/c0le69de645o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener">Search for missing airman presents serious test for US</a>
+            </h3>
+            
+            <div class="article-meta">BBC US — 2026-04-05</div>
+          </article>
+          
+          <article class="article">
+            <h3 class="article-headline">
+              <a href="https://www.bbc.com/news/articles/cgqkn4j48qdo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener">US says it has arrested relatives of late Iranian ​general Qasem ​Soleimani</a>
+            </h3>
+            
+            <div class="article-meta">BBC US — 2026-04-05</div>
+          </article>
+          
+          <article class="article">
+            <h3 class="article-headline">
+              <a href="https://www.bbc.com/news/articles/cx267dnex7ko?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener">Man charged over fatal shooting of baby in pram in New York</a>
+            </h3>
+            
+            <div class="article-meta">BBC US — 2026-04-05</div>
+          </article>
+          
+          <article class="article">
+            <h3 class="article-headline">
+              <a href="https://www.bbc.com/news/articles/cje47vy0w3ko?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener">ICE wanted to build a detention centre -  this small farming town said no</a>
+            </h3>
+            
+            <div class="article-meta">BBC US — 2026-04-05</div>
+          </article>
+          
+        </div>
+      </section>
       
-        
-      
-        
-      
     
       
-        
+      <section id="bbc_world">
+        <div class="section-header">
+          <h2 class="section-title">Bbc World</h2>
+        </div>
+        <div class="articles">
+          
+          <article class="article">
+            <h3 class="article-headline">
+              <a href="https://www.bbc.com/news/articles/cm2k1dgz142o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener">What we know so far about rescue of US airman in Iran</a>
+            </h3>
+            
+            <div class="article-meta">BBC World — 2026-04-05</div>
+          </article>
+          
+          <article class="article">
+            <h3 class="article-headline">
+              <a href="https://www.bbc.com/news/articles/cx267dnex7ko?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener">Man charged over fatal shooting of baby in pram in New York</a>
+            </h3>
+            
+            <div class="article-meta">BBC World — 2026-04-05</div>
+          </article>
+          
+          <article class="article">
+            <h3 class="article-headline">
+              <a href="https://www.bbc.com/news/articles/cgqkn4j48qdo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener">US says it has arrested relatives of late Iranian ​general Qasem ​Soleimani</a>
+            </h3>
+            
+            <div class="article-meta">BBC World — 2026-04-05</div>
+          </article>
+          
+          <article class="article">
+            <h3 class="article-headline">
+              <a href="https://www.bbc.com/news/articles/cvg3nr83xyvo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener">German males under 45 may need military approval for long stays abroad</a>
+            </h3>
+            
+            <div class="article-meta">BBC World — 2026-04-05</div>
+          </article>
+          
+          <article class="article">
+            <h3 class="article-headline">
+              <a href="https://www.bbc.com/news/articles/c5yj97yd6v5o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener">AI videos fuel rhetoric as Orbán bids for four more years in Hungary</a>
+            </h3>
+            
+            <div class="article-meta">BBC World — 2026-04-05</div>
+          </article>
+          
+        </div>
+      </section>
       
-        
-      
-        
-      
     
       
-        
+      <section id="npr">
+        <div class="section-header">
+          <h2 class="section-title">Npr</h2>
+        </div>
+        <div class="articles">
+          
+          <article class="article">
+            <h3 class="article-headline">
+              <a href="https://www.npr.org/2026/04/05/nx-s1-5773315/shellear-climbing-fish-congo-waterfall" target="_blank" rel="noopener">These rock-climbing fish can shimmy up a 50-foot waterfall</a>
+            </h3>
+            
+            <div class="article-meta">NPR News — 2026-04-05</div>
+          </article>
+          
+          <article class="article">
+            <h3 class="article-headline">
+              <a href="https://www.npr.org/2026/04/05/nx-s1-5763606/lebanon-medics-killed-targeted-israel" target="_blank" rel="noopener">In Lebanon, more than 50 medics have been killed by Israel. Some say they&#39;re targeted</a>
+            </h3>
+            
+            <div class="article-meta">NPR News — 2026-04-05</div>
+          </article>
+          
+          <article class="article">
+            <h3 class="article-headline">
+              <a href="https://www.npr.org/2026/04/05/nx-s1-5745032/questions-to-help-you-get-financially-naked-with-your-partner" target="_blank" rel="noopener">Questions to help you get &#39;financially naked&#39; with your partner</a>
+            </h3>
+            
+            <div class="article-meta">NPR News — 2026-04-05</div>
+          </article>
+          
+          <article class="article">
+            <h3 class="article-headline">
+              <a href="https://www.npr.org/2026/04/05/nx-s1-5762276/teens-getting-hooked-on-gambling-sports-betting" target="_blank" rel="noopener">More teens are getting hooked on gambling. Parents say it often goes undetected</a>
+            </h3>
+            
+            <div class="article-meta">NPR News — 2026-04-05</div>
+          </article>
+          
+          <article class="article">
+            <h3 class="article-headline">
+              <a href="https://www.npr.org/2026/04/05/nx-s1-5774368/iran-war-updates" target="_blank" rel="noopener">Trump says U.S. military has rescued airman shot down over Iran</a>
+            </h3>
+            
+            <div class="article-meta">NPR News — 2026-04-05</div>
+          </article>
+          
+        </div>
+      </section>
       
     
-    
-    
-    <!-- Above the fold -->
-    <div class="hero">
-      <div class="hero-label">Top Story</div>
-      <h2 class="hero-headline">
-        <a href="https://www.nytimes.com/2026/04/04/us/politics/military-iran-airman-rescue.html" target="_blank" rel="noopener">U.S. Rescues Downed Air Force Officer Deep Inside Iran, Trump Says</a>
-      </h2>
       
-      <div class="hero-meta">NY Times — NYT</div>
-    </div>
-    
-    <!-- Secondary stories -->
-    <div class="secondary-grid">
+      <section id="conflict">
+        <div class="section-header">
+          <h2 class="section-title">Conflict</h2>
+        </div>
+        <div class="articles">
+          
+          <article class="article">
+            <h3 class="article-headline">
+              <a href="https://www.theguardian.com/world/live/2026/apr/05/middle-east-crisis-live-iran-israel-us-war-trump-strait-hormuz-missing-pilot-downed" target="_blank" rel="noopener">Iranian Drone Attacks Target Kuwaiti Energy Facilities</a>
+            </h3>
+            
+            <p class="article-summary">Iranian drone attacks have targeted several facilities belonging to the Kuwait Petroleum Corporation, resulting in fires and significant material losses. This incident marks an escalation in the regional conflict, impacting critical energy infrastructure.</p>
+            
+            <div class="article-meta">The Guardian — 2026-04-05</div>
+          </article>
+          
+          <article class="article">
+            <h3 class="article-headline">
+              <a href="https://sana.sy/en/international/2308000/" target="_blank" rel="noopener">Israel Conducts Airstrikes in Lebanon and Gaza, Hezbollah Retaliates</a>
+            </h3>
+            
+            <p class="article-summary">Deadly Israeli airstrikes hit Lebanon and Gaza, with at least seven people, including a child, killed in Kfar Hatta, Lebanon. In response, Hezbollah launched missiles towards northern Israel, which were reportedly intercepted by the IDF.</p>
+            
+            <div class="article-meta">The Guardian — 2026-04-05</div>
+          </article>
+          
+          <article class="article">
+            <h3 class="article-headline">
+              <a href="https://www.caixinglobal.com/2026-04-05/cover-story-energy-shockwaves-from-us-iran-war-hit-global-economy-102431224.html" target="_blank" rel="noopener">Pope Calls for Global Peace Amidst Ongoing Conflicts</a>
+            </h3>
+            
+            <p class="article-summary">During his Easter Mass, Pope Leo XIV urged for renewed global efforts towards peace and warned against the dangers of current conflicts. He emphasized the need for international leaders to overcome divisions and work towards stability.</p>
+            
+            <div class="article-meta">Syrian Arab News Agency (SANA) — 2026-04-05</div>
+          </article>
+          
+        </div>
+      </section>
       
-      <article class="secondary-story">
-        <div class="secondary-label">NYT</div>
-        <h3 class="secondary-headline">
-          <a href="https://www.nytimes.com/2026/04/05/world/middleeast/iran-us-rescue.html" target="_blank" rel="noopener">Iran’s Downing of Plane and U.S. Rescue Leave Both Sides Dangerously Emboldened</a>
-        </h3>
-        
-      </article>
+    
       
-      <article class="secondary-story">
-        <div class="secondary-label">NYT</div>
-        <h3 class="secondary-headline">
-          <a href="https://www.nytimes.com/2026/04/03/world/middleeast/f-15-us-fighter-jet-iran.html" target="_blank" rel="noopener">What We Know About the F-15E Strike Eagle Shot Down by Iran</a>
-        </h3>
-        
-      </article>
+      <section id="economy">
+        <div class="section-header">
+          <h2 class="section-title">Economy</h2>
+        </div>
+        <div class="articles">
+          
+          <article class="article">
+            <h3 class="article-headline">
+              <a href="https://gbcode.rthk.hk/TuniS/news.rthk.hk/rthk/en/component/k2/1850039-20260405.htm?spTabChangeable=0" target="_blank" rel="noopener">US-Iran War Causes Energy Shockwaves and Global Economic Instability</a>
+            </h3>
+            
+            <p class="article-summary">The ongoing US-Iran war is creating significant energy shockwaves, leading to disruptions in the Strait of Hormuz and higher oil prices. This situation is fracturing global supply chains and leaving economies in Asia and Europe particularly vulnerable.</p>
+            
+            <div class="article-meta">Cover Story — 2026-04-05</div>
+          </article>
+          
+          <article class="article">
+            <h3 class="article-headline">
+              <a href="https://www.clickondetroit.com/news/world/2026/04/05/aid-groups-warn-iran-war-is-hindering-food-and-medicine-from-reaching-millions/" target="_blank" rel="noopener">Opec+ Considers Oil Production Increase Amidst Middle East Conflict</a>
+            </h3>
+            
+            <p class="article-summary">Key members of the Opec+ oil cartel are meeting to discuss increasing oil production quotas for the upcoming month, aiming to stabilize global markets unsettled by the US-Israeli war against Iran. Reports suggest an agreement in principle to raise output by 206,000 barrels per day for May, though its immediate impact on supply may be limited.</p>
+            
+            <div class="article-meta">RTHK — 2026-04-05</div>
+          </article>
+          
+          <article class="article">
+            <h3 class="article-headline">
+              <a href="https://wmo.int/news/media-centre/earths-climate-swings-increasingly-out-of-balance" target="_blank" rel="noopener">Aid Groups Warn of Humanitarian Crisis as War Disrupts Supply Chains</a>
+            </h3>
+            
+            <p class="article-summary">Aid organizations are sounding the alarm that the Middle East conflict is severely impeding their ability to deliver essential food and medicine to millions worldwide. The closure of vital shipping routes, especially the Strait of Hormuz, has escalated transport costs and raised concerns about widespread hunger.</p>
+            
+            <div class="article-meta">ClickOnDetroit — 2026-04-05</div>
+          </article>
+          
+        </div>
+      </section>
       
-      <article class="secondary-story">
-        <div class="secondary-label">NYT</div>
-        <h3 class="secondary-headline">
-          <a href="https://www.nytimes.com/2026/04/05/us/politics/stephen-miller-immigration-agenda.html" target="_blank" rel="noopener">Stephen Miller Is Still Pursuing His Immigration Agenda, but More Quietly</a>
-        </h3>
-        
-      </article>
+    
       
-    </div>
+      <section id="climate">
+        <div class="section-header">
+          <h2 class="section-title">Climate</h2>
+        </div>
+        <div class="articles">
+          
+          <article class="article">
+            <h3 class="article-headline">
+              <a href="https://earth.org/this-week-in-climate-news-april-2026-week-1/" target="_blank" rel="noopener">WMO Report Declares Earth&#39;s Climate &#39;Out of Balance&#39;</a>
+            </h3>
+            
+            <p class="article-summary">The World Meteorological Organization (WMO) has released a report indicating that Earth&#39;s climate is more imbalanced than at any point in observed history, driven by rising greenhouse gas concentrations. The report highlights that over 91% of the planet&#39;s excess heat is now stored in the ocean, which recorded its highest temperature in 2025.</p>
+            
+            <div class="article-meta">World Meteorological Organization (WMO) — 2026-04-05</div>
+          </article>
+          
+          <article class="article">
+            <h3 class="article-headline">
+              <a href="https://www.theinvadingsea.com/2026/04/05/iran-war-strait-of-hormuz-oil-prices-renewable-energy-middle-east-solar-wind-turkey-cop31/" target="_blank" rel="noopener">Renewable Energy Accounts for Nearly Half of Global Power Capacity in 2025</a>
+            </h3>
+            
+            <p class="article-summary">New data from the International Renewable Energy Agency (IRENA) reveals that renewable energy sources constituted almost half of the global power capacity by the end of 2025. This achievement marks the largest annual increase in renewable energy capacity ever recorded, primarily fueled by significant growth in solar and wind power.</p>
+            
+            <div class="article-meta">Earth.Org — 2026-04-04</div>
+          </article>
+          
+          <article class="article">
+            <h3 class="article-headline">
+              <a href="https://www.emjreviews.com/microbiology-infectious-diseases/news/ai-drug-discovery-platform-launched-to-tackle-global-diseases/" target="_blank" rel="noopener">Middle East War Reinforces Urgency for Renewable Energy Transition</a>
+            </h3>
+            
+            <p class="article-summary">The ongoing conflict in the Middle East has strongly underscored the necessity of transitioning from fossil fuels to renewable energy sources. Disruptions to oil shipments through the Strait of Hormuz have caused a surge in oil prices, exposing the vulnerabilities of global reliance on fossil fuels.</p>
+            
+            <div class="article-meta">The Invading Sea — 2026-04-05</div>
+          </article>
+          
+        </div>
+      </section>
+      
     
-    
-    <!-- Sections -->
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
+      
+      <section id="health">
+        <div class="section-header">
+          <h2 class="section-title">Health</h2>
+        </div>
+        <div class="articles">
+          
+          <article class="article">
+            <h3 class="article-headline">
+              <a href="https://www.afro.who.int/countries/ghana/news/ghana-identifies-priority-areas-strengthen-cholera-prevention-and-control-0" target="_blank" rel="noopener">New AI Platform Launched for Global Drug Discovery</a>
+            </h3>
+            
+            <p class="article-summary">A novel artificial intelligence (AI) drug discovery platform, named dd4gh, has been introduced to accelerate the development of treatments for major global diseases. This platform provides free access to eligible researchers worldwide, aiming to foster a more inclusive global health research ecosystem.</p>
+            
+            <div class="article-meta">EMJ — 2026-04-05</div>
+          </article>
+          
+        </div>
+      </section>
+      
     
   </main>
-  
+
   <footer class="footer">
-    Compiled by Pavano — 2026-04-05
+    Built by Pavano · 2026-04-05
   </footer>
 </body>
 </html>
